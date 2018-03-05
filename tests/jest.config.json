@@ -1,0 +1,5 @@
+{
+  "rootDir": "../",
+  "setupFiles": ["<rootDir>/tests/shim.js", "<rootDir>/tests/jest.setup.js"],
+  "verbose": true
+}

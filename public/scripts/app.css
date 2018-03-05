@@ -1,0 +1,13 @@
+body {
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  &:visited {
+    color: black;
+  }
+}
