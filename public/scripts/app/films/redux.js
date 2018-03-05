@@ -1,3 +1,5 @@
+import { getFilmsAPI } from '../api/getFilmsAPI';
+
 const NAME = 'FILM';
 
 const UPDATE_FILMS = `${NAME}/UPDATE_FILMS`;
@@ -21,8 +23,7 @@ export const updateFilms = films => ({
 });
 
 export const fetchFilms = () => async dispatch => {
-  const response = await fetch('https://startmeup.herokuapp.com/api/movies');
-  const films = await response.json();
+  const films = await getFilmsAPI();
   dispatch(updateFilms(films));
 };
 

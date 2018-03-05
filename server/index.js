@@ -1,11 +1,11 @@
+require('es6-promise').polyfill();
+import 'isomorphic-fetch';
 import React from 'react';
 import express from 'express';
 import compression from 'compression';
 import logger from 'winston';
 import { create } from './store';
 import { renderFullPage } from './render';
-import rp from 'request-promise';
-import { updateFilms } from '../public/scripts/app/films/redux';
 import { handleFilm } from './handlers/handleFilms';
 
 const app = express();
