@@ -1,1 +1,14 @@
-ul{list-style:none}a,a:visited{color:#000}
+body {
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: rgb(0, 0, 0)
+}
+
+a:visited {
+  color: black;
+}

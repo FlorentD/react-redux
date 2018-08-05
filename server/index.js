@@ -3,7 +3,7 @@ import 'isomorphic-fetch';
 import React from 'react';
 import express from 'express';
 import compression from 'compression';
-import logger from 'winston';
+import logger from './logger';
 import { create } from './store';
 import { renderFullPage } from './render';
 import { handleFilm } from './handlers/handleFilms';

@@ -1,5 +1,6 @@
 {
   "rootDir": "../",
+  "testURL": "http://localhost/",
   "setupFiles": ["<rootDir>/tests/shim.js", "<rootDir>/tests/jest.setup.js"],
   "verbose": true
 }

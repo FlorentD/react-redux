@@ -9,9 +9,9 @@ server.get('/api/', (req, res, next) => {
 });
 
 server.get(
-  /\/(.*)?.*/,
+  '*',
   restify.plugins.serveStatic({
-    directory: __dirname + '/dist',
+    directory: `${__dirname}/dist`,
     default: 'index.html',
   })
 );
