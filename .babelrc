@@ -1,5 +1,11 @@
 {
-  "presets": ["env"],
+  "presets": [
+    ["env", {
+      "targets": {
+        "chrome": 68
+      }
+    }]
+  ],
   "plugins": [
     "transform-regenerator",
     "react-hot-loader/babel",

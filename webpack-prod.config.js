@@ -1,50 +1,46 @@
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
   entry: {
     app: ['babel-regenerator-runtime', './public/scripts/app'],
   },
+  output: {
+    path: `${__dirname}/dist/js`,
+    filename: '[name].js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          'css-loader',
+          'postcss-loader',
+        ],
+      },
+    ],
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {
-        vendor: {
-          test: /node_modules/,
-          chunks: 'initial',
-          name: 'vendor',
-          priority: 10,
-          enforce: true,
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: 1,
+          chunks: 'all',
         },
       },
     },
   },
-  output: {
-    path: __dirname,
-    filename: 'dist/js/[name].js',
-  },
-  module: {
-    rules: [
-      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' },
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: { importLoaders: 1, minimize: true },
-            },
-            'postcss-loader',
-          ],
-        }),
-      },
-    ],
-  },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+    new MiniCssExtractPlugin({
+      filename: '../css/[name].css',
     }),
-    new ExtractTextPlugin('dist/styles/style.css'),
   ],
 };

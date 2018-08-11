@@ -1,0 +1,23 @@
+body {
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: rgb(0, 0, 0)
+}
+
+a:visited {
+  color: black;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
