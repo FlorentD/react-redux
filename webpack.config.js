@@ -3,10 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
-  entry: [
-    'babel-regenerator-runtime', // in order to use async/await
-    './public/scripts/app',
-  ],
+  entry: './public/scripts/app',
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname),

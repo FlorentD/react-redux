@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    app: ['babel-regenerator-runtime', './public/scripts/app'],
+    app: './public/scripts/app',
   },
   output: {
     path: `${__dirname}/dist/js`,
