@@ -11,3 +11,67 @@ a {
     color: black;
   }
 }
+
+.format_align_left div {
+  text-align: left;
+}
+
+.format_align_right div {
+  text-align: right;
+}
+
+.format_align_center div {
+  text-align: center;
+}
+
+.format_align_justify div {
+  text-align: justify;
+}
+
+i {
+  cursor: pointer;
+}
+
+a {
+  color: midnightblue;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.blocks-container {
+  display: flex;
+  align-items: baseline;
+  background-color: lightblue;
+  padding: 5px;
+  border-bottom: 1px dashed black;
+}
+
+.blocks-container div {
+  margin: auto 5px;
+}
