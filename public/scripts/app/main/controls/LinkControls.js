@@ -1,4 +1,7 @@
 import React, { Fragment, Component } from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { getEditorState, updateEditorState } from '../redux';
 import {
   Modal,
   Button,
@@ -19,13 +22,56 @@ class Link extends Component {
     this.setState({ showCommands: true });
   };
 
+  left = 0;
+  top = 0;
+
   deleteLink = () => {
+    const { editorState, contentState, updateEditorState } = this.props;
+    const newContentState = Modifier.applyEntity(
+      contentState,
+      contentState.getSelectionAfter(),
+      null
+    );
+    updateEditorState(
+      EditorState.push(editorState, newContentState, 'remove-link')
+    );
+  };
+
+  getLink = () => {
     const { contentState, entityKey } = this.props;
-    console.log(this.props);
+    const entity = contentState.getEntity(entityKey).getData();
+    return entity.url;
+  };
+
+  openTarget = e => {
+    e.preventDefault();
+    window.open(this.getLink(), '_blank');
   };
 
   closeInlineCommads = () => {
     this.setState({ showCommands: false });
+  };
+
+  componentDidUpdate(prevProps) {
+    const { width, height } = this.target.getBoundingClientRect();
+    this.left = width + 5;
+    this.top = height + 5;
+
+    setTimeout(() => {
+      if (this.hasFocus(prevProps) && !this.hasFocus(this.props)) {
+        this.closeInlineCommads();
+      }
+    }, 0);
+  }
+
+  hasFocus = ({ contentState, editorState }) => {
+    const linkSelection = contentState.getSelectionAfter();
+    const editorSelector = editorState.getSelection();
+    const hasSameContent =
+      linkSelection.getStartKey() === editorSelector.getStartKey();
+    const hasSameSelectionContent =
+      editorSelector.getStartOffset() >= linkSelection.getStartOffset();
+    return hasSameContent && hasSameSelectionContent;
   };
 
   render() {
@@ -33,15 +79,31 @@ class Link extends Component {
     const { url } = contentState.getEntity(entityKey).getData();
     return (
       <Fragment>
-        <a href={url} target="_blank" onClick={this.showInlineCommands}>
-          {children}
-        </a>
-        {this.state.showCommands && (
-          <div>
-            <button onClick={this.deleteLink}>Supprimer</button>
-            <button onClick={this.closeInlineCommads}>x</button>
-          </div>
-        )}
+        <div style={{ display: 'inline-block' }}>
+          <a
+            href={url}
+            target="_blank"
+            ref={link => (this.target = link)}
+            onClick={this.showInlineCommands}
+          >
+            {children}
+          </a>
+          {this.state.showCommands && (
+            <div
+              className="link-deletion"
+              style={{ marginLeft: this.left, marginTop: `-${this.top}px` }}
+            >
+              <a
+                className="link-preview"
+                href={this.getLink()}
+                onClick={this.openTarget}
+              >
+                {this.getLink()}
+              </a>{' '}
+              | <a onClick={this.deleteLink}>Supprimer</a>
+            </div>
+          )}
+        </div>
       </Fragment>
     );
   }
@@ -57,9 +119,20 @@ const linkStrategy = (contentBlock, callback, contentState) => {
   }, callback);
 };
 
+const mapStateToProps = createStructuredSelector({
+  editorState: getEditorState,
+});
+
+const mapDispatchToProps = {
+  updateEditorState,
+};
+
 export const decorator = {
   strategy: linkStrategy,
-  component: Link,
+  component: connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Link),
 };
 
 class LinkControls extends Component {

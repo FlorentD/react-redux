@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 import {
   Editor,
   convertToRaw,
@@ -6,6 +8,7 @@ import {
   RichUtils,
   CompositeDecorator,
 } from 'draft-js';
+import { getEditorState, updateEditorState } from './redux';
 import InlineStyleControls from './controls/InlineStyleControls';
 import BlockTypeControls from './controls/BlockTypeControls';
 import AlignementControls from './controls/AlignementControls';
@@ -24,20 +27,22 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      editorState: EditorState.set(EditorState.createEmpty(), {
+      edit: true,
+    };
+    props.updateEditorState(
+      EditorState.set(EditorState.createEmpty(), {
         decorator: new CompositeDecorator([
           linkDecorator,
           mediaDecorator,
           imageDecorator,
           linkify,
         ]),
-      }),
-      edit: true,
-    };
-    this.onChange = editorState => this.setState({ editorState });
+      })
+    );
+    this.onChange = editorState => props.updateEditorState(editorState);
   }
   logState = () => {
-    const content = this.state.editorState.getCurrentContent();
+    const content = this.props.editorState.getCurrentContent();
     console.log(convertToRaw(content));
   };
   toggleReadMode = () => {
@@ -53,11 +58,11 @@ class Main extends Component {
   };
   toggleInlineStyle = inlineStyle => {
     this.onChange(
-      RichUtils.toggleInlineStyle(this.state.editorState, inlineStyle)
+      RichUtils.toggleInlineStyle(this.props.editorState, inlineStyle)
     );
   };
   toggleBlockType = blockType => {
-    this.onChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
+    this.onChange(RichUtils.toggleBlockType(this.props.editorState, blockType));
   };
   updateEditorState = newEditorState => {
     this.onChange(newEditorState);
@@ -68,44 +73,44 @@ class Main extends Component {
         <div className="blocks-container">
           <div>
             <InlineStyleControls
-              editorState={this.state.editorState}
+              editorState={this.props.editorState}
               onToggle={this.toggleInlineStyle}
             />
           </div>
           <div>
             <BlockTypeControls
-              editorState={this.state.editorState}
+              editorState={this.props.editorState}
               onToggle={this.toggleBlockType}
             />
           </div>
           <div>
             <AlignementControls
-              editorState={this.state.editorState}
+              editorState={this.props.editorState}
               onToogle={this.updateEditorState}
             />
           </div>
           <div>
             <LinkControls
-              editorState={this.state.editorState}
+              editorState={this.props.editorState}
               onToggle={this.updateEditorState}
             />
           </div>
           <div>
             <MediaControls
-              editorState={this.state.editorState}
+              editorState={this.props.editorState}
               onToggle={this.updateEditorState}
             />
           </div>
           <div>
             <ImageControls
-              editorState={this.state.editorState}
+              editorState={this.props.editorState}
               onToggle={this.updateEditorState}
             />
           </div>
         </div>
         <div style={{ margin: 5, padding: 5 }}>
           <Editor
-            editorState={this.state.editorState}
+            editorState={this.props.editorState}
             readOnly={!this.state.edit}
             decorator={new CompositeDecorator([linkDecorator, mediaDecorator])}
             onChange={this.onChange}
@@ -131,4 +136,15 @@ class Main extends Component {
   }
 }
 
-export default Main;
+const mapStateToProps = createStructuredSelector({
+  editorState: getEditorState,
+});
+
+const mapDispatchToProps = {
+  updateEditorState,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Main);

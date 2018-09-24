@@ -33,7 +33,11 @@ i {
 }
 
 a {
-  color: midnightblue;
+  color: blue !important;
+}
+
+a:visited {
+  color: blue !important;
 }
 
 .video-container {
@@ -74,4 +78,27 @@ a {
 
 .blocks-container div {
   margin: auto 5px;
+}
+
+.link-deletion {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: 1px dashed black;
+  margin-left: 5px;
+  background-color: whitesmoke;
+}
+
+.link-deletion a {
+  cursor: pointer !important;
+}
+
+.link-preview {
+  display: inline-block;
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
 }
