@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "draft-js": "0.10.5",
+    "emoji-mart": "2.8.1",
     "express": "4.16.3",
     "immutable": "3.8.2",
     "linkify-it": "2.0.3",

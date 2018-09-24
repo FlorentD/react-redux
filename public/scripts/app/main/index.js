@@ -21,6 +21,7 @@ import MediaControls, {
 import ImageControls, {
   decorator as imageDecorator,
 } from './controls/ImageControls';
+import EmojiControls from './controls/EmojiControls';
 import linkify from './enhancers/linkify';
 
 class Main extends Component {
@@ -70,44 +71,49 @@ class Main extends Component {
   render() {
     return (
       <div style={{ border: '1px solid black' }}>
-        <div className="blocks-container">
-          <div>
-            <InlineStyleControls
-              editorState={this.props.editorState}
-              onToggle={this.toggleInlineStyle}
-            />
+        {this.state.edit && (
+          <div className="blocks-container">
+            <div>
+              <InlineStyleControls
+                editorState={this.props.editorState}
+                onToggle={this.toggleInlineStyle}
+              />
+            </div>
+            <div>
+              <BlockTypeControls
+                editorState={this.props.editorState}
+                onToggle={this.toggleBlockType}
+              />
+            </div>
+            <div>
+              <AlignementControls
+                editorState={this.props.editorState}
+                onToogle={this.updateEditorState}
+              />
+            </div>
+            <div>
+              <LinkControls
+                editorState={this.props.editorState}
+                onToggle={this.updateEditorState}
+              />
+            </div>
+            <div>
+              <MediaControls
+                editorState={this.props.editorState}
+                onToggle={this.updateEditorState}
+              />
+            </div>
+            <div>
+              <ImageControls
+                editorState={this.props.editorState}
+                onToggle={this.updateEditorState}
+              />
+            </div>
+            <div>
+              <EmojiControls />
+            </div>
           </div>
-          <div>
-            <BlockTypeControls
-              editorState={this.props.editorState}
-              onToggle={this.toggleBlockType}
-            />
-          </div>
-          <div>
-            <AlignementControls
-              editorState={this.props.editorState}
-              onToogle={this.updateEditorState}
-            />
-          </div>
-          <div>
-            <LinkControls
-              editorState={this.props.editorState}
-              onToggle={this.updateEditorState}
-            />
-          </div>
-          <div>
-            <MediaControls
-              editorState={this.props.editorState}
-              onToggle={this.updateEditorState}
-            />
-          </div>
-          <div>
-            <ImageControls
-              editorState={this.props.editorState}
-              onToggle={this.updateEditorState}
-            />
-          </div>
-        </div>
+        )}
         <div style={{ margin: 5, padding: 5 }}>
           <Editor
             editorState={this.props.editorState}
