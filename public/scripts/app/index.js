@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { hot } from 'react-hot-loader';
+import { hot } from 'react-hot-loader/root';
 import Menu from './menu';
 import Main from './main';
 import Why from './why';
@@ -23,4 +23,4 @@ const App = () => {
   );
 };
 
-export default hot(module)(App);
+export default hot(App);

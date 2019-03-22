@@ -1,29 +1,14 @@
 import { useEffect } from 'react';
-import { createStructuredSelector } from 'reselect';
-import { connect } from 'react-redux';
+import { useDispatch, useMappedState } from 'redux-react-hook';
 import { withRouter } from 'react-router';
-import { compose } from 'recompose';
 import { fetchFilms, getFilms } from './redux';
 
-const FilmsRequest = ({ children, films, staticContext, fetchFilms }) => {
+const FilmsRequest = ({ children, staticContext }) => {
+  const dispatch = useDispatch();
   useEffect(() => {
-    if (!staticContext || !staticContext.fromServer) fetchFilms();
+    if (!staticContext || !staticContext.fromServer) dispatch(fetchFilms());
   }, []);
-  return children(films);
+  return children(useMappedState(getFilms));
 };
 
-const mapStateToProps = createStructuredSelector({
-  films: getFilms,
-});
-
-const mapDispatchToProps = {
-  fetchFilms,
-};
-
-export default compose(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  ),
-  withRouter
-)(FilmsRequest);
+export default withRouter(FilmsRequest);
