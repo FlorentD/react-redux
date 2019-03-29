@@ -12,7 +12,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "predist": "rm -fr dist && mkdir dist && mkdir dist/js",
+    "predist": "rm -fr dist && mkdir dist",
     "prettier": "prettier --single-quote --trailing-comma es5 --write",
     "dist": "webpack --config webpack-prod.config.js --progress --colors",
     "test": "jest --config tests/jest.config.json",
