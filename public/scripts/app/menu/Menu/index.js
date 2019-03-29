@@ -1,8 +1,13 @@
-import './style.css';
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const Menu = ({ children }) => <ul className="menu">{children}</ul>;
+const MenuUl = styled.ul`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const Menu = ({ children }) => <MenuUl>{children}</MenuUl>;
 
 Menu.propTypes = {
   children: PropTypes.arrayOf(PropTypes.object),

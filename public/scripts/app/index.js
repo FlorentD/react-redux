@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
 import Menu from './menu';
@@ -8,9 +9,15 @@ import About from './about';
 import NoMatch from './NoMatch';
 import Films from './films/Films';
 
+const Container = styled.div`
+  padding: 10px;
+  background-color: #f0efef;
+  color: black;
+`;
+
 const App = () => {
   return (
-    <div className="container">
+    <Container>
       <Menu />
       <Switch>
         <Route exact path="/" component={Main} />
@@ -19,7 +26,7 @@ const App = () => {
         <Route path="/films" component={Films} />
         <Route component={NoMatch} />
       </Switch>
-    </div>
+    </Container>
   );
 };
 
