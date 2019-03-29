@@ -1,10 +1,12 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   mode: 'production',
   entry: {
     app: './public/scripts/app',
   },
   output: {
-    path: `${__dirname}/dist/js`,
+    path: `${__dirname}/dist`,
     filename: '[name].js',
   },
   module: {
@@ -13,6 +15,10 @@ module.exports = {
         test: /\.js/,
         exclude: /node_modules/,
         loader: 'babel-loader',
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
       },
     ],
   },
@@ -27,4 +33,9 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+    }),
+  ],
 };
