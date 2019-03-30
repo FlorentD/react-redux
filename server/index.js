@@ -1,4 +1,3 @@
-require('es6-promise').polyfill();
 import 'isomorphic-fetch';
 import React from 'react';
 import express from 'express';

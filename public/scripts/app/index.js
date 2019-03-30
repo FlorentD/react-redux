@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
 import Menu from './menu';
@@ -8,6 +8,19 @@ import Why from './why';
 import About from './about';
 import NoMatch from './NoMatch';
 import Films from './films/Films';
+
+const GlobalStyle = createGlobalStyle`
+ul {
+  list-style: none;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  &:visited {
+    color: blue;
+  }
+}
+`;
 
 const Container = styled.div`
   padding: 10px;
@@ -18,6 +31,7 @@ const Container = styled.div`
 const App = () => {
   return (
     <Container>
+      <GlobalStyle />
       <Menu />
       <Switch>
         <Route exact path="/" component={Main} />

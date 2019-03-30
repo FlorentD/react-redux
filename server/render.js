@@ -1,23 +1,31 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import { StoreContext } from 'redux-react-hook';
 import { StaticRouter as Router } from 'react-router';
 import { renderToString } from 'react-dom/server';
 import App from '../public/scripts/app/index';
 
+const sheet = new ServerStyleSheet();
+
 export function renderFullPage(req, store, context = {}) {
   const fullContext = { fromServer: true, ...context };
   const html = renderToString(
-    <Router location={req.url} context={fullContext}>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </Router>
+    <StyleSheetManager sheet={sheet.instance}>
+      <Router location={req.url} context={fullContext}>
+        <StoreContext.Provider value={store}>
+          <App />
+        </StoreContext.Provider>
+      </Router>
+    </StyleSheetManager>
   );
+  const styleTags = sheet.getStyleTags();
+  sheet.seal();
   return `
     <!doctype html>
-    <html>
+    <html lang="en">
       <head>
         <title>My SSR APP</title>
+        ${styleTags}
       </head>
       <body>
         <div id="body">${html}</div>
@@ -26,7 +34,7 @@ export function renderFullPage(req, store, context = {}) {
             store.getState()
           ).replace(/</g, '\\u003c')}
         </script>
-        <script src="/static/vendor.js"></script>
+        <script src="/static/vendors~app.js"></script>
         <script src="/static/app.js"></script>
       </body>
     </html>

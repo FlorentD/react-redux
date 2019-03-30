@@ -1,6 +1,6 @@
-import {create} from '../store';
-import {renderFullPage} from '../render';
-import {fetchFilms} from '../../public/scripts/app/films/redux';
+import { create } from '../store';
+import { renderFullPage } from '../render';
+import { fetchFilms } from '../../public/scripts/app/films/redux';
 
 export const handleFilm = async (req, res) => {
   const store = create();
