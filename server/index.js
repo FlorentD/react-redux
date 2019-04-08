@@ -15,6 +15,10 @@ app.use('/static', express.static(`${__dirname}/static`));
 app.get('/films', handleFilm);
 
 app.get('*', (req, res) => {
+  logger.info(req.url);
+  if (req.url === '/robots.txt') {
+    return res.status(300).sendFile(`${__dirname}/robots.txt`);
+  }
   const store = create();
   res.status(200).send(renderFullPage(req, store));
 });

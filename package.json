@@ -19,7 +19,7 @@
     "dev": "clear && webpack-dev-server",
     "deploy": "npm run test && npm run dist && git push heroku master",
     "start": "node server-rest.js",
-    "ssr": "npx babel-node server/index.js"
+    "ssr": "nodemon --exec babel-node server/index.js"
   },
   "lint-staged": {
     "*.js": [
