@@ -7,7 +7,7 @@ import Main from './main';
 import Why from './why';
 import About from './about';
 import NoMatch from './NoMatch';
-import Films from './films/Films';
+import LoadableFilms from './films/LoadableFilms';
 
 const GlobalStyle = createGlobalStyle`
 ul {
@@ -37,7 +37,7 @@ const App = () => {
         <Route exact path="/" component={Main} />
         <Route path="/why" component={Why} />
         <Route path="/about" component={About} />
-        <Route path="/films" component={Films} />
+        <Route path="/films" component={LoadableFilms} />
         <Route component={NoMatch} />
       </Switch>
     </Container>

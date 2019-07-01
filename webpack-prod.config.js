@@ -1,5 +1,5 @@
+const { ReactLoadablePlugin } = require('react-loadable/webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
   mode: 'production',
   entry: {
@@ -7,6 +7,7 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/dist`,
+    publicPath: '/static/',
     filename: '[name].js',
   },
   module: {
@@ -34,6 +35,9 @@ module.exports = {
     },
   },
   plugins: [
+    new ReactLoadablePlugin({
+      filename: './dist/react-loadable.json',
+    }),
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),

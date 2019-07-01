@@ -6,6 +6,7 @@ import logger from './logger';
 import { create } from './store';
 import { renderFullPage } from './render';
 import { handleFilm } from './handlers/handleFilms';
+import Loadable from 'react-loadable';
 
 const app = express();
 
@@ -23,4 +24,6 @@ app.get('*', (req, res) => {
   res.status(200).send(renderFullPage(req, store));
 });
 
-app.listen(8080, () => logger.info('App running on port 8080 o//'));
+Loadable.preloadAll().then(() =>
+  app.listen(8080, () => logger.info('App running on port 8080 o//'))
+);
