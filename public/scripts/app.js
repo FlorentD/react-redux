@@ -4,6 +4,9 @@ import { StoreContext } from 'redux-react-hook';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './app/index';
 import store from './store';
+import JmyJSON from './test.json'
+
+console.log(JmyJSON);
 
 hydrate(
   <Router>
