@@ -35,4 +35,4 @@ app.get('*', (req, res) => {
   res.status(200).send((0, _render.renderFullPage)(req, store));
 });
 
-_reactLoadable.default.preloadAll().then(() => app.listen(8080, () => _logger.default.info('App running on port 8080 o//')));
+_reactLoadable.default.preloadAll().then(() => app.listen(process.env.PORT || 8080, () => _logger.default.info('App running on port 8080 o//')));
