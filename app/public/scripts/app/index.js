@@ -64,13 +64,5 @@ let App = () => {
   })));
 };
 
-if (process.env.NODE_ENV !== 'production') {
-  const {
-    hot
-  } = require('react-hot-loader/root');
-
-  App = hot(App);
-}
-
 var _default = App;
 exports.default = _default;

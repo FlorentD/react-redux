@@ -25,5 +25,7 @@ app.get('*', (req, res) => {
 });
 
 Loadable.preloadAll().then(() =>
-  app.listen(8080, () => logger.info('App running on port 8080 o//'))
+  app.listen(process.env.PORT || 8080, () =>
+    logger.info('App running on port 8080 o//')
+  )
 );
