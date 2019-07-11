@@ -8,7 +8,7 @@
   "author": "florentduveau <florent.duveau@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": "10.x"
+    "node": "12.x"
   },
   "scripts": {
     "precommit": "lint-staged",
