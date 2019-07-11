@@ -1,4 +1,5 @@
 const { ReactLoadablePlugin } = require('react-loadable/webpack');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'production',
@@ -40,6 +41,11 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'index.html',
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"',
+      },
     }),
   ],
 };

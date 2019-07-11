@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
-import { hot } from 'react-hot-loader/root';
 import Menu from './menu';
 import Main from './main';
 import Why from './why';
@@ -28,7 +27,7 @@ const Container = styled.div`
   color: black;
 `;
 
-const App = () => {
+let App = () => {
   return (
     <Container>
       <GlobalStyle />
@@ -44,4 +43,9 @@ const App = () => {
   );
 };
 
-export default hot(App);
+if (process.env.NODE_ENV !== 'production') {
+  const { hot } = require('react-hot-loader/root');
+  App = hot(App);
+}
+
+export default App;

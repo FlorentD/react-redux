@@ -15,8 +15,6 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _root = require("react-hot-loader/root");
-
 var _menu = _interopRequireDefault(require("./menu"));
 
 var _main = _interopRequireDefault(require("./main"));
@@ -56,7 +54,7 @@ const Container = _styledComponents.default.div.withConfig({
   componentId: "vbjlqm-0"
 })(["padding:10px;background-color:#f0efef;color:black;"]);
 
-const App = () => {
+let App = () => {
   return _react.default.createElement(Container, null, _react.default.createElement(GlobalStyle, null), _react.default.createElement(_menu.default, null), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/",
@@ -75,8 +73,15 @@ const App = () => {
   })));
 };
 
-const _default = (0, _root.hot)(App);
+if (process.env.NODE_ENV !== 'production') {
+  const {
+    hot
+  } = require('react-hot-loader/root');
 
+  App = hot(App);
+}
+
+const _default = App;
 var _default2 = _default;
 exports.default = _default2;
 ;
