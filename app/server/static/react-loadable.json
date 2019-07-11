@@ -119,17 +119,9 @@
       "publicPath": "/static/app.js"
     }
   ],
-  "./test.json": [
-    {
-      "id": 50,
-      "name": "./public/scripts/test.json",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
   "./public/scripts/app": [
     {
-      "id": 54,
+      "id": 53,
       "name": "./public/scripts/app.js",
       "file": "app.js",
       "publicPath": "/static/app.js"
@@ -409,7 +401,7 @@
   ],
   "@emotion/is-prop-valid": [
     {
-      "id": 51,
+      "id": 50,
       "name": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -417,7 +409,7 @@
   ],
   "merge-anything": [
     {
-      "id": 52,
+      "id": 51,
       "name": "./node_modules/merge-anything/dist/index.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -425,7 +417,7 @@
   ],
   "./cjs/react.production.min.js": [
     {
-      "id": 55,
+      "id": 54,
       "name": "./node_modules/react/cjs/react.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -433,7 +425,7 @@
   ],
   "./cjs/react-dom.production.min.js": [
     {
-      "id": 56,
+      "id": 55,
       "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -441,7 +433,7 @@
   ],
   "scheduler": [
     {
-      "id": 57,
+      "id": 56,
       "name": "./node_modules/scheduler/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -449,7 +441,7 @@
   ],
   "./cjs/scheduler.production.min.js": [
     {
-      "id": 58,
+      "id": 57,
       "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -457,7 +449,7 @@
   ],
   "./dist/react-hot-loader.production.min.js": [
     {
-      "id": 59,
+      "id": 58,
       "name": "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -465,7 +457,7 @@
   ],
   "./factoryWithThrowingShims": [
     {
-      "id": 60,
+      "id": 59,
       "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -473,7 +465,7 @@
   ],
   "./lib/ReactPropTypesSecret": [
     {
-      "id": 61,
+      "id": 60,
       "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -481,7 +473,7 @@
   ],
   "./../../process/browser.js": [
     {
-      "id": 62,
+      "id": 61,
       "name": "./node_modules/process/browser.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -489,7 +481,7 @@
   ],
   "./cjs/react-is.production.min.js": [
     {
-      "id": 63,
+      "id": 62,
       "name": "./node_modules/react-is/cjs/react-is.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -497,7 +489,7 @@
   ],
   "isarray": [
     {
-      "id": 64,
+      "id": 63,
       "name": "./node_modules/isarray/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -505,7 +497,7 @@
   ],
   "./_baseGetTag": [
     {
-      "id": 65,
+      "id": 64,
       "name": "./node_modules/lodash/_baseGetTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -513,7 +505,7 @@
   ],
   "./_root": [
     {
-      "id": 66,
+      "id": 65,
       "name": "./node_modules/lodash/_root.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -521,7 +513,7 @@
   ],
   "./_freeGlobal": [
     {
-      "id": 67,
+      "id": 66,
       "name": "./node_modules/lodash/_freeGlobal.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -529,7 +521,7 @@
   ],
   "./_getRawTag": [
     {
-      "id": 68,
+      "id": 67,
       "name": "./node_modules/lodash/_getRawTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -537,7 +529,7 @@
   ],
   "./_objectToString": [
     {
-      "id": 69,
+      "id": 68,
       "name": "./node_modules/lodash/_objectToString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -545,7 +537,7 @@
   ],
   "./isObject": [
     {
-      "id": 70,
+      "id": 69,
       "name": "./node_modules/lodash/isObject.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -553,7 +545,7 @@
   ],
   "./Films": [
     {
-      "id": 53,
+      "id": 52,
       "name": "./public/scripts/app/films/Films.js",
       "file": "2.js",
       "publicPath": "/static/2.js"
@@ -561,7 +553,7 @@
   ],
   "./FilmsRequest": [
     {
-      "id": 71,
+      "id": 70,
       "name": "./public/scripts/app/films/FilmsRequest.js",
       "file": "2.js",
       "publicPath": "/static/2.js"
