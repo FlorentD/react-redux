@@ -27,15 +27,6 @@ var _NoMatch = _interopRequireDefault(require("./NoMatch"));
 
 var _LoadableFilms = _interopRequireDefault(require("./films/LoadableFilms"));
 
-(function () {
-  var enterModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).enterModule;
-  enterModule && enterModule(module);
-})();
-
-var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
-  return a;
-};
-
 const GlobalStyle = _styledComponents.createGlobalStyle`
 ul {
   list-style: none;
@@ -81,27 +72,5 @@ if (process.env.NODE_ENV !== 'production') {
   App = hot(App);
 }
 
-const _default = App;
-var _default2 = _default;
-exports.default = _default2;
-;
-
-(function () {
-  var reactHotLoader = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).default;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(GlobalStyle, "GlobalStyle", "/Users/florentduveau/WebstormProjects/react-redux/public/scripts/app/index.js");
-  reactHotLoader.register(Container, "Container", "/Users/florentduveau/WebstormProjects/react-redux/public/scripts/app/index.js");
-  reactHotLoader.register(App, "App", "/Users/florentduveau/WebstormProjects/react-redux/public/scripts/app/index.js");
-  reactHotLoader.register(_default, "default", "/Users/florentduveau/WebstormProjects/react-redux/public/scripts/app/index.js");
-})();
-
-;
-
-(function () {
-  var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
-  leaveModule && leaveModule(module);
-})();
+var _default = App;
+exports.default = _default;

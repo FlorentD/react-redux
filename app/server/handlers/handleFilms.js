@@ -11,15 +11,6 @@ var _render = require("../render");
 
 var _redux = require("../../public/scripts/app/films/redux");
 
-(function () {
-  var enterModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).enterModule;
-  enterModule && enterModule(module);
-})();
-
-var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
-  return a;
-};
-
 const handleFilm = async (req, res) => {
   const store = (0, _store.create)();
   await (0, _redux.fetchFilms)()(store.dispatch);
@@ -27,21 +18,3 @@ const handleFilm = async (req, res) => {
 };
 
 exports.handleFilm = handleFilm;
-;
-
-(function () {
-  var reactHotLoader = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).default;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(handleFilm, "handleFilm", "/Users/florentduveau/WebstormProjects/react-redux/server/handlers/handleFilms.js");
-})();
-
-;
-
-(function () {
-  var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
-  leaveModule && leaveModule(module);
-})();

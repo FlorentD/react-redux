@@ -1,127 +1,15 @@
 {
-  "./menu/redux": [
-    {
-      "id": 16,
-      "name": "./public/scripts/app/menu/redux.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
   "./films/redux": [
     {
-      "id": 26,
+      "id": 24,
       "name": "./public/scripts/app/films/redux.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./app/index": [
-    {
-      "id": 29,
-      "name": "./public/scripts/app/index.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./menu": [
-    {
-      "id": 30,
-      "name": "./public/scripts/app/menu/index.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./Menu": [
-    {
-      "id": 31,
-      "name": "./public/scripts/app/menu/Menu/index.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./MenuItem": [
-    {
-      "id": 34,
-      "name": "./public/scripts/app/menu/MenuItem/index.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./main": [
-    {
-      "id": 37,
-      "name": "./public/scripts/app/main/index.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./why": [
-    {
-      "id": 38,
-      "name": "./public/scripts/app/why/index.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./about": [
-    {
-      "id": 39,
-      "name": "./public/scripts/app/about/index.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./NoMatch": [
-    {
-      "id": 40,
-      "name": "./public/scripts/app/NoMatch.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./films/LoadableFilms": [
-    {
-      "id": 41,
-      "name": "./public/scripts/app/films/LoadableFilms.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./store": [
-    {
-      "id": 43,
-      "name": "./public/scripts/store.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./app/reducers": [
-    {
-      "id": 44,
-      "name": "./public/scripts/app/reducers.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "../api/getFilmsAPI": [
-    {
-      "id": 45,
-      "name": "./public/scripts/app/api/getFilmsAPI.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
-  "./middleware/logger": [
-    {
-      "id": 48,
-      "name": "./public/scripts/middleware/logger.js",
       "file": "app.js",
       "publicPath": "/static/app.js"
     }
   ],
   "./public/scripts/app": [
     {
-      "id": 52,
+      "id": 51,
       "name": "./public/scripts/app.js",
       "file": "app.js",
       "publicPath": "/static/app.js"
@@ -135,49 +23,25 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "react-hot-loader": [
-    {
-      "id": 1,
-      "name": "./node_modules/react-hot-loader/index.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
   "@babel/runtime/helpers/esm/extends": [
     {
-      "id": 2,
+      "id": 1,
       "name": "./node_modules/@babel/runtime/helpers/esm/extends.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
-  "./../../../node_modules/webpack/buildin/harmony-module.js": [
-    {
-      "id": 3,
-      "name": "./node_modules/webpack/buildin/harmony-module.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "prop-types": [
     {
-      "id": 4,
+      "id": 2,
       "name": "./node_modules/prop-types/index.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
-  "react-router": [
-    {
-      "id": 5,
-      "name": "./node_modules/react-router/esm/react-router.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "tiny-invariant": [
     {
-      "id": 6,
+      "id": 3,
       "name": "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -185,7 +49,7 @@
   ],
   "history": [
     {
-      "id": 7,
+      "id": 4,
       "name": "./node_modules/history/esm/history.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -193,15 +57,23 @@
   ],
   "@babel/runtime/helpers/esm/inheritsLoose": [
     {
-      "id": 8,
+      "id": 5,
       "name": "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
+      "file": "vendors~app.js",
+      "publicPath": "/static/vendors~app.js"
+    }
+  ],
+  "react-router": [
+    {
+      "id": 6,
+      "name": "./node_modules/react-router/esm/react-router.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "styled-components": [
     {
-      "id": 9,
+      "id": 7,
       "name": "./node_modules/styled-components/dist/styled-components.browser.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -209,7 +81,7 @@
   ],
   "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose": [
     {
-      "id": 10,
+      "id": 8,
       "name": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -217,23 +89,15 @@
   ],
   "redux": [
     {
-      "id": 11,
+      "id": 9,
       "name": "./node_modules/redux/es/redux.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
-  "redux-react-hook": [
-    {
-      "id": 12,
-      "name": "./node_modules/redux-react-hook/dist/index.es.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "react-is": [
     {
-      "id": 13,
+      "id": 10,
       "name": "./node_modules/react-is/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -241,7 +105,7 @@
   ],
   "react-router-dom": [
     {
-      "id": 14,
+      "id": 11,
       "name": "./node_modules/react-router-dom/esm/react-router-dom.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -249,15 +113,23 @@
   ],
   "./../../webpack/buildin/global.js": [
     {
-      "id": 15,
+      "id": 12,
       "name": "./node_modules/webpack/buildin/global.js",
+      "file": "vendors~app.js",
+      "publicPath": "/static/vendors~app.js"
+    }
+  ],
+  "redux-react-hook": [
+    {
+      "id": 13,
+      "name": "./node_modules/redux-react-hook/dist/index.es.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "@babel/runtime/helpers/defineProperty": [
     {
-      "id": 17,
+      "id": 14,
       "name": "./node_modules/@babel/runtime/helpers/defineProperty.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -265,7 +137,7 @@
   ],
   "stylis/stylis.min": [
     {
-      "id": 19,
+      "id": 16,
       "name": "./node_modules/stylis/stylis.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -273,7 +145,7 @@
   ],
   "memoize-one": [
     {
-      "id": 20,
+      "id": 17,
       "name": "./node_modules/memoize-one/dist/memoize-one.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -281,7 +153,7 @@
   ],
   "@babel/runtime/helpers/inheritsLoose": [
     {
-      "id": 21,
+      "id": 18,
       "name": "./node_modules/@babel/runtime/helpers/inheritsLoose.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -289,7 +161,7 @@
   ],
   "path-to-regexp": [
     {
-      "id": 22,
+      "id": 19,
       "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -297,7 +169,7 @@
   ],
   "symbol-observable": [
     {
-      "id": 23,
+      "id": 20,
       "name": "./node_modules/symbol-observable/es/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -305,7 +177,7 @@
   ],
   "lodash/isFunction": [
     {
-      "id": 24,
+      "id": 21,
       "name": "./node_modules/lodash/isFunction.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -313,7 +185,7 @@
   ],
   "object-assign": [
     {
-      "id": 25,
+      "id": 22,
       "name": "./node_modules/object-assign/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -321,7 +193,7 @@
   ],
   "./_Symbol": [
     {
-      "id": 27,
+      "id": 23,
       "name": "./node_modules/lodash/_Symbol.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -329,7 +201,7 @@
   ],
   "react-dom": [
     {
-      "id": 28,
+      "id": 25,
       "name": "./node_modules/react-dom/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -337,7 +209,7 @@
   ],
   "stylis-rule-sheet": [
     {
-      "id": 32,
+      "id": 26,
       "name": "./node_modules/stylis-rule-sheet/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -345,7 +217,7 @@
   ],
   "@emotion/unitless": [
     {
-      "id": 33,
+      "id": 27,
       "name": "./node_modules/@emotion/unitless/dist/unitless.browser.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -353,7 +225,7 @@
   ],
   "gud": [
     {
-      "id": 35,
+      "id": 28,
       "name": "./node_modules/gud/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -361,7 +233,7 @@
   ],
   "hoist-non-react-statics": [
     {
-      "id": 36,
+      "id": 29,
       "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -369,7 +241,7 @@
   ],
   "react-loadable": [
     {
-      "id": 42,
+      "id": 30,
       "name": "./node_modules/react-loadable/lib/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -377,7 +249,7 @@
   ],
   "./ponyfill.js": [
     {
-      "id": 46,
+      "id": 31,
       "name": "./node_modules/symbol-observable/es/ponyfill.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -385,7 +257,7 @@
   ],
   "redux-thunk": [
     {
-      "id": 47,
+      "id": 32,
       "name": "./node_modules/redux-thunk/es/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -393,7 +265,7 @@
   ],
   "@emotion/is-prop-valid": [
     {
-      "id": 49,
+      "id": 33,
       "name": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -401,7 +273,7 @@
   ],
   "merge-anything": [
     {
-      "id": 50,
+      "id": 34,
       "name": "./node_modules/merge-anything/dist/index.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -409,7 +281,7 @@
   ],
   "./cjs/react.production.min.js": [
     {
-      "id": 53,
+      "id": 35,
       "name": "./node_modules/react/cjs/react.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -417,7 +289,7 @@
   ],
   "./cjs/react-dom.production.min.js": [
     {
-      "id": 54,
+      "id": 36,
       "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -425,7 +297,7 @@
   ],
   "scheduler": [
     {
-      "id": 55,
+      "id": 37,
       "name": "./node_modules/scheduler/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -433,23 +305,15 @@
   ],
   "./cjs/scheduler.production.min.js": [
     {
-      "id": 56,
+      "id": 38,
       "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
-  "./dist/react-hot-loader.production.min.js": [
-    {
-      "id": 57,
-      "name": "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "./factoryWithThrowingShims": [
     {
-      "id": 58,
+      "id": 39,
       "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -457,7 +321,7 @@
   ],
   "./lib/ReactPropTypesSecret": [
     {
-      "id": 59,
+      "id": 40,
       "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -465,7 +329,7 @@
   ],
   "./../../process/browser.js": [
     {
-      "id": 60,
+      "id": 41,
       "name": "./node_modules/process/browser.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -473,7 +337,7 @@
   ],
   "./cjs/react-is.production.min.js": [
     {
-      "id": 61,
+      "id": 42,
       "name": "./node_modules/react-is/cjs/react-is.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -481,15 +345,23 @@
   ],
   "isarray": [
     {
-      "id": 62,
+      "id": 43,
       "name": "./node_modules/isarray/index.js",
+      "file": "vendors~app.js",
+      "publicPath": "/static/vendors~app.js"
+    }
+  ],
+  "./../../webpack/buildin/harmony-module.js": [
+    {
+      "id": 44,
+      "name": "./node_modules/webpack/buildin/harmony-module.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "./_baseGetTag": [
     {
-      "id": 63,
+      "id": 45,
       "name": "./node_modules/lodash/_baseGetTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -497,7 +369,7 @@
   ],
   "./_root": [
     {
-      "id": 64,
+      "id": 46,
       "name": "./node_modules/lodash/_root.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -505,7 +377,7 @@
   ],
   "./_freeGlobal": [
     {
-      "id": 65,
+      "id": 47,
       "name": "./node_modules/lodash/_freeGlobal.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -513,7 +385,7 @@
   ],
   "./_getRawTag": [
     {
-      "id": 66,
+      "id": 48,
       "name": "./node_modules/lodash/_getRawTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -521,7 +393,7 @@
   ],
   "./_objectToString": [
     {
-      "id": 67,
+      "id": 49,
       "name": "./node_modules/lodash/_objectToString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -529,7 +401,7 @@
   ],
   "./isObject": [
     {
-      "id": 68,
+      "id": 50,
       "name": "./node_modules/lodash/isObject.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -537,16 +409,8 @@
   ],
   "./Films": [
     {
-      "id": 51,
+      "id": 52,
       "name": "./public/scripts/app/films/Films.js",
-      "file": "2.js",
-      "publicPath": "/static/2.js"
-    }
-  ],
-  "./FilmsRequest": [
-    {
-      "id": 69,
-      "name": "./public/scripts/app/films/FilmsRequest.js",
       "file": "2.js",
       "publicPath": "/static/2.js"
     }

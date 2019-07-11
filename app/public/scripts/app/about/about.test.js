@@ -10,10 +10,6 @@ var _ = _interopRequireDefault(require("./"));
 
 var _sinon = _interopRequireDefault(require("sinon"));
 
-var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
-  return a;
-};
-
 describe('About.jsx', () => {
   it('should pass', () => {
     const Component = (0, _enzyme.mount)(_react.default.createElement(_.default, null));
