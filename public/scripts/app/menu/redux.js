@@ -24,7 +24,7 @@ const initialState = {
     },
     {
       id: 'item5',
-      label: 'Films',
+      label: 'Filmz',
       link: 'films',
     },
   ],
