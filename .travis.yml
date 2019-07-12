@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - '12'
+install:
+  - npm install
+script:
+  - npm test
+  - npm run dist
+deploy:
+  provider: heroku
+  api_key:
+    secure: VN6mYAQ+wiIHmxLYu6N9GcceR9EggWZkwgisWinjplL5pF0062GBWYJ02/wV0i2hx1ARD1mJtx1BKVJpBln5aWQvTZyju/EwL9X69LDjtSeY7zr6s3yb08UuGc6unlyxQ9Xtrurd0K52RBn3F78qrc/of4EYjzTpkl+N7FPYfhnjjSuVumPzGubWkef6MMBIIDPfTs7bA1q0i5Yk+OroexK8hTu1C9IFV+ZheFSrTt+NDq3xb/T+qfWuibDHshXfdd/RAQHvnL5YuDPa+uOskceTS07XfYThy6V3q1rLXqJSMY1s55yI0e3rUBGgNNmV8ZVWaKkJowWfWPq/TM9ZZ7xpE30QXV0Da9XR7C/jA3cFYVT82OlZqdhHM1dtO/GKKeMExA29i013ClZgyy0AVyXeBHDfjznErNc/bA72Q9iuPAmmkHo1zwgDD/d5nyS/VToQdp+dSOeaoE4snR7W5oKdABz0UNYpJ5Qfq6+JJyonJBVgC2CQoBi8e8K6lt/yiAdtIKZ+3VtR0ZbQqG4XzMxnA9/r2RUPKN0LEoftnlJ565GhvxTUkqDRrIrxBAcz3jN8T49XdR52Npe1WsgVcicSnT9qfndkCX9Zc6J9PB/kJj8MCCGrajLJWnNQba3R8RsZ8p90EPdCZ+ugErAL3VuHcUp4jXqwFiJvcV1vCQ8=
+  app: react-redux
+  skip_cleanup: true
