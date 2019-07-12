@@ -1,0 +1,9 @@
+kind: pipeline
+name: react-redux
+
+steps:
+  - name: front
+    image: node
+    commands:
+      - npm install
+      - npm test
