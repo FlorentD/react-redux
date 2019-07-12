@@ -12,10 +12,13 @@ steps:
     image: node
     commands:
       - npm run dist
+
+  - name: add_to_git
+    image: docker:git
       - git add .
       - git commit -m "new release"
 
   - name: deploy
-    image: node
+    image: docker:git
     commands:
       - git push heroku master
