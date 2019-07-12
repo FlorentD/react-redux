@@ -2,8 +2,20 @@ kind: pipeline
 name: react-redux
 
 steps:
-  - name: front
+  - name: test
     image: node
     commands:
       - npm install
       - npm test
+
+  - name: build
+    image: node
+    commands:
+      - npm run dist
+      - git add .
+      - git commit -m "new release"
+
+  - name: deploy
+    image: node
+    commands:
+      - git push heroku master
