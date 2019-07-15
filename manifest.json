@@ -1,0 +1,31 @@
+{
+  "short_name": "RrF",
+  "name": "My ReactRedux-fr",
+  "icons": [
+    {
+      "src": "/image/icon-48.png",
+      "type": "image/jpeg",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/image/icon-96.png",
+      "type": "image/jpeg",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/image/icon-192.png",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/image/icon-512.png",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#99ff99",
+  "theme_color": "#0066ff",
+  "display": "standalone",
+  "orientation": "portrait-primary"
+}

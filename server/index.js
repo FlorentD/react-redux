@@ -12,6 +12,7 @@ const app = express();
 
 app.use(compression());
 app.use('/static', express.static(`${__dirname}/static`));
+app.use('/image', express.static(`${__dirname}/image`));
 
 app.get('/films', handleFilm);
 

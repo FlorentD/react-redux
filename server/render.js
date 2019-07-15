@@ -31,6 +31,7 @@ export function renderFullPage(req, store, context = {}) {
     <!doctype html>
     <html lang="en">
       <head>
+        <link rel="icon" type="image/jpeg" href="/image/icon-48.jpg">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>My SSR APP</title>

@@ -12,13 +12,13 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "predist": "rm -rf app && rm -rf dist && npx babel server --out-dir app/server && npx babel public --out-dir app/public && mkdir dist",
+    "predist": "rm -rf app && rm -rf dist && npx babel server --out-dir app/server && npx babel public --out-dir app/public && mkdir dist && mkdir app/server/image",
     "dist": "webpack --config webpack-prod.config.js --progress --colors && npm run copy",
     "postdist": "rm -fr dist",
     "prettier": "prettier --single-quote --trailing-comma es5 --write",
-    "copy": "cp dist/*.js app/server/static/ && cp dist/*.json app/server/static/",
+    "copy": "cp dist/*.js app/server/static/ && cp dist/*.json app/server/static/ && cp server/image/*.jpg app/server/image/",
     "test": "jest --config tests/jest.config.json",
-    "dev": "clear && webpack-dev-server",
+    "dev": "clear && webpack-dev-server --https",
     "deploy": "npm run test && npm run dist && git push heroku master",
     "start": "node ./app/server/index.js",
     "ssr": "nodemon --exec babel-node server/index.js"

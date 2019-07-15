@@ -23,6 +23,7 @@ var _reactLoadable = _interopRequireDefault(require("react-loadable"));
 const app = (0, _express.default)();
 app.use((0, _compression.default)());
 app.use('/static', _express.default.static(`${__dirname}/static`));
+app.use('/image', _express.default.static(`${__dirname}/image`));
 app.get('/films', _handleFilms.handleFilm);
 app.get('*', (req, res) => {
   _logger.default.info(req.url);
