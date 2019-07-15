@@ -35,6 +35,7 @@ export function renderFullPage(req, store, context = {}) {
         <link rel="manifest" href="/static/manifest.json">
         <meta charset="utf-8" />
         <meta name="theme-color" content="#0066ff"/>
+        <meta name="description" content="My tests to get the perfect webapp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>My SSR APP</title>
         ${styleTags}
