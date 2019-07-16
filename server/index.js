@@ -21,6 +21,9 @@ app.get('*', (req, res) => {
   if (req.url === '/robots.txt') {
     return res.status(300).sendFile(`${__dirname}/robots.txt`);
   }
+  if(req.url === '/sw.js') {
+    return res.status(200).sendFile(`${__dirname}/sw.js`);
+  }
   const store = create();
   res.status(200).send(renderFullPage(req, store));
 });
