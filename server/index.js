@@ -21,8 +21,14 @@ app.get('*', (req, res) => {
   if (req.url === '/robots.txt') {
     return res.status(300).sendFile(`${__dirname}/robots.txt`);
   }
-  if(req.url === '/sw.js') {
+  if (req.url === '/sw.js') {
     return res.status(200).sendFile(`${__dirname}/sw.js`);
+  }
+  if (req.url === '/404.html') {
+    return res.status(404).sendFile(`${__dirname}/static/404.html`);
+  }
+  if (req.url === '/offline.html') {
+    return res.status(503).sendFile(`${__dirname}/static/offline.html`);
   }
   const store = create();
   res.status(200).send(renderFullPage(req, store));
