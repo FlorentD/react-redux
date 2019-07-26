@@ -31,6 +31,7 @@
     ]
   },
   "dependencies": {
+    "body-parser": "1.19.0",
     "compression": "1.7.4",
     "express": "4.17.1",
     "isomorphic-fetch": "2.2.1",
@@ -49,6 +50,7 @@
     "reselect": "4.0.0",
     "restify": "8.3.3",
     "styled-components": "4.3.2",
+    "web-push": "3.3.5",
     "winston": "3.2.1"
   },
   "devDependencies": {

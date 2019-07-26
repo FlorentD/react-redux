@@ -31,3 +31,11 @@ if (workbox) {
 } else {
   console.log(`Boo! Workbox didn't load 😬`);
 }
+
+self.addEventListener('push', event => {
+  event.waitUntil(
+    self.registration.showNotification('ReactRedux-FR', {
+      body: 'Brand new notification !',
+    })
+  );
+});
