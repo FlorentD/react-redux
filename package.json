@@ -19,7 +19,7 @@
     "copy": "cp dist/*.js app/server/static/ && cp dist/*.json app/server/static/ && cp server/static/manifest.json app/server/static && cp server/image/*.png app/server/image/ && cp server/static/*.html app/server/static && cp server/static/*.css app/server/static",
     "build": "rm -rf dist && webpack --config webpack-prod.config.js && cp dist/*.* server/static",
     "test": "jest --config tests/jest.config.json",
-    "dev": "clear && webpack-dev-server --https",
+    "dev": "clear && webpack-dev-server",
     "deploy": "npm run test && npm run dist && git push heroku master",
     "start": "node ./app/server/index.js",
     "ssr": "nodemon --exec babel-node server/index.js"
@@ -33,6 +33,7 @@
   "dependencies": {
     "body-parser": "1.19.0",
     "compression": "1.7.4",
+    "dexie": "2.0.4",
     "express": "4.17.1",
     "isomorphic-fetch": "2.2.1",
     "lodash": "4.17.15",
