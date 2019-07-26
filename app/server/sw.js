@@ -1,33 +1,24 @@
 "use strict";
 
-const version = '1';
-const cacheName = `reactreact-fr-${version}`;
-self.addEventListener('install', event => {
-  event.waitUntil(caches.open(cacheName).then(function (cache) {
-    return cache.addAll(['/offline.html', '/404.html']);
-  }));
-});
-self.addEventListener('activate', event => {
-  console.log('Activation ok !', event);
-});
-self.addEventListener('fetch', event => {
-  console.log('Fetching:', event.request.url);
-  event.respondWith(caches.match(event.request).then(response => {
-    if (response) {
-      return response;
-    }
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
-    return fetch(event.request).then(response => {
-      if (response.status === 404) {
-        return caches.match('/404.html');
-      }
-
-      caches.open(cacheName).then(cache => {
-        return cache.add(event.request.url);
-      });
-      return response;
-    });
-  }).catch(() => {
-    return caches.match('/offline.html');
+if (workbox) {
+  console.log(`Yay! Workbox is loaded 🎉`);
+  workbox.precaching.precacheAndRoute(['/static/app.css', {
+    url: '/index.html',
+    revision: '383676'
+  }]);
+  workbox.routing.registerRoute(/\.js$/, new workbox.strategies.NetworkFirst());
+  workbox.routing.registerRoute(/\.css$/, new workbox.strategies.StaleWhileRevalidate({
+    cacheName: 'css-cache'
   }));
-});
+  workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|svg|gif)$/, new workbox.strategies.CacheFirst({
+    cacheName: 'image-cache',
+    plugins: [new workbox.expiration.Plugin({
+      maxEntries: 20,
+      maxAgeSeconds: 7 * 24 * 60 * 60
+    })]
+  }));
+} else {
+  console.log(`Boo! Workbox didn't load 😬`);
+}

@@ -37,11 +37,11 @@ app.get('*', (req, res) => {
   }
 
   if (req.url === '/404.html') {
-    return res.status(404).sendFile(`${__dirname}/static/404.html`);
+    return res.status(200).sendFile(`${__dirname}/static/404.html`);
   }
 
   if (req.url === '/offline.html') {
-    return res.status(503).sendFile(`${__dirname}/static/offline.html`);
+    return res.status(200).sendFile(`${__dirname}/static/offline.html`);
   }
 
   const store = (0, _store.create)();

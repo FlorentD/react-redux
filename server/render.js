@@ -31,12 +31,21 @@ export function renderFullPage(req, store, context = {}) {
     <!doctype html>
     <html lang="en">
       <head>
+         <script> 
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js');
+            }
+        </script>
         <link rel="icon" type="image/jpeg" href="/image/icon-48.jpg">
         <link rel="manifest" href="/static/manifest.json">
         <meta charset="utf-8" />
         <meta name="theme-color" content="#0066ff"/>
         <meta name="description" content="My tests to get the perfect webapp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link
+          rel="stylesheet"
+          href="/static/app.css"
+        />
         <title>My SSR APP</title>
         ${styleTags}
       </head>

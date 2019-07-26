@@ -7,17 +7,9 @@
       "publicPath": "/static/app.js"
     }
   ],
-  "./webWorker": [
-    {
-      "id": 35,
-      "name": "./public/scripts/webWorker.js",
-      "file": "app.js",
-      "publicPath": "/static/app.js"
-    }
-  ],
   "./public/scripts/app": [
     {
-      "id": 52,
+      "id": 51,
       "name": "./public/scripts/app.js",
       "file": "app.js",
       "publicPath": "/static/app.js"
@@ -289,7 +281,7 @@
   ],
   "./cjs/react.production.min.js": [
     {
-      "id": 36,
+      "id": 35,
       "name": "./node_modules/react/cjs/react.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -297,7 +289,7 @@
   ],
   "./cjs/react-dom.production.min.js": [
     {
-      "id": 37,
+      "id": 36,
       "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -305,7 +297,7 @@
   ],
   "scheduler": [
     {
-      "id": 38,
+      "id": 37,
       "name": "./node_modules/scheduler/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -313,7 +305,7 @@
   ],
   "./cjs/scheduler.production.min.js": [
     {
-      "id": 39,
+      "id": 38,
       "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -321,7 +313,7 @@
   ],
   "./factoryWithThrowingShims": [
     {
-      "id": 40,
+      "id": 39,
       "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -329,7 +321,7 @@
   ],
   "./lib/ReactPropTypesSecret": [
     {
-      "id": 41,
+      "id": 40,
       "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -337,7 +329,7 @@
   ],
   "./../../process/browser.js": [
     {
-      "id": 42,
+      "id": 41,
       "name": "./node_modules/process/browser.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -345,7 +337,7 @@
   ],
   "./cjs/react-is.production.min.js": [
     {
-      "id": 43,
+      "id": 42,
       "name": "./node_modules/react-is/cjs/react-is.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -353,7 +345,7 @@
   ],
   "isarray": [
     {
-      "id": 44,
+      "id": 43,
       "name": "./node_modules/isarray/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -361,7 +353,7 @@
   ],
   "./../../webpack/buildin/harmony-module.js": [
     {
-      "id": 45,
+      "id": 44,
       "name": "./node_modules/webpack/buildin/harmony-module.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -369,7 +361,7 @@
   ],
   "./_baseGetTag": [
     {
-      "id": 46,
+      "id": 45,
       "name": "./node_modules/lodash/_baseGetTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -377,7 +369,7 @@
   ],
   "./_root": [
     {
-      "id": 47,
+      "id": 46,
       "name": "./node_modules/lodash/_root.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -385,7 +377,7 @@
   ],
   "./_freeGlobal": [
     {
-      "id": 48,
+      "id": 47,
       "name": "./node_modules/lodash/_freeGlobal.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -393,7 +385,7 @@
   ],
   "./_getRawTag": [
     {
-      "id": 49,
+      "id": 48,
       "name": "./node_modules/lodash/_getRawTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -401,7 +393,7 @@
   ],
   "./_objectToString": [
     {
-      "id": 50,
+      "id": 49,
       "name": "./node_modules/lodash/_objectToString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -409,7 +401,7 @@
   ],
   "./isObject": [
     {
-      "id": 51,
+      "id": 50,
       "name": "./node_modules/lodash/isObject.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -417,7 +409,7 @@
   ],
   "./Films": [
     {
-      "id": 53,
+      "id": 52,
       "name": "./public/scripts/app/films/Films.js",
       "file": "2.js",
       "publicPath": "/static/2.js"

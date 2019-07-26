@@ -2,8 +2,6 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("./webWorker");
-
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = require("react-dom");

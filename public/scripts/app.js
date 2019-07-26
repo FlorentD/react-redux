@@ -1,4 +1,3 @@
-import './webWorker';
 import React from 'react';
 import { hydrate } from 'react-dom';
 import { StoreContext } from 'redux-react-hook';
