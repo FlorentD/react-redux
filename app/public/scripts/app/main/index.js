@@ -9,12 +9,27 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _semanticUiReact = require("semantic-ui-react");
+
 var _push = require("../push");
 
+const NotificationButton = _styledComponents.default.div.withConfig({
+  displayName: "main__NotificationButton",
+  componentId: "sc-14cy0bs-0"
+})(["margin:50px;"]);
+
 const Main = () => {
-  return _react.default.createElement("div", {
-    className: "main"
-  }, _react.default.createElement("h1", null, "Main"), _react.default.createElement("button", {
+  return _react.default.createElement(_semanticUiReact.Header, {
+    as: "h2",
+    icon: true,
+    textAlign: "center"
+  }, _react.default.createElement(_semanticUiReact.Icon, {
+    name: "users",
+    circular: true
+  }), _react.default.createElement(_semanticUiReact.Header.Content, null, "Main"), _react.default.createElement(NotificationButton, null, _react.default.createElement(_semanticUiReact.Button, {
+    positive: true,
     onClick: () => {
       fetch('/sendNotification', {
         method: 'post',
@@ -26,7 +41,7 @@ const Main = () => {
         })
       }).then(() => console.info('notification sent'));
     }
-  }, "Send my a notification please !"));
+  }, "Send my a notification please !")));
 };
 
 var _default = Main;

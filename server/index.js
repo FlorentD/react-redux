@@ -41,6 +41,9 @@ app.get('*', (req, res) => {
   if (req.url === '/sw.js') {
     return res.status(200).sendFile(`${__dirname}/sw.js`);
   }
+  if (req.url === '/favicon.ico') {
+    return res.status(200).sendFile(`${__dirname}/favicon.ico`);
+  }
   if (req.url === '/404.html') {
     return res.status(200).sendFile(`${__dirname}/static/404.html`);
   }

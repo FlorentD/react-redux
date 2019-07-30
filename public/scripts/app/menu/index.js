@@ -1,22 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useMappedState } from 'redux-react-hook';
-import Menu from './Menu';
-import MenuItem from './MenuItem';
+import { Menu } from 'semantic-ui-react';
 import { getMenu } from './redux';
+import { Link } from 'react-router-dom';
 
 const PageMenu = () => {
   return (
     <Menu>
       {useMappedState(getMenu).map(({ id, label, link }) => (
-        <MenuItem key={id} label={label} link={link} />
+        <Menu.Item key={id} name={id}>
+          <Link to={link}>{label}</Link>
+        </Menu.Item>
       ))}
     </Menu>
   );
-};
-
-PageMenu.propTypes = {
-  menu: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default PageMenu;

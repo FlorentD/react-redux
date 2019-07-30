@@ -11,7 +11,10 @@ module.exports = {
     publicPath: '/',
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: [
+      path.join(__dirname, 'public'),
+      path.join(__dirname, 'server'),
+    ],
     watchContentBase: true,
     compress: true,
     port: 3000,
@@ -33,8 +36,8 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': '"developpment"'
-      }
-    })
+        NODE_ENV: '"developpment"',
+      },
+    }),
   ],
 };

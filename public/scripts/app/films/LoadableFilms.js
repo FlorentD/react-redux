@@ -1,10 +1,17 @@
 import React from 'react';
 import Loadable from 'react-loadable';
+import { Segment, Dimmer, Loader } from 'semantic-ui-react';
 
 const LoadableFilms = Loadable({
-  loader: () => import('./Films').catch(e => console.log(e)),
+  loader: () => import('./Films').catch(e => console.error(e)),
   loading() {
-    return <div>Chargement</div>;
+    return (
+      <Segment>
+        <Dimmer active>
+          <Loader indeterminate>Loading</Loader>
+        </Dimmer>
+      </Segment>
+    );
   },
 });
 

@@ -13,13 +13,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactLoadable = _interopRequireDefault(require("react-loadable"));
 
+var _semanticUiReact = require("semantic-ui-react");
+
 const LoadableFilms = (0, _reactLoadable.default)({
-  loader: () => Promise.resolve().then(() => (0, _interopRequireWildcard2.default)(require('./Films'))).catch(e => console.log(e)),
+  loader: () => Promise.resolve().then(() => (0, _interopRequireWildcard2.default)(require('./Films'))).catch(e => console.error(e)),
   modules: ['./Films'],
   webpack: () => [require.resolveWeak('./Films')],
 
   loading() {
-    return _react.default.createElement("div", null, "Chargement");
+    return _react.default.createElement(_semanticUiReact.Segment, null, _react.default.createElement(_semanticUiReact.Dimmer, {
+      active: true
+    }, _react.default.createElement(_semanticUiReact.Loader, {
+      indeterminate: true
+    }, "Loading")));
   }
 
 });

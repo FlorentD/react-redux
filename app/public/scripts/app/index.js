@@ -15,6 +15,8 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _semanticUiReact = require("semantic-ui-react");
+
 var _menu = _interopRequireDefault(require("./menu"));
 
 var _main = _interopRequireDefault(require("./main"));
@@ -28,6 +30,10 @@ var _NoMatch = _interopRequireDefault(require("./NoMatch"));
 var _LoadableFilms = _interopRequireDefault(require("./films/LoadableFilms"));
 
 const GlobalStyle = _styledComponents.createGlobalStyle`
+html, body, #body {
+  height: 100%;
+}
+
 ul {
   list-style: none;
 }
@@ -40,13 +46,13 @@ a {
 }
 `;
 
-const Container = _styledComponents.default.div.withConfig({
-  displayName: "app__Container",
+const Layout = _styledComponents.default.div.withConfig({
+  displayName: "app__Layout",
   componentId: "vbjlqm-0"
-})(["padding:10px;background-color:#f0efef;color:black;"]);
+})(["padding:10px;background-image:url('/image/background.jpg');background-position:center;background-size:cover;background-attachment:fixed;background-color:#f0efef;color:black;height:100%;"]);
 
 let App = () => {
-  return _react.default.createElement(Container, null, _react.default.createElement(GlobalStyle, null), _react.default.createElement(_menu.default, null), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement(Layout, null, _react.default.createElement(GlobalStyle, null), _react.default.createElement(_menu.default, null), _react.default.createElement(_semanticUiReact.Container, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/",
     component: _main.default
@@ -61,7 +67,7 @@ let App = () => {
     component: _LoadableFilms.default
   }), _react.default.createElement(_reactRouterDom.Route, {
     component: _NoMatch.default
-  })));
+  }))));
 };
 
 if (process.env.NODE_ENV !== 'production') {
