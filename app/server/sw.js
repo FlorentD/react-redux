@@ -6,7 +6,7 @@ if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
   workbox.precaching.precacheAndRoute(['/static/app.css', {
     url: '/index.html',
-    revision: '383676'
+    revision: '2'
   }]);
   workbox.routing.registerRoute(/\.js$/, new workbox.strategies.NetworkFirst());
   workbox.routing.registerRoute(/\.css$/, new workbox.strategies.StaleWhileRevalidate({
