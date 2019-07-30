@@ -35,7 +35,10 @@ if (workbox) {
 self.addEventListener('push', event => {
   event.waitUntil(
     self.registration.showNotification('ReactRedux-FR', {
-      body: 'Brand new notification !',
+      lang: 'en',
+      icon: '/image/icon-96.png',
+      body: 'Hey you ! You got a notification !',
+      vibrate: [500, 100, 500],
     })
   );
 });

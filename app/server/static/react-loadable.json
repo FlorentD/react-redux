@@ -431,7 +431,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "../toInteger": [
+  "./toInteger": [
     {
       "id": 52,
       "name": "./node_modules/lodash/toInteger.js",
@@ -855,7 +855,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "lodash/isString": [
+  "./isString": [
     {
       "id": 108,
       "name": "./node_modules/lodash/isString.js",
@@ -2127,7 +2127,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "./deburr": [
+  "lodash/deburr": [
     {
       "id": 277,
       "name": "./node_modules/lodash/deburr.js",
@@ -2239,7 +2239,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "./findIndex": [
+  "lodash/findIndex": [
     {
       "id": 291,
       "name": "./node_modules/lodash/findIndex.js",
@@ -2279,7 +2279,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "../difference": [
+  "lodash/difference": [
     {
       "id": 296,
       "name": "./node_modules/lodash/difference.js",
@@ -2423,7 +2423,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "lodash/values": [
+  "./values": [
     {
       "id": 314,
       "name": "./node_modules/lodash/values.js",

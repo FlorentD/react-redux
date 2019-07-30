@@ -6,7 +6,7 @@ if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
   workbox.precaching.precacheAndRoute(['/static/app.css', {
     url: '/index.html',
-    revision: '2'
+    revision: '383676'
   }]);
   workbox.routing.registerRoute(/\.js$/, new workbox.strategies.NetworkFirst());
   workbox.routing.registerRoute(/\.css$/, new workbox.strategies.StaleWhileRevalidate({
@@ -25,6 +25,9 @@ if (workbox) {
 
 self.addEventListener('push', event => {
   event.waitUntil(self.registration.showNotification('ReactRedux-FR', {
-    body: 'Brand new notification !'
+    lang: 'en',
+    icon: '/image/icon-96.png',
+    body: 'Hey you ! You got a notification !',
+    vibrate: [500, 100, 500]
   }));
 });
