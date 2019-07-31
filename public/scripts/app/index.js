@@ -7,6 +7,7 @@ import Main from './main';
 import Why from './why';
 import About from './about';
 import NoMatch from './NoMatch';
+import CheckConnection from './CheckConnection';
 import LoadableFilms from './films/LoadableFilms';
 
 const GlobalStyle = createGlobalStyle`
@@ -42,6 +43,7 @@ let App = () => {
     <Layout>
       <GlobalStyle />
       <Menu />
+      <CheckConnection />
       <Container>
         <Switch>
           <Route exact path="/" component={Main} />
