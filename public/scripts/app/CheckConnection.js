@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Message } from 'semantic-ui-react';
 
 const CheckConnection = () => {
+  if (typeof navigator === 'undefined') return null
   const [isOnline, online] = useState(navigator.onLine);
   const [hasBeenOffline, offline] = useState(false);
   const [showWelcomeBackMessage, welcomeBackMessage] = useState(false);

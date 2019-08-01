@@ -27,6 +27,8 @@ var _about = _interopRequireDefault(require("./about"));
 
 var _NoMatch = _interopRequireDefault(require("./NoMatch"));
 
+var _CheckConnection = _interopRequireDefault(require("./CheckConnection"));
+
 var _LoadableFilms = _interopRequireDefault(require("./films/LoadableFilms"));
 
 const GlobalStyle = _styledComponents.createGlobalStyle`
@@ -52,7 +54,7 @@ const Layout = _styledComponents.default.div.withConfig({
 })(["padding:10px;background-image:url('/image/background.jpg');background-position:center;background-size:cover;background-attachment:fixed;background-color:#f0efef;color:black;height:100%;"]);
 
 let App = () => {
-  return _react.default.createElement(Layout, null, _react.default.createElement(GlobalStyle, null), _react.default.createElement(_menu.default, null), _react.default.createElement(_semanticUiReact.Container, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement(Layout, null, _react.default.createElement(GlobalStyle, null), _react.default.createElement(_menu.default, null), _react.default.createElement(_CheckConnection.default, null), _react.default.createElement(_semanticUiReact.Container, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/",
     component: _main.default
