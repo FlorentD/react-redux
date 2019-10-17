@@ -13,7 +13,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = require("styled-components");
 
-var _reduxReactHook = require("redux-react-hook");
+var _reactRedux = require("react-redux");
 
 var _reactRouter = require("react-router");
 
@@ -44,8 +44,8 @@ function renderFullPage(req, store, context = {}) {
   }, _react.default.createElement(_reactRouter.StaticRouter, {
     location: req.url,
     context: fullContext
-  }, _react.default.createElement(_reduxReactHook.StoreContext.Provider, {
-    value: store
+  }, _react.default.createElement(_reactRedux.Provider, {
+    store: store
   }, _react.default.createElement(_reactLoadable.default.Capture, {
     report: moduleName => modules.push(moduleName)
   }, _react.default.createElement(_index.default, null))))));

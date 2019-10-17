@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = require("react");
 
-var _reduxReactHook = require("redux-react-hook");
+var _reactRedux = require("react-redux");
 
 var _reactRouter = require("react-router");
 
@@ -17,11 +17,11 @@ const FilmsRequest = ({
   children,
   staticContext
 }) => {
-  const dispatch = (0, _reduxReactHook.useDispatch)();
+  const dispatch = (0, _reactRedux.useDispatch)();
   (0, _react.useEffect)(() => {
     if (!staticContext || !staticContext.fromServer) dispatch((0, _redux.fetchFilms)());
   }, []);
-  return children((0, _reduxReactHook.useMappedState)(_redux.getFilms));
+  return children((0, _reactRedux.useSelector)(_redux.getFilms));
 };
 
 var _default = (0, _reactRouter.withRouter)(FilmsRequest);

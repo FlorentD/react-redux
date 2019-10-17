@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import { StoreContext } from 'redux-react-hook';
+import { Provider } from 'react-redux';
 import { StaticRouter as Router } from 'react-router';
 import { renderToString } from 'react-dom/server';
 import Loadable from 'react-loadable';
@@ -16,11 +16,11 @@ export function renderFullPage(req, store, context = {}) {
   const html = renderToString(
     <StyleSheetManager sheet={sheet.instance}>
       <Router location={req.url} context={fullContext}>
-        <StoreContext.Provider value={store}>
+        <Provider store={store}>
           <Loadable.Capture report={moduleName => modules.push(moduleName)}>
             <App />
           </Loadable.Capture>
-        </StoreContext.Provider>
+        </Provider>
       </Router>
     </StyleSheetManager>
   );

@@ -1,15 +1,16 @@
+import './webWorker';
 import React from 'react';
 import { hydrate } from 'react-dom';
-import { StoreContext } from 'redux-react-hook';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './app/index';
 import store from './store';
 
 hydrate(
   <Router>
-    <StoreContext.Provider value={store}>
+    <Provider store={store}>
       <App />
-    </StoreContext.Provider>
+    </Provider>
   </Router>,
   document.getElementById('body')
 );

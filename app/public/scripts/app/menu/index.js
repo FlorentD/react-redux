@@ -9,7 +9,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reduxReactHook = require("redux-react-hook");
+var _reactRedux = require("react-redux");
 
 var _semanticUiReact = require("semantic-ui-react");
 
@@ -18,7 +18,7 @@ var _redux = require("./redux");
 var _reactRouterDom = require("react-router-dom");
 
 const PageMenu = () => {
-  return _react.default.createElement(_semanticUiReact.Menu, null, (0, _reduxReactHook.useMappedState)(_redux.getMenu).map(({
+  return _react.default.createElement(_semanticUiReact.Menu, null, (0, _reactRedux.useSelector)(_redux.getMenu).map(({
     id,
     label,
     link

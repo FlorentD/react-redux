@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch, useMappedState } from 'redux-react-hook';
+import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router';
 import { fetchFilms, getFilms } from './redux';
 
@@ -8,7 +8,7 @@ const FilmsRequest = ({ children, staticContext }) => {
   useEffect(() => {
     if (!staticContext || !staticContext.fromServer) dispatch(fetchFilms());
   }, []);
-  return children(useMappedState(getFilms));
+  return children(useSelector(getFilms));
 };
 
 export default withRouter(FilmsRequest);
