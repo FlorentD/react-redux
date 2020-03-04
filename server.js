@@ -1,7 +1,23 @@
 const express = require('express');
 const compression = require('compression');
-const logger = require('winston');
+const winston = require('winston');
 const app = express();
+
+winston.format.combine(
+    winston.format.colorize(),
+    winston.format.json()
+);
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.json(),
+  defaultMeta: { service: 'user-service' },
+  transports: [
+    new winston.transports.Console({
+      format: winston.format.simple()
+    })
+  ]
+});
 
 app.use(compression());
 app.use(express.static(__dirname + '/dist'));

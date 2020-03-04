@@ -1,7 +1,7 @@
 {
   "./films/redux": [
     {
-      "id": 177,
+      "id": 174,
       "name": "./public/scripts/app/films/redux.js",
       "file": "app.js",
       "publicPath": "/static/app.js"
@@ -9,7 +9,7 @@
   ],
   "./webWorker": [
     {
-      "id": 205,
+      "id": 203,
       "name": "./public/scripts/webWorker.js",
       "file": "app.js",
       "publicPath": "/static/app.js"
@@ -17,7 +17,7 @@
   ],
   "./public/scripts/app": [
     {
-      "id": 379,
+      "id": 377,
       "name": "./public/scripts/app.js",
       "file": "app.js",
       "publicPath": "/static/app.js"
@@ -255,17 +255,9 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "invariant": [
-    {
-      "id": 29,
-      "name": "./node_modules/invariant/browser.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
   "@babel/runtime/helpers/objectSpread": [
     {
-      "id": 30,
+      "id": 29,
       "name": "./node_modules/@babel/runtime/helpers/objectSpread.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -273,7 +265,7 @@
   ],
   "lodash/keys": [
     {
-      "id": 31,
+      "id": 30,
       "name": "./node_modules/lodash/keys.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -281,8 +273,16 @@
   ],
   "react-router": [
     {
-      "id": 32,
+      "id": 31,
       "name": "./node_modules/react-router/esm/react-router.js",
+      "file": "vendors~app.js",
+      "publicPath": "/static/vendors~app.js"
+    }
+  ],
+  "hoist-non-react-statics": [
+    {
+      "id": 32,
+      "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
@@ -327,23 +327,9 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "react-is": [
-    {
-      "id": 38,
-      "name": "./node_modules/react-is/index.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    },
-    {
-      "id": 178,
-      "name": "./node_modules/react-redux/node_modules/react-is/index.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
   "./../../webpack/buildin/global.js": [
     {
-      "id": 39,
+      "id": 38,
       "name": "./node_modules/webpack/buildin/global.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -351,7 +337,7 @@
   ],
   "./_baseIteratee": [
     {
-      "id": 40,
+      "id": 39,
       "name": "./node_modules/lodash/_baseIteratee.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -359,7 +345,7 @@
   ],
   "./_Symbol": [
     {
-      "id": 41,
+      "id": 40,
       "name": "./node_modules/lodash/_Symbol.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -367,7 +353,7 @@
   ],
   "./_getTag": [
     {
-      "id": 42,
+      "id": 41,
       "name": "./node_modules/lodash/_getTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -375,7 +361,7 @@
   ],
   "./toString": [
     {
-      "id": 43,
+      "id": 42,
       "name": "./node_modules/lodash/toString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -383,7 +369,7 @@
   ],
   "./_toKey": [
     {
-      "id": 44,
+      "id": 43,
       "name": "./node_modules/lodash/_toKey.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -391,8 +377,22 @@
   ],
   "./htmlPropsUtils": [
     {
-      "id": 45,
+      "id": 44,
       "name": "./node_modules/semantic-ui-react/dist/es/lib/htmlPropsUtils.js",
+      "file": "vendors~app.js",
+      "publicPath": "/static/vendors~app.js"
+    }
+  ],
+  "react-is": [
+    {
+      "id": 45,
+      "name": "./node_modules/react-is/index.js",
+      "file": "vendors~app.js",
+      "publicPath": "/static/vendors~app.js"
+    },
+    {
+      "id": 175,
+      "name": "./node_modules/react-redux/node_modules/react-is/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
@@ -461,7 +461,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "../toInteger": [
+  "./toInteger": [
     {
       "id": 54,
       "name": "./node_modules/lodash/toInteger.js",
@@ -477,17 +477,9 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "hoist-non-react-statics": [
-    {
-      "id": 56,
-      "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
   "styled-components": [
     {
-      "id": 57,
+      "id": 56,
       "name": "./node_modules/styled-components/dist/styled-components.browser.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -495,7 +487,7 @@
   ],
   "./_ListCache": [
     {
-      "id": 59,
+      "id": 58,
       "name": "./node_modules/lodash/_ListCache.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -503,7 +495,7 @@
   ],
   "./_assocIndexOf": [
     {
-      "id": 60,
+      "id": 59,
       "name": "./node_modules/lodash/_assocIndexOf.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -511,7 +503,7 @@
   ],
   "./eq": [
     {
-      "id": 61,
+      "id": 60,
       "name": "./node_modules/lodash/eq.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -519,7 +511,7 @@
   ],
   "./_nativeCreate": [
     {
-      "id": 62,
+      "id": 61,
       "name": "./node_modules/lodash/_nativeCreate.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -527,7 +519,7 @@
   ],
   "./_getMapData": [
     {
-      "id": 63,
+      "id": 62,
       "name": "./node_modules/lodash/_getMapData.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -535,7 +527,7 @@
   ],
   "./_SetCache": [
     {
-      "id": 64,
+      "id": 63,
       "name": "./node_modules/lodash/_SetCache.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -543,7 +535,7 @@
   ],
   "./_cacheHas": [
     {
-      "id": 65,
+      "id": 64,
       "name": "./node_modules/lodash/_cacheHas.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -551,7 +543,7 @@
   ],
   "./isArguments": [
     {
-      "id": 66,
+      "id": 65,
       "name": "./node_modules/lodash/isArguments.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -559,7 +551,7 @@
   ],
   "./isBuffer": [
     {
-      "id": 67,
+      "id": 66,
       "name": "./node_modules/lodash/isBuffer.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -567,7 +559,7 @@
   ],
   "./_isIndex": [
     {
-      "id": 68,
+      "id": 67,
       "name": "./node_modules/lodash/_isIndex.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -575,7 +567,7 @@
   ],
   "./_isPrototype": [
     {
-      "id": 69,
+      "id": 68,
       "name": "./node_modules/lodash/_isPrototype.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -583,7 +575,7 @@
   ],
   "./_baseEach": [
     {
-      "id": 70,
+      "id": 69,
       "name": "./node_modules/lodash/_baseEach.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -591,7 +583,7 @@
   ],
   "./_apply": [
     {
-      "id": 71,
+      "id": 70,
       "name": "./node_modules/lodash/_apply.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -599,7 +591,7 @@
   ],
   "./_arrayIncludes": [
     {
-      "id": 72,
+      "id": 71,
       "name": "./node_modules/lodash/_arrayIncludes.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -607,7 +599,7 @@
   ],
   "./_arrayEach": [
     {
-      "id": 73,
+      "id": 72,
       "name": "./node_modules/lodash/_arrayEach.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -615,7 +607,7 @@
   ],
   "./_createCtor": [
     {
-      "id": 74,
+      "id": 73,
       "name": "./node_modules/lodash/_createCtor.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -623,7 +615,7 @@
   ],
   "./_baseCreate": [
     {
-      "id": 75,
+      "id": 74,
       "name": "./node_modules/lodash/_baseCreate.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -631,7 +623,7 @@
   ],
   "./_copyArray": [
     {
-      "id": 76,
+      "id": 75,
       "name": "./node_modules/lodash/_copyArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -639,7 +631,7 @@
   ],
   "./_copyObject": [
     {
-      "id": 77,
+      "id": 76,
       "name": "./node_modules/lodash/_copyObject.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -647,7 +639,7 @@
   ],
   "react-redux": [
     {
-      "id": 78,
+      "id": 77,
       "name": "./node_modules/react-redux/es/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -655,7 +647,7 @@
   ],
   "./getElementType": [
     {
-      "id": 79,
+      "id": 78,
       "name": "./node_modules/semantic-ui-react/dist/es/lib/getElementType.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -663,7 +655,7 @@
   ],
   "./getUnhandledProps": [
     {
-      "id": 80,
+      "id": 79,
       "name": "./node_modules/semantic-ui-react/dist/es/lib/getUnhandledProps.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -671,7 +663,7 @@
   ],
   "lodash/isUndefined": [
     {
-      "id": 81,
+      "id": 80,
       "name": "./node_modules/lodash/isUndefined.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -679,7 +671,7 @@
   ],
   "@babel/runtime/helpers/esm/typeof": [
     {
-      "id": 82,
+      "id": 81,
       "name": "./node_modules/@babel/runtime/helpers/esm/typeof.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -687,7 +679,7 @@
   ],
   "../Label/Label": [
     {
-      "id": 83,
+      "id": 82,
       "name": "./node_modules/semantic-ui-react/dist/es/elements/Label/Label.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -695,7 +687,7 @@
   ],
   "./_Stack": [
     {
-      "id": 86,
+      "id": 85,
       "name": "./node_modules/lodash/_Stack.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -703,7 +695,7 @@
   ],
   "./_Map": [
     {
-      "id": 87,
+      "id": 86,
       "name": "./node_modules/lodash/_Map.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -711,7 +703,7 @@
   ],
   "./_MapCache": [
     {
-      "id": 88,
+      "id": 87,
       "name": "./node_modules/lodash/_MapCache.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -719,7 +711,7 @@
   ],
   "./_setToArray": [
     {
-      "id": 89,
+      "id": 88,
       "name": "./node_modules/lodash/_setToArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -727,7 +719,7 @@
   ],
   "./_arrayPush": [
     {
-      "id": 90,
+      "id": 89,
       "name": "./node_modules/lodash/_arrayPush.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -735,7 +727,7 @@
   ],
   "./_getSymbols": [
     {
-      "id": 91,
+      "id": 90,
       "name": "./node_modules/lodash/_getSymbols.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -743,7 +735,7 @@
   ],
   "./../webpack/buildin/module.js": [
     {
-      "id": 92,
+      "id": 91,
       "name": "./node_modules/webpack/buildin/module.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -751,7 +743,7 @@
   ],
   "./isTypedArray": [
     {
-      "id": 93,
+      "id": 92,
       "name": "./node_modules/lodash/isTypedArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -759,7 +751,7 @@
   ],
   "./isLength": [
     {
-      "id": 94,
+      "id": 93,
       "name": "./node_modules/lodash/isLength.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -767,7 +759,7 @@
   ],
   "./_nodeUtil": [
     {
-      "id": 95,
+      "id": 94,
       "name": "./node_modules/lodash/_nodeUtil.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -775,7 +767,7 @@
   ],
   "./_baseKeys": [
     {
-      "id": 96,
+      "id": 95,
       "name": "./node_modules/lodash/_baseKeys.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -783,7 +775,7 @@
   ],
   "./_baseGet": [
     {
-      "id": 97,
+      "id": 96,
       "name": "./node_modules/lodash/_baseGet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -791,7 +783,7 @@
   ],
   "./_castPath": [
     {
-      "id": 98,
+      "id": 97,
       "name": "./node_modules/lodash/_castPath.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -799,7 +791,7 @@
   ],
   "./_isKey": [
     {
-      "id": 99,
+      "id": 98,
       "name": "./node_modules/lodash/_isKey.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -807,7 +799,7 @@
   ],
   "./_baseRest": [
     {
-      "id": 100,
+      "id": 99,
       "name": "./node_modules/lodash/_baseRest.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -815,7 +807,7 @@
   ],
   "./_setToString": [
     {
-      "id": 101,
+      "id": 100,
       "name": "./node_modules/lodash/_setToString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -823,7 +815,7 @@
   ],
   "./_arrayIncludesWith": [
     {
-      "id": 102,
+      "id": 101,
       "name": "./node_modules/lodash/_arrayIncludesWith.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -831,7 +823,7 @@
   ],
   "./_getPrototype": [
     {
-      "id": 103,
+      "id": 102,
       "name": "./node_modules/lodash/_getPrototype.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -839,7 +831,7 @@
   ],
   "./_createWrap": [
     {
-      "id": 104,
+      "id": 103,
       "name": "./node_modules/lodash/_createWrap.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -847,7 +839,7 @@
   ],
   "./_LazyWrapper": [
     {
-      "id": 105,
+      "id": 104,
       "name": "./node_modules/lodash/_LazyWrapper.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -855,7 +847,7 @@
   ],
   "./_baseLodash": [
     {
-      "id": 106,
+      "id": 105,
       "name": "./node_modules/lodash/_baseLodash.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -863,7 +855,7 @@
   ],
   "./_replaceHolders": [
     {
-      "id": 107,
+      "id": 106,
       "name": "./node_modules/lodash/_replaceHolders.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -871,23 +863,23 @@
   ],
   "./_cloneArrayBuffer": [
     {
-      "id": 108,
+      "id": 107,
       "name": "./node_modules/lodash/_cloneArrayBuffer.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "lodash/isPlainObject": [
+  "../isPlainObject": [
     {
-      "id": 109,
+      "id": 108,
       "name": "./node_modules/lodash/isPlainObject.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "lodash/isString": [
+  "./isString": [
     {
-      "id": 110,
+      "id": 109,
       "name": "./node_modules/lodash/isString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -895,7 +887,7 @@
   ],
   "lodash/forEach": [
     {
-      "id": 111,
+      "id": 110,
       "name": "./node_modules/lodash/forEach.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -903,7 +895,7 @@
   ],
   "symbol-observable": [
     {
-      "id": 112,
+      "id": 111,
       "name": "./node_modules/symbol-observable/es/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -911,7 +903,7 @@
   ],
   "@babel/runtime/helpers/inheritsLoose": [
     {
-      "id": 113,
+      "id": 112,
       "name": "./node_modules/@babel/runtime/helpers/inheritsLoose.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -919,31 +911,15 @@
   ],
   "path-to-regexp": [
     {
-      "id": 114,
+      "id": 113,
       "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
-  "stylis/stylis.min": [
-    {
-      "id": 115,
-      "name": "./node_modules/stylis/stylis.min.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
-  "memoize-one": [
-    {
-      "id": 116,
-      "name": "./node_modules/memoize-one/dist/memoize-one.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "keyboard-key": [
     {
-      "id": 117,
+      "id": 114,
       "name": "./node_modules/keyboard-key/src/keyboardKey.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -951,7 +927,7 @@
   ],
   "lodash/inRange": [
     {
-      "id": 118,
+      "id": 115,
       "name": "./node_modules/lodash/inRange.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -959,7 +935,7 @@
   ],
   "object-assign": [
     {
-      "id": 122,
+      "id": 119,
       "name": "./node_modules/object-assign/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -967,7 +943,7 @@
   ],
   "./_freeGlobal": [
     {
-      "id": 123,
+      "id": 120,
       "name": "./node_modules/lodash/_freeGlobal.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -975,7 +951,7 @@
   ],
   "./_toSource": [
     {
-      "id": 124,
+      "id": 121,
       "name": "./node_modules/lodash/_toSource.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -983,7 +959,7 @@
   ],
   "./_baseIsEqual": [
     {
-      "id": 125,
+      "id": 122,
       "name": "./node_modules/lodash/_baseIsEqual.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -991,7 +967,7 @@
   ],
   "./_equalArrays": [
     {
-      "id": 126,
+      "id": 123,
       "name": "./node_modules/lodash/_equalArrays.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -999,7 +975,7 @@
   ],
   "./_arraySome": [
     {
-      "id": 127,
+      "id": 124,
       "name": "./node_modules/lodash/_arraySome.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1007,7 +983,7 @@
   ],
   "./_Uint8Array": [
     {
-      "id": 128,
+      "id": 125,
       "name": "./node_modules/lodash/_Uint8Array.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1015,7 +991,7 @@
   ],
   "./_getAllKeys": [
     {
-      "id": 129,
+      "id": 126,
       "name": "./node_modules/lodash/_getAllKeys.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1023,7 +999,7 @@
   ],
   "./_baseGetAllKeys": [
     {
-      "id": 130,
+      "id": 127,
       "name": "./node_modules/lodash/_baseGetAllKeys.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1031,7 +1007,7 @@
   ],
   "./_arrayFilter": [
     {
-      "id": 131,
+      "id": 128,
       "name": "./node_modules/lodash/_arrayFilter.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1039,7 +1015,7 @@
   ],
   "./stubArray": [
     {
-      "id": 132,
+      "id": 129,
       "name": "./node_modules/lodash/stubArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1047,7 +1023,7 @@
   ],
   "./_arrayLikeKeys": [
     {
-      "id": 133,
+      "id": 130,
       "name": "./node_modules/lodash/_arrayLikeKeys.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1055,7 +1031,7 @@
   ],
   "./_overArg": [
     {
-      "id": 134,
+      "id": 131,
       "name": "./node_modules/lodash/_overArg.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1063,7 +1039,7 @@
   ],
   "./_Set": [
     {
-      "id": 135,
+      "id": 132,
       "name": "./node_modules/lodash/_Set.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1071,7 +1047,7 @@
   ],
   "./_WeakMap": [
     {
-      "id": 136,
+      "id": 133,
       "name": "./node_modules/lodash/_WeakMap.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1079,7 +1055,7 @@
   ],
   "./_isStrictComparable": [
     {
-      "id": 137,
+      "id": 134,
       "name": "./node_modules/lodash/_isStrictComparable.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1087,7 +1063,7 @@
   ],
   "./_matchesStrictComparable": [
     {
-      "id": 138,
+      "id": 135,
       "name": "./node_modules/lodash/_matchesStrictComparable.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1095,7 +1071,7 @@
   ],
   "./_stringToPath": [
     {
-      "id": 139,
+      "id": 136,
       "name": "./node_modules/lodash/_stringToPath.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1103,7 +1079,7 @@
   ],
   "./_baseToString": [
     {
-      "id": 140,
+      "id": 137,
       "name": "./node_modules/lodash/_baseToString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1111,7 +1087,7 @@
   ],
   "./_hasPath": [
     {
-      "id": 141,
+      "id": 138,
       "name": "./node_modules/lodash/_hasPath.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1119,7 +1095,7 @@
   ],
   "./_baseSlice": [
     {
-      "id": 142,
+      "id": 139,
       "name": "./node_modules/lodash/_baseSlice.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1127,7 +1103,7 @@
   ],
   "./_overRest": [
     {
-      "id": 143,
+      "id": 140,
       "name": "./node_modules/lodash/_overRest.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1135,7 +1111,7 @@
   ],
   "./_defineProperty": [
     {
-      "id": 144,
+      "id": 141,
       "name": "./node_modules/lodash/_defineProperty.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1143,7 +1119,7 @@
   ],
   "./_shortOut": [
     {
-      "id": 145,
+      "id": 142,
       "name": "./node_modules/lodash/_shortOut.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1151,7 +1127,7 @@
   ],
   "./_baseIndexOf": [
     {
-      "id": 146,
+      "id": 143,
       "name": "./node_modules/lodash/_baseIndexOf.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1159,7 +1135,7 @@
   ],
   "./_baseFindIndex": [
     {
-      "id": 147,
+      "id": 144,
       "name": "./node_modules/lodash/_baseFindIndex.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1167,7 +1143,7 @@
   ],
   "./isArrayLikeObject": [
     {
-      "id": 148,
+      "id": 145,
       "name": "./node_modules/lodash/isArrayLikeObject.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1175,7 +1151,7 @@
   ],
   "./_hasUnicode": [
     {
-      "id": 149,
+      "id": 146,
       "name": "./node_modules/lodash/_hasUnicode.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1183,7 +1159,7 @@
   ],
   "./toFinite": [
     {
-      "id": 150,
+      "id": 147,
       "name": "./node_modules/lodash/toFinite.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1191,7 +1167,7 @@
   ],
   "./toNumber": [
     {
-      "id": 151,
+      "id": 148,
       "name": "./node_modules/lodash/toNumber.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1199,7 +1175,7 @@
   ],
   "./factories": [
     {
-      "id": 152,
+      "id": 149,
       "name": "./node_modules/semantic-ui-react/dist/es/lib/factories.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1207,7 +1183,7 @@
   ],
   "lodash/noop": [
     {
-      "id": 153,
+      "id": 150,
       "name": "./node_modules/lodash/noop.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1215,7 +1191,7 @@
   ],
   "./AutoControlledComponent": [
     {
-      "id": 154,
+      "id": 151,
       "name": "./node_modules/semantic-ui-react/dist/es/lib/AutoControlledComponent.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1223,7 +1199,7 @@
   ],
   "../isEmpty": [
     {
-      "id": 155,
+      "id": 152,
       "name": "./node_modules/lodash/isEmpty.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1231,7 +1207,7 @@
   ],
   "./../../process/browser.js": [
     {
-      "id": 156,
+      "id": 153,
       "name": "./node_modules/process/browser.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1239,7 +1215,7 @@
   ],
   "./isBrowser": [
     {
-      "id": 157,
+      "id": 154,
       "name": "./node_modules/semantic-ui-react/dist/es/lib/isBrowser.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1247,7 +1223,7 @@
   ],
   "./doesNodeContainClick": [
     {
-      "id": 158,
+      "id": 155,
       "name": "./node_modules/semantic-ui-react/dist/es/lib/doesNodeContainClick.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1255,7 +1231,7 @@
   ],
   "./placeholder": [
     {
-      "id": 159,
+      "id": 156,
       "name": "./node_modules/lodash/fp/placeholder.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1263,7 +1239,7 @@
   ],
   "./_baseSetData": [
     {
-      "id": 160,
+      "id": 157,
       "name": "./node_modules/lodash/_baseSetData.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1271,7 +1247,7 @@
   ],
   "./_metaMap": [
     {
-      "id": 161,
+      "id": 158,
       "name": "./node_modules/lodash/_metaMap.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1279,7 +1255,7 @@
   ],
   "./_createHybrid": [
     {
-      "id": 162,
+      "id": 159,
       "name": "./node_modules/lodash/_createHybrid.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1287,7 +1263,7 @@
   ],
   "./_composeArgs": [
     {
-      "id": 163,
+      "id": 160,
       "name": "./node_modules/lodash/_composeArgs.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1295,7 +1271,7 @@
   ],
   "./_composeArgsRight": [
     {
-      "id": 164,
+      "id": 161,
       "name": "./node_modules/lodash/_composeArgsRight.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1303,7 +1279,7 @@
   ],
   "./_createRecurry": [
     {
-      "id": 165,
+      "id": 162,
       "name": "./node_modules/lodash/_createRecurry.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1311,7 +1287,7 @@
   ],
   "./_getData": [
     {
-      "id": 166,
+      "id": 163,
       "name": "./node_modules/lodash/_getData.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1319,7 +1295,7 @@
   ],
   "./_LodashWrapper": [
     {
-      "id": 167,
+      "id": 164,
       "name": "./node_modules/lodash/_LodashWrapper.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1327,7 +1303,7 @@
   ],
   "./_setData": [
     {
-      "id": 168,
+      "id": 165,
       "name": "./node_modules/lodash/_setData.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1335,7 +1311,7 @@
   ],
   "./_setWrapToString": [
     {
-      "id": 169,
+      "id": 166,
       "name": "./node_modules/lodash/_setWrapToString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1343,7 +1319,7 @@
   ],
   "./_getHolder": [
     {
-      "id": 170,
+      "id": 167,
       "name": "./node_modules/lodash/_getHolder.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1351,7 +1327,7 @@
   ],
   "../_baseAssign": [
     {
-      "id": 171,
+      "id": 168,
       "name": "./node_modules/lodash/_baseAssign.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1359,7 +1335,7 @@
   ],
   "./_assignValue": [
     {
-      "id": 172,
+      "id": 169,
       "name": "./node_modules/lodash/_assignValue.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1367,7 +1343,7 @@
   ],
   "./_baseAssignValue": [
     {
-      "id": 173,
+      "id": 170,
       "name": "./node_modules/lodash/_baseAssignValue.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1375,7 +1351,7 @@
   ],
   "./_baseClone": [
     {
-      "id": 174,
+      "id": 171,
       "name": "./node_modules/lodash/_baseClone.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1383,7 +1359,7 @@
   ],
   "./keysIn": [
     {
-      "id": 175,
+      "id": 172,
       "name": "./node_modules/lodash/keysIn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1391,7 +1367,7 @@
   ],
   "./_getSymbolsIn": [
     {
-      "id": 176,
+      "id": 173,
       "name": "./node_modules/lodash/_getSymbolsIn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1399,7 +1375,7 @@
   ],
   "./ponyfill.js": [
     {
-      "id": 179,
+      "id": 176,
       "name": "./node_modules/symbol-observable/es/ponyfill.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1407,7 +1383,7 @@
   ],
   "lodash/startCase": [
     {
-      "id": 180,
+      "id": 177,
       "name": "./node_modules/lodash/startCase.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1415,7 +1391,7 @@
   ],
   "lodash/find": [
     {
-      "id": 181,
+      "id": 178,
       "name": "./node_modules/lodash/find.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1423,7 +1399,7 @@
   ],
   "lodash/uniq": [
     {
-      "id": 182,
+      "id": 179,
       "name": "./node_modules/lodash/uniq.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1431,7 +1407,7 @@
   ],
   "lodash/isNumber": [
     {
-      "id": 183,
+      "id": 180,
       "name": "./node_modules/lodash/isNumber.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1439,7 +1415,7 @@
   ],
   "lodash/isBoolean": [
     {
-      "id": 184,
+      "id": 181,
       "name": "./node_modules/lodash/isBoolean.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1447,23 +1423,31 @@
   ],
   "gud": [
     {
-      "id": 185,
+      "id": 182,
       "name": "./node_modules/gud/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "stylis-rule-sheet": [
+  "shallowequal": [
     {
-      "id": 186,
-      "name": "./node_modules/stylis-rule-sheet/index.js",
+      "id": 183,
+      "name": "./node_modules/shallowequal/index.js",
+      "file": "vendors~app.js",
+      "publicPath": "/static/vendors~app.js"
+    }
+  ],
+  "@emotion/stylis": [
+    {
+      "id": 184,
+      "name": "./node_modules/@emotion/stylis/dist/stylis.browser.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "@emotion/unitless": [
     {
-      "id": 187,
+      "id": 185,
       "name": "./node_modules/@emotion/unitless/dist/unitless.browser.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1471,7 +1455,7 @@
   ],
   "@babel/runtime/helpers/slicedToArray": [
     {
-      "id": 188,
+      "id": 186,
       "name": "./node_modules/@babel/runtime/helpers/slicedToArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1479,7 +1463,7 @@
   ],
   "lodash/includes": [
     {
-      "id": 189,
+      "id": 187,
       "name": "./node_modules/lodash/includes.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1487,7 +1471,7 @@
   ],
   "lodash/first": [
     {
-      "id": 190,
+      "id": 188,
       "name": "./node_modules/lodash/first.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1495,7 +1479,7 @@
   ],
   "react-loadable": [
     {
-      "id": 191,
+      "id": 189,
       "name": "./node_modules/react-loadable/lib/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1503,7 +1487,7 @@
   ],
   "dexie": [
     {
-      "id": 192,
+      "id": 190,
       "name": "./node_modules/dexie/dist/dexie.es.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1511,7 +1495,7 @@
   ],
   "lodash/fp/isEmpty": [
     {
-      "id": 193,
+      "id": 191,
       "name": "./node_modules/lodash/fp/isEmpty.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1519,7 +1503,7 @@
   ],
   "redux-thunk": [
     {
-      "id": 194,
+      "id": 192,
       "name": "./node_modules/redux-thunk/es/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1527,23 +1511,15 @@
   ],
   "@emotion/is-prop-valid": [
     {
-      "id": 195,
+      "id": 193,
       "name": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "merge-anything": [
+  "./Image": [
     {
-      "id": 196,
-      "name": "./node_modules/merge-anything/dist/index.esm.js",
-      "file": "vendors~app.js",
-      "publicPath": "/static/vendors~app.js"
-    }
-  ],
-  "../Image/Image": [
-    {
-      "id": 197,
+      "id": 194,
       "name": "./node_modules/semantic-ui-react/dist/es/elements/Image/Image.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1551,7 +1527,7 @@
   ],
   "./cjs/react.production.min.js": [
     {
-      "id": 206,
+      "id": 204,
       "name": "./node_modules/react/cjs/react.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1559,7 +1535,7 @@
   ],
   "./cjs/react-dom.production.min.js": [
     {
-      "id": 207,
+      "id": 205,
       "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1567,23 +1543,23 @@
   ],
   "scheduler": [
     {
-      "id": 208,
-      "name": "./node_modules/scheduler/index.js",
+      "id": 206,
+      "name": "./node_modules/react-dom/node_modules/scheduler/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "./cjs/scheduler.production.min.js": [
     {
-      "id": 209,
-      "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
+      "id": 207,
+      "name": "./node_modules/react-dom/node_modules/scheduler/cjs/scheduler.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
   "./factoryWithThrowingShims": [
     {
-      "id": 210,
+      "id": 208,
       "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1591,7 +1567,7 @@
   ],
   "./lib/ReactPropTypesSecret": [
     {
-      "id": 211,
+      "id": 209,
       "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1599,13 +1575,13 @@
   ],
   "./cjs/react-is.production.min.js": [
     {
-      "id": 212,
+      "id": 210,
       "name": "./node_modules/react-is/cjs/react-is.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     },
     {
-      "id": 213,
+      "id": 211,
       "name": "./node_modules/react-redux/node_modules/react-is/cjs/react-is.production.min.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1613,7 +1589,7 @@
   ],
   "./../../webpack/buildin/harmony-module.js": [
     {
-      "id": 214,
+      "id": 212,
       "name": "./node_modules/webpack/buildin/harmony-module.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1621,7 +1597,7 @@
   ],
   "./setPrototypeOf": [
     {
-      "id": 215,
+      "id": 213,
       "name": "./node_modules/@babel/runtime/helpers/setPrototypeOf.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1629,7 +1605,7 @@
   ],
   "./_baseMatches": [
     {
-      "id": 216,
+      "id": 214,
       "name": "./node_modules/lodash/_baseMatches.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1637,7 +1613,7 @@
   ],
   "./_baseIsMatch": [
     {
-      "id": 217,
+      "id": 215,
       "name": "./node_modules/lodash/_baseIsMatch.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1645,7 +1621,7 @@
   ],
   "./_listCacheClear": [
     {
-      "id": 218,
+      "id": 216,
       "name": "./node_modules/lodash/_listCacheClear.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1653,7 +1629,7 @@
   ],
   "./_listCacheDelete": [
     {
-      "id": 219,
+      "id": 217,
       "name": "./node_modules/lodash/_listCacheDelete.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1661,7 +1637,7 @@
   ],
   "./_listCacheGet": [
     {
-      "id": 220,
+      "id": 218,
       "name": "./node_modules/lodash/_listCacheGet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1669,7 +1645,7 @@
   ],
   "./_listCacheHas": [
     {
-      "id": 221,
+      "id": 219,
       "name": "./node_modules/lodash/_listCacheHas.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1677,7 +1653,7 @@
   ],
   "./_listCacheSet": [
     {
-      "id": 222,
+      "id": 220,
       "name": "./node_modules/lodash/_listCacheSet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1685,7 +1661,7 @@
   ],
   "./_stackClear": [
     {
-      "id": 223,
+      "id": 221,
       "name": "./node_modules/lodash/_stackClear.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1693,7 +1669,7 @@
   ],
   "./_stackDelete": [
     {
-      "id": 224,
+      "id": 222,
       "name": "./node_modules/lodash/_stackDelete.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1701,7 +1677,7 @@
   ],
   "./_stackGet": [
     {
-      "id": 225,
+      "id": 223,
       "name": "./node_modules/lodash/_stackGet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1709,7 +1685,7 @@
   ],
   "./_stackHas": [
     {
-      "id": 226,
+      "id": 224,
       "name": "./node_modules/lodash/_stackHas.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1717,7 +1693,7 @@
   ],
   "./_stackSet": [
     {
-      "id": 227,
+      "id": 225,
       "name": "./node_modules/lodash/_stackSet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1725,7 +1701,7 @@
   ],
   "./_baseIsNative": [
     {
-      "id": 228,
+      "id": 226,
       "name": "./node_modules/lodash/_baseIsNative.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1733,7 +1709,7 @@
   ],
   "./_getRawTag": [
     {
-      "id": 229,
+      "id": 227,
       "name": "./node_modules/lodash/_getRawTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1741,7 +1717,7 @@
   ],
   "./_objectToString": [
     {
-      "id": 230,
+      "id": 228,
       "name": "./node_modules/lodash/_objectToString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1749,7 +1725,7 @@
   ],
   "./_isMasked": [
     {
-      "id": 231,
+      "id": 229,
       "name": "./node_modules/lodash/_isMasked.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1757,7 +1733,7 @@
   ],
   "./_coreJsData": [
     {
-      "id": 232,
+      "id": 230,
       "name": "./node_modules/lodash/_coreJsData.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1765,7 +1741,7 @@
   ],
   "./_getValue": [
     {
-      "id": 233,
+      "id": 231,
       "name": "./node_modules/lodash/_getValue.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1773,7 +1749,7 @@
   ],
   "./_mapCacheClear": [
     {
-      "id": 234,
+      "id": 232,
       "name": "./node_modules/lodash/_mapCacheClear.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1781,7 +1757,7 @@
   ],
   "./_Hash": [
     {
-      "id": 235,
+      "id": 233,
       "name": "./node_modules/lodash/_Hash.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1789,7 +1765,7 @@
   ],
   "./_hashClear": [
     {
-      "id": 236,
+      "id": 234,
       "name": "./node_modules/lodash/_hashClear.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1797,7 +1773,7 @@
   ],
   "./_hashDelete": [
     {
-      "id": 237,
+      "id": 235,
       "name": "./node_modules/lodash/_hashDelete.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1805,7 +1781,7 @@
   ],
   "./_hashGet": [
     {
-      "id": 238,
+      "id": 236,
       "name": "./node_modules/lodash/_hashGet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1813,7 +1789,7 @@
   ],
   "./_hashHas": [
     {
-      "id": 239,
+      "id": 237,
       "name": "./node_modules/lodash/_hashHas.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1821,7 +1797,7 @@
   ],
   "./_hashSet": [
     {
-      "id": 240,
+      "id": 238,
       "name": "./node_modules/lodash/_hashSet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1829,7 +1805,7 @@
   ],
   "./_mapCacheDelete": [
     {
-      "id": 241,
+      "id": 239,
       "name": "./node_modules/lodash/_mapCacheDelete.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1837,7 +1813,7 @@
   ],
   "./_isKeyable": [
     {
-      "id": 242,
+      "id": 240,
       "name": "./node_modules/lodash/_isKeyable.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1845,7 +1821,7 @@
   ],
   "./_mapCacheGet": [
     {
-      "id": 243,
+      "id": 241,
       "name": "./node_modules/lodash/_mapCacheGet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1853,7 +1829,7 @@
   ],
   "./_mapCacheHas": [
     {
-      "id": 244,
+      "id": 242,
       "name": "./node_modules/lodash/_mapCacheHas.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1861,7 +1837,7 @@
   ],
   "./_mapCacheSet": [
     {
-      "id": 245,
+      "id": 243,
       "name": "./node_modules/lodash/_mapCacheSet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1869,7 +1845,7 @@
   ],
   "./_baseIsEqualDeep": [
     {
-      "id": 246,
+      "id": 244,
       "name": "./node_modules/lodash/_baseIsEqualDeep.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1877,7 +1853,7 @@
   ],
   "./_setCacheAdd": [
     {
-      "id": 247,
+      "id": 245,
       "name": "./node_modules/lodash/_setCacheAdd.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1885,7 +1861,7 @@
   ],
   "./_setCacheHas": [
     {
-      "id": 248,
+      "id": 246,
       "name": "./node_modules/lodash/_setCacheHas.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1893,7 +1869,7 @@
   ],
   "./_equalByTag": [
     {
-      "id": 249,
+      "id": 247,
       "name": "./node_modules/lodash/_equalByTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1901,7 +1877,7 @@
   ],
   "./_mapToArray": [
     {
-      "id": 250,
+      "id": 248,
       "name": "./node_modules/lodash/_mapToArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1909,7 +1885,7 @@
   ],
   "./_equalObjects": [
     {
-      "id": 251,
+      "id": 249,
       "name": "./node_modules/lodash/_equalObjects.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1917,7 +1893,7 @@
   ],
   "./_baseTimes": [
     {
-      "id": 252,
+      "id": 250,
       "name": "./node_modules/lodash/_baseTimes.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1925,7 +1901,7 @@
   ],
   "./_baseIsArguments": [
     {
-      "id": 253,
+      "id": 251,
       "name": "./node_modules/lodash/_baseIsArguments.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1933,7 +1909,7 @@
   ],
   "./stubFalse": [
     {
-      "id": 254,
+      "id": 252,
       "name": "./node_modules/lodash/stubFalse.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1941,7 +1917,7 @@
   ],
   "./_baseIsTypedArray": [
     {
-      "id": 255,
+      "id": 253,
       "name": "./node_modules/lodash/_baseIsTypedArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1949,7 +1925,7 @@
   ],
   "./_nativeKeys": [
     {
-      "id": 256,
+      "id": 254,
       "name": "./node_modules/lodash/_nativeKeys.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1957,7 +1933,7 @@
   ],
   "./_DataView": [
     {
-      "id": 257,
+      "id": 255,
       "name": "./node_modules/lodash/_DataView.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1965,7 +1941,7 @@
   ],
   "./_Promise": [
     {
-      "id": 258,
+      "id": 256,
       "name": "./node_modules/lodash/_Promise.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1973,7 +1949,7 @@
   ],
   "./_getMatchData": [
     {
-      "id": 259,
+      "id": 257,
       "name": "./node_modules/lodash/_getMatchData.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1981,7 +1957,7 @@
   ],
   "./_baseMatchesProperty": [
     {
-      "id": 260,
+      "id": 258,
       "name": "./node_modules/lodash/_baseMatchesProperty.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1989,7 +1965,7 @@
   ],
   "lodash/get": [
     {
-      "id": 261,
+      "id": 259,
       "name": "./node_modules/lodash/get.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -1997,7 +1973,7 @@
   ],
   "./_memoizeCapped": [
     {
-      "id": 262,
+      "id": 260,
       "name": "./node_modules/lodash/_memoizeCapped.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2005,7 +1981,7 @@
   ],
   "../memoize": [
     {
-      "id": 263,
+      "id": 261,
       "name": "./node_modules/lodash/memoize.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2013,7 +1989,7 @@
   ],
   "./hasIn": [
     {
-      "id": 264,
+      "id": 262,
       "name": "./node_modules/lodash/hasIn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2021,7 +1997,7 @@
   ],
   "./_baseHasIn": [
     {
-      "id": 265,
+      "id": 263,
       "name": "./node_modules/lodash/_baseHasIn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2029,7 +2005,7 @@
   ],
   "./property": [
     {
-      "id": 266,
+      "id": 264,
       "name": "./node_modules/lodash/property.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2037,7 +2013,7 @@
   ],
   "./_baseProperty": [
     {
-      "id": 267,
+      "id": 265,
       "name": "./node_modules/lodash/_baseProperty.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2045,7 +2021,7 @@
   ],
   "./_basePropertyDeep": [
     {
-      "id": 268,
+      "id": 266,
       "name": "./node_modules/lodash/_basePropertyDeep.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2053,7 +2029,7 @@
   ],
   "./_baseMap": [
     {
-      "id": 269,
+      "id": 267,
       "name": "./node_modules/lodash/_baseMap.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2061,7 +2037,7 @@
   ],
   "./_baseForOwn": [
     {
-      "id": 270,
+      "id": 268,
       "name": "./node_modules/lodash/_baseForOwn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2069,7 +2045,7 @@
   ],
   "./_baseFor": [
     {
-      "id": 271,
+      "id": 269,
       "name": "./node_modules/lodash/_baseFor.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2077,7 +2053,7 @@
   ],
   "./_createBaseFor": [
     {
-      "id": 272,
+      "id": 270,
       "name": "./node_modules/lodash/_createBaseFor.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2085,7 +2061,7 @@
   ],
   "./_createBaseEach": [
     {
-      "id": 273,
+      "id": 271,
       "name": "./node_modules/lodash/_createBaseEach.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2093,7 +2069,7 @@
   ],
   "./_baseInvoke": [
     {
-      "id": 274,
+      "id": 272,
       "name": "./node_modules/lodash/_baseInvoke.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2101,7 +2077,7 @@
   ],
   "./last": [
     {
-      "id": 275,
+      "id": 273,
       "name": "./node_modules/lodash/last.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2109,7 +2085,7 @@
   ],
   "./_parent": [
     {
-      "id": 276,
+      "id": 274,
       "name": "./node_modules/lodash/_parent.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2117,7 +2093,7 @@
   ],
   "./_baseSetToString": [
     {
-      "id": 277,
+      "id": 275,
       "name": "./node_modules/lodash/_baseSetToString.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2125,7 +2101,7 @@
   ],
   "./constant": [
     {
-      "id": 278,
+      "id": 276,
       "name": "./node_modules/lodash/constant.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2133,7 +2109,7 @@
   ],
   "./_baseDifference": [
     {
-      "id": 279,
+      "id": 277,
       "name": "./node_modules/lodash/_baseDifference.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2141,7 +2117,7 @@
   ],
   "./_baseIsNaN": [
     {
-      "id": 280,
+      "id": 278,
       "name": "./node_modules/lodash/_baseIsNaN.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2149,7 +2125,7 @@
   ],
   "./_strictIndexOf": [
     {
-      "id": 281,
+      "id": 279,
       "name": "./node_modules/lodash/_strictIndexOf.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2157,7 +2133,7 @@
   ],
   "./_createCompounder": [
     {
-      "id": 282,
+      "id": 280,
       "name": "./node_modules/lodash/_createCompounder.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2165,7 +2141,7 @@
   ],
   "./_arrayReduce": [
     {
-      "id": 283,
+      "id": 281,
       "name": "./node_modules/lodash/_arrayReduce.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2173,7 +2149,7 @@
   ],
   "./deburr": [
     {
-      "id": 284,
+      "id": 282,
       "name": "./node_modules/lodash/deburr.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2181,7 +2157,7 @@
   ],
   "./_deburrLetter": [
     {
-      "id": 285,
+      "id": 283,
       "name": "./node_modules/lodash/_deburrLetter.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2189,7 +2165,7 @@
   ],
   "./_basePropertyOf": [
     {
-      "id": 286,
+      "id": 284,
       "name": "./node_modules/lodash/_basePropertyOf.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2197,7 +2173,7 @@
   ],
   "./words": [
     {
-      "id": 287,
+      "id": 285,
       "name": "./node_modules/lodash/words.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2205,7 +2181,7 @@
   ],
   "./_asciiWords": [
     {
-      "id": 288,
+      "id": 286,
       "name": "./node_modules/lodash/_asciiWords.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2213,7 +2189,7 @@
   ],
   "./_hasUnicodeWord": [
     {
-      "id": 289,
+      "id": 287,
       "name": "./node_modules/lodash/_hasUnicodeWord.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2221,7 +2197,7 @@
   ],
   "./_unicodeWords": [
     {
-      "id": 290,
+      "id": 288,
       "name": "./node_modules/lodash/_unicodeWords.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2229,7 +2205,7 @@
   ],
   "./upperFirst": [
     {
-      "id": 291,
+      "id": 289,
       "name": "./node_modules/lodash/upperFirst.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2237,7 +2213,7 @@
   ],
   "./_createCaseFirst": [
     {
-      "id": 292,
+      "id": 290,
       "name": "./node_modules/lodash/_createCaseFirst.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2245,7 +2221,7 @@
   ],
   "./_castSlice": [
     {
-      "id": 293,
+      "id": 291,
       "name": "./node_modules/lodash/_castSlice.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2253,7 +2229,7 @@
   ],
   "./_stringToArray": [
     {
-      "id": 294,
+      "id": 292,
       "name": "./node_modules/lodash/_stringToArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2261,7 +2237,7 @@
   ],
   "./_asciiToArray": [
     {
-      "id": 295,
+      "id": 293,
       "name": "./node_modules/lodash/_asciiToArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2269,7 +2245,7 @@
   ],
   "./_unicodeToArray": [
     {
-      "id": 296,
+      "id": 294,
       "name": "./node_modules/lodash/_unicodeToArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2277,7 +2253,7 @@
   ],
   "./_createFind": [
     {
-      "id": 297,
+      "id": 295,
       "name": "./node_modules/lodash/_createFind.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2285,7 +2261,7 @@
   ],
   "./findIndex": [
     {
-      "id": 298,
+      "id": 296,
       "name": "./node_modules/lodash/findIndex.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2293,7 +2269,7 @@
   ],
   "./_baseSome": [
     {
-      "id": 299,
+      "id": 297,
       "name": "./node_modules/lodash/_baseSome.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2301,7 +2277,7 @@
   ],
   "./_isIterateeCall": [
     {
-      "id": 300,
+      "id": 298,
       "name": "./node_modules/lodash/_isIterateeCall.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2309,7 +2285,7 @@
   ],
   "./_baseUniq": [
     {
-      "id": 301,
+      "id": 299,
       "name": "./node_modules/lodash/_baseUniq.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2317,7 +2293,7 @@
   ],
   "./_createSet": [
     {
-      "id": 302,
+      "id": 300,
       "name": "./node_modules/lodash/_createSet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2325,7 +2301,7 @@
   ],
   "lodash/startsWith": [
     {
-      "id": 303,
+      "id": 301,
       "name": "./node_modules/lodash/startsWith.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2333,7 +2309,7 @@
   ],
   "./_baseClamp": [
     {
-      "id": 304,
+      "id": 302,
       "name": "./node_modules/lodash/_baseClamp.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2341,7 +2317,7 @@
   ],
   "lodash/filter": [
     {
-      "id": 305,
+      "id": 303,
       "name": "./node_modules/lodash/filter.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2349,7 +2325,7 @@
   ],
   "./_baseFilter": [
     {
-      "id": 306,
+      "id": 304,
       "name": "./node_modules/lodash/_baseFilter.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2357,7 +2333,7 @@
   ],
   "lodash/intersection": [
     {
-      "id": 307,
+      "id": 305,
       "name": "./node_modules/lodash/intersection.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2365,7 +2341,7 @@
   ],
   "./_baseIntersection": [
     {
-      "id": 308,
+      "id": 306,
       "name": "./node_modules/lodash/_baseIntersection.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2373,7 +2349,7 @@
   ],
   "./_castArrayLikeObject": [
     {
-      "id": 309,
+      "id": 307,
       "name": "./node_modules/lodash/_castArrayLikeObject.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2381,7 +2357,7 @@
   ],
   "lodash/has": [
     {
-      "id": 310,
+      "id": 308,
       "name": "./node_modules/lodash/has.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2389,7 +2365,7 @@
   ],
   "./_baseHas": [
     {
-      "id": 311,
+      "id": 309,
       "name": "./node_modules/lodash/_baseHas.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2397,7 +2373,7 @@
   ],
   "lodash/each": [
     {
-      "id": 312,
+      "id": 310,
       "name": "./node_modules/lodash/each.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2405,7 +2381,7 @@
   ],
   "./_castFunction": [
     {
-      "id": 313,
+      "id": 311,
       "name": "./node_modules/lodash/_castFunction.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2413,7 +2389,7 @@
   ],
   "isarray": [
     {
-      "id": 314,
+      "id": 312,
       "name": "./node_modules/isarray/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2421,7 +2397,7 @@
   ],
   "./arrayWithHoles": [
     {
-      "id": 315,
+      "id": 313,
       "name": "./node_modules/@babel/runtime/helpers/arrayWithHoles.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2429,7 +2405,7 @@
   ],
   "./iterableToArrayLimit": [
     {
-      "id": 316,
+      "id": 314,
       "name": "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2437,15 +2413,15 @@
   ],
   "./nonIterableRest": [
     {
-      "id": 317,
+      "id": 315,
       "name": "./node_modules/@babel/runtime/helpers/nonIterableRest.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "lodash/values": [
+  "./values": [
     {
-      "id": 318,
+      "id": 316,
       "name": "./node_modules/lodash/values.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2453,7 +2429,7 @@
   ],
   "./_baseValues": [
     {
-      "id": 319,
+      "id": 317,
       "name": "./node_modules/lodash/_baseValues.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2461,7 +2437,7 @@
   ],
   "./cjs/event-stack.production.js": [
     {
-      "id": 320,
+      "id": 318,
       "name": "./node_modules/@semantic-ui-react/event-stack/lib/cjs/event-stack.production.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2469,7 +2445,7 @@
   ],
   "exenv": [
     {
-      "id": 321,
+      "id": 319,
       "name": "./node_modules/exenv/index.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2477,7 +2453,7 @@
   ],
   "./_baseInRange": [
     {
-      "id": 322,
+      "id": 320,
       "name": "./node_modules/lodash/_baseInRange.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2485,7 +2461,7 @@
   ],
   "./head": [
     {
-      "id": 323,
+      "id": 321,
       "name": "./node_modules/lodash/head.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2493,7 +2469,7 @@
   ],
   "@babel/runtime/helpers/toConsumableArray": [
     {
-      "id": 324,
+      "id": 322,
       "name": "./node_modules/@babel/runtime/helpers/toConsumableArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2501,7 +2477,7 @@
   ],
   "./arrayWithoutHoles": [
     {
-      "id": 325,
+      "id": 323,
       "name": "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2509,7 +2485,7 @@
   ],
   "./iterableToArray": [
     {
-      "id": 326,
+      "id": 324,
       "name": "./node_modules/@babel/runtime/helpers/iterableToArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2517,7 +2493,7 @@
   ],
   "./nonIterableSpread": [
     {
-      "id": 327,
+      "id": 325,
       "name": "./node_modules/@babel/runtime/helpers/nonIterableSpread.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2525,7 +2501,7 @@
   ],
   "./../../timers-browserify/main.js": [
     {
-      "id": 328,
+      "id": 326,
       "name": "./node_modules/timers-browserify/main.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2533,7 +2509,7 @@
   ],
   "setimmediate": [
     {
-      "id": 329,
+      "id": 327,
       "name": "./node_modules/setimmediate/setImmediate.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2541,7 +2517,7 @@
   ],
   "./convert": [
     {
-      "id": 330,
+      "id": 328,
       "name": "./node_modules/lodash/fp/convert.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2549,7 +2525,7 @@
   ],
   "./_baseConvert": [
     {
-      "id": 331,
+      "id": 329,
       "name": "./node_modules/lodash/fp/_baseConvert.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2557,7 +2533,7 @@
   ],
   "./_mapping": [
     {
-      "id": 332,
+      "id": 330,
       "name": "./node_modules/lodash/fp/_mapping.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2565,7 +2541,7 @@
   ],
   "./_util": [
     {
-      "id": 333,
+      "id": 331,
       "name": "./node_modules/lodash/fp/_util.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2573,7 +2549,7 @@
   ],
   "../ary": [
     {
-      "id": 334,
+      "id": 332,
       "name": "./node_modules/lodash/ary.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2581,7 +2557,7 @@
   ],
   "./_createBind": [
     {
-      "id": 335,
+      "id": 333,
       "name": "./node_modules/lodash/_createBind.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2589,7 +2565,7 @@
   ],
   "./_createCurry": [
     {
-      "id": 336,
+      "id": 334,
       "name": "./node_modules/lodash/_createCurry.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2597,7 +2573,7 @@
   ],
   "./_countHolders": [
     {
-      "id": 337,
+      "id": 335,
       "name": "./node_modules/lodash/_countHolders.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2605,7 +2581,7 @@
   ],
   "./_isLaziable": [
     {
-      "id": 338,
+      "id": 336,
       "name": "./node_modules/lodash/_isLaziable.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2613,7 +2589,7 @@
   ],
   "./_getFuncName": [
     {
-      "id": 339,
+      "id": 337,
       "name": "./node_modules/lodash/_getFuncName.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2621,7 +2597,7 @@
   ],
   "./_realNames": [
     {
-      "id": 340,
+      "id": 338,
       "name": "./node_modules/lodash/_realNames.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2629,7 +2605,7 @@
   ],
   "./wrapperLodash": [
     {
-      "id": 341,
+      "id": 339,
       "name": "./node_modules/lodash/wrapperLodash.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2637,7 +2613,7 @@
   ],
   "./_wrapperClone": [
     {
-      "id": 342,
+      "id": 340,
       "name": "./node_modules/lodash/_wrapperClone.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2645,7 +2621,7 @@
   ],
   "./_getWrapDetails": [
     {
-      "id": 343,
+      "id": 341,
       "name": "./node_modules/lodash/_getWrapDetails.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2653,7 +2629,7 @@
   ],
   "./_insertWrapDetails": [
     {
-      "id": 344,
+      "id": 342,
       "name": "./node_modules/lodash/_insertWrapDetails.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2661,7 +2637,7 @@
   ],
   "./_updateWrapDetails": [
     {
-      "id": 345,
+      "id": 343,
       "name": "./node_modules/lodash/_updateWrapDetails.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2669,7 +2645,7 @@
   ],
   "./_reorder": [
     {
-      "id": 346,
+      "id": 344,
       "name": "./node_modules/lodash/_reorder.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2677,7 +2653,7 @@
   ],
   "./_createPartial": [
     {
-      "id": 347,
+      "id": 345,
       "name": "./node_modules/lodash/_createPartial.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2685,7 +2661,7 @@
   ],
   "./_mergeData": [
     {
-      "id": 348,
+      "id": 346,
       "name": "./node_modules/lodash/_mergeData.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2693,7 +2669,7 @@
   ],
   "../clone": [
     {
-      "id": 349,
+      "id": 347,
       "name": "./node_modules/lodash/clone.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2701,7 +2677,7 @@
   ],
   "./_baseAssignIn": [
     {
-      "id": 350,
+      "id": 348,
       "name": "./node_modules/lodash/_baseAssignIn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2709,7 +2685,7 @@
   ],
   "./_baseKeysIn": [
     {
-      "id": 351,
+      "id": 349,
       "name": "./node_modules/lodash/_baseKeysIn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2717,7 +2693,7 @@
   ],
   "./_nativeKeysIn": [
     {
-      "id": 352,
+      "id": 350,
       "name": "./node_modules/lodash/_nativeKeysIn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2725,7 +2701,7 @@
   ],
   "./_cloneBuffer": [
     {
-      "id": 353,
+      "id": 351,
       "name": "./node_modules/lodash/_cloneBuffer.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2733,7 +2709,7 @@
   ],
   "./_copySymbols": [
     {
-      "id": 354,
+      "id": 352,
       "name": "./node_modules/lodash/_copySymbols.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2741,7 +2717,7 @@
   ],
   "./_copySymbolsIn": [
     {
-      "id": 355,
+      "id": 353,
       "name": "./node_modules/lodash/_copySymbolsIn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2749,7 +2725,7 @@
   ],
   "./_getAllKeysIn": [
     {
-      "id": 356,
+      "id": 354,
       "name": "./node_modules/lodash/_getAllKeysIn.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2757,7 +2733,7 @@
   ],
   "./_initCloneArray": [
     {
-      "id": 357,
+      "id": 355,
       "name": "./node_modules/lodash/_initCloneArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2765,7 +2741,7 @@
   ],
   "./_initCloneByTag": [
     {
-      "id": 358,
+      "id": 356,
       "name": "./node_modules/lodash/_initCloneByTag.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2773,7 +2749,7 @@
   ],
   "./_cloneDataView": [
     {
-      "id": 359,
+      "id": 357,
       "name": "./node_modules/lodash/_cloneDataView.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2781,7 +2757,7 @@
   ],
   "./_cloneRegExp": [
     {
-      "id": 360,
+      "id": 358,
       "name": "./node_modules/lodash/_cloneRegExp.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2789,7 +2765,7 @@
   ],
   "./_cloneSymbol": [
     {
-      "id": 361,
+      "id": 359,
       "name": "./node_modules/lodash/_cloneSymbol.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2797,7 +2773,7 @@
   ],
   "./_cloneTypedArray": [
     {
-      "id": 362,
+      "id": 360,
       "name": "./node_modules/lodash/_cloneTypedArray.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2805,7 +2781,7 @@
   ],
   "./_initCloneObject": [
     {
-      "id": 363,
+      "id": 361,
       "name": "./node_modules/lodash/_initCloneObject.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2813,7 +2789,7 @@
   ],
   "./isMap": [
     {
-      "id": 364,
+      "id": 362,
       "name": "./node_modules/lodash/isMap.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2821,7 +2797,7 @@
   ],
   "./_baseIsMap": [
     {
-      "id": 365,
+      "id": 363,
       "name": "./node_modules/lodash/_baseIsMap.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2829,7 +2805,7 @@
   ],
   "./isSet": [
     {
-      "id": 366,
+      "id": 364,
       "name": "./node_modules/lodash/isSet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2837,7 +2813,7 @@
   ],
   "./_baseIsSet": [
     {
-      "id": 367,
+      "id": 365,
       "name": "./node_modules/lodash/_baseIsSet.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2845,7 +2821,7 @@
   ],
   "../curry": [
     {
-      "id": 368,
+      "id": 366,
       "name": "./node_modules/lodash/curry.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2853,7 +2829,7 @@
   ],
   "../isError": [
     {
-      "id": 369,
+      "id": 367,
       "name": "./node_modules/lodash/isError.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2861,7 +2837,7 @@
   ],
   "../isWeakMap": [
     {
-      "id": 370,
+      "id": 368,
       "name": "./node_modules/lodash/isWeakMap.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2869,7 +2845,7 @@
   ],
   "../iteratee": [
     {
-      "id": 371,
+      "id": 369,
       "name": "./node_modules/lodash/iteratee.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2877,7 +2853,7 @@
   ],
   "../rearg": [
     {
-      "id": 372,
+      "id": 370,
       "name": "./node_modules/lodash/rearg.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2885,7 +2861,7 @@
   ],
   "./_flatRest": [
     {
-      "id": 373,
+      "id": 371,
       "name": "./node_modules/lodash/_flatRest.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2893,7 +2869,7 @@
   ],
   "./flatten": [
     {
-      "id": 374,
+      "id": 372,
       "name": "./node_modules/lodash/flatten.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2901,7 +2877,7 @@
   ],
   "./_baseFlatten": [
     {
-      "id": 375,
+      "id": 373,
       "name": "./node_modules/lodash/_baseFlatten.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2909,7 +2885,7 @@
   ],
   "./_isFlattenable": [
     {
-      "id": 376,
+      "id": 374,
       "name": "./node_modules/lodash/_isFlattenable.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2917,7 +2893,7 @@
   ],
   "../toPath": [
     {
-      "id": 377,
+      "id": 375,
       "name": "./node_modules/lodash/toPath.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2925,7 +2901,7 @@
   ],
   "./_falseOptions": [
     {
-      "id": 378,
+      "id": 376,
       "name": "./node_modules/lodash/fp/_falseOptions.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2933,7 +2909,7 @@
   ],
   "./Loader": [
     {
-      "id": 385,
+      "id": 383,
       "name": "./node_modules/semantic-ui-react/dist/es/elements/Loader/Loader.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2941,7 +2917,7 @@
   ],
   "./Container": [
     {
-      "id": 386,
+      "id": 384,
       "name": "./node_modules/semantic-ui-react/dist/es/elements/Container/Container.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2949,7 +2925,7 @@
   ],
   "./Ref": [
     {
-      "id": 387,
+      "id": 385,
       "name": "./node_modules/@stardust-ui/react-component-ref/dist/es/Ref.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2957,7 +2933,7 @@
   ],
   "./Dimmer": [
     {
-      "id": 388,
+      "id": 386,
       "name": "./node_modules/semantic-ui-react/dist/es/modules/Dimmer/Dimmer.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2965,7 +2941,7 @@
   ],
   "./Message": [
     {
-      "id": 389,
+      "id": 387,
       "name": "./node_modules/semantic-ui-react/dist/es/collections/Message/Message.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2973,7 +2949,7 @@
   ],
   "./elements/Button/Button": [
     {
-      "id": 390,
+      "id": 388,
       "name": "./node_modules/semantic-ui-react/dist/es/elements/Button/Button.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2981,7 +2957,7 @@
   ],
   "./Menu": [
     {
-      "id": 391,
+      "id": 389,
       "name": "./node_modules/semantic-ui-react/dist/es/collections/Menu/Menu.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2989,7 +2965,7 @@
   ],
   "./Header": [
     {
-      "id": 392,
+      "id": 390,
       "name": "./node_modules/semantic-ui-react/dist/es/elements/Header/Header.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -2997,7 +2973,7 @@
   ],
   "../../elements/Segment/Segment": [
     {
-      "id": 393,
+      "id": 391,
       "name": "./node_modules/semantic-ui-react/dist/es/elements/Segment/Segment.js",
       "file": "vendors~app.js",
       "publicPath": "/static/vendors~app.js"
@@ -3005,7 +2981,7 @@
   ],
   "./Films": [
     {
-      "id": 381,
+      "id": 379,
       "name": "./public/scripts/app/films/Films.js",
       "file": "2.js",
       "publicPath": "/static/2.js"

@@ -31,7 +31,7 @@ var _CheckConnection = _interopRequireDefault(require("./CheckConnection"));
 
 var _LoadableFilms = _interopRequireDefault(require("./films/LoadableFilms"));
 
-const GlobalStyle = _styledComponents.createGlobalStyle`
+const GlobalStyle = (0, _styledComponents.createGlobalStyle)`
 html, body, #body {
   height: 100%;
 }
