@@ -461,7 +461,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "./toInteger": [
+  "../toInteger": [
     {
       "id": 54,
       "name": "./node_modules/lodash/toInteger.js",
@@ -877,7 +877,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "./isString": [
+  "lodash/isString": [
     {
       "id": 109,
       "name": "./node_modules/lodash/isString.js",
@@ -2419,7 +2419,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "./values": [
+  "lodash/values": [
     {
       "id": 316,
       "name": "./node_modules/lodash/values.js",
