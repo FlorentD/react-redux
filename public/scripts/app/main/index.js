@@ -1,34 +1,35 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 import {
   Editor,
   convertToRaw,
   EditorState,
   RichUtils,
   CompositeDecorator,
-} from 'draft-js';
-import { getEditorState, updateEditorState } from './redux';
-import InlineStyleControls from './controls/InlineStyleControls';
-import BlockTypeControls from './controls/BlockTypeControls';
-import AlignementControls from './controls/AlignementControls';
+  Modifier
+} from "draft-js";
+import { getEditorState, updateEditorState } from "./redux";
+import InlineStyleControls from "./controls/InlineStyleControls";
+import BlockTypeControls from "./controls/BlockTypeControls";
+import AlignementControls from "./controls/AlignementControls";
 import LinkControls, {
-  decorator as linkDecorator,
-} from './controls/LinkControls';
+  decorator as linkDecorator
+} from "./controls/LinkControls";
 import MediaControls, {
-  decorator as mediaDecorator,
-} from './controls/MediaControls';
+  decorator as mediaDecorator
+} from "./controls/MediaControls";
 import ImageControls, {
-  decorator as imageDecorator,
-} from './controls/ImageControls';
-import EmojiControls from './controls/EmojiControls';
-import linkify from './enhancers/linkify';
+  decorator as imageDecorator
+} from "./controls/ImageControls";
+import EmojiControls from "./controls/EmojiControls";
+import linkify from "./enhancers/linkify";
 
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      edit: true,
+      edit: true
     };
     props.updateEditorState(
       EditorState.set(EditorState.createEmpty(), {
@@ -36,8 +37,8 @@ class Main extends Component {
           linkDecorator,
           mediaDecorator,
           imageDecorator,
-          linkify,
-        ]),
+          linkify
+        ])
       })
     );
     this.onChange = editorState => props.updateEditorState(editorState);
@@ -50,12 +51,31 @@ class Main extends Component {
     this.setState({ edit: !this.state.edit });
   };
   handleKeyCommand = (command, editorState) => {
+    if (command === "backspace") {
+      const selectionState = editorState.getSelection();
+      const anchorKey = selectionState.getAnchorKey();
+      const currentContent = editorState.getCurrentContent();
+      const currentContentBlock = currentContent.getBlockForKey(anchorKey);
+      if (currentContentBlock.getType() === "atomic") {
+        const newBlockMap = currentContent.blockMap.delete(
+          currentContentBlock.getKey()
+        );
+        const newContentState = currentContent.set("blockMap", newBlockMap);
+        const newEditorState = EditorState.push(
+          editorState,
+          newContentState,
+          "move-block"
+        );
+        this.onChange(newEditorState);
+        return "handled";
+      }
+    }
     const newState = RichUtils.handleKeyCommand(editorState, command);
     if (newState) {
       this.onChange(newState);
-      return 'handled';
+      return "handled";
     }
-    return 'not-handled';
+    return "not-handled";
   };
   toggleInlineStyle = inlineStyle => {
     this.onChange(
@@ -69,8 +89,9 @@ class Main extends Component {
     this.onChange(newEditorState);
   };
   render() {
+    //console.log(this.props.editorState);
     return (
-      <div style={{ border: '1px solid black' }}>
+      <div style={{ border: "1px solid black" }}>
         {this.state.edit && (
           <div className="blocks-container">
             <div>
@@ -120,12 +141,12 @@ class Main extends Component {
             readOnly={!this.state.edit}
             decorator={new CompositeDecorator([linkDecorator, mediaDecorator])}
             onChange={this.onChange}
-            textAlignment={['center']}
+            textAlignment={["center"]}
             handleKeyCommand={this.handleKeyCommand}
             blockStyleFn={contentBlock => {
-              let style = '';
-              if (contentBlock.getData().get('alignmentStyle')) {
-                style += contentBlock.getData().get('alignmentStyle');
+              let style = "";
+              if (contentBlock.getData().get("alignmentStyle")) {
+                style += contentBlock.getData().get("alignmentStyle");
               }
               return style;
             }}
@@ -143,14 +164,11 @@ class Main extends Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  editorState: getEditorState,
+  editorState: getEditorState
 });
 
 const mapDispatchToProps = {
-  updateEditorState,
+  updateEditorState
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
