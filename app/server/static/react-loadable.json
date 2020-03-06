@@ -461,7 +461,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "../toInteger": [
+  "./toInteger": [
     {
       "id": 54,
       "name": "./node_modules/lodash/toInteger.js",
@@ -869,7 +869,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "../isPlainObject": [
+  "lodash/isPlainObject": [
     {
       "id": 108,
       "name": "./node_modules/lodash/isPlainObject.js",
@@ -877,7 +877,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "lodash/isString": [
+  "./isString": [
     {
       "id": 109,
       "name": "./node_modules/lodash/isString.js",
@@ -1517,7 +1517,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "./Image": [
+  "../Image/Image": [
     {
       "id": 194,
       "name": "./node_modules/semantic-ui-react/dist/es/elements/Image/Image.js",
@@ -2259,7 +2259,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "./findIndex": [
+  "lodash/findIndex": [
     {
       "id": 296,
       "name": "./node_modules/lodash/findIndex.js",
@@ -2419,7 +2419,7 @@
       "publicPath": "/static/vendors~app.js"
     }
   ],
-  "lodash/values": [
+  "./values": [
     {
       "id": 316,
       "name": "./node_modules/lodash/values.js",

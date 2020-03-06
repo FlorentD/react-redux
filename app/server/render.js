@@ -17,7 +17,7 @@ var _reactRedux = require("react-redux");
 
 var _reactRouter = require("react-router");
 
-var _server = require("react-dom/server");
+var _server = _interopRequireDefault(require("react-dom/server"));
 
 var _reactLoadable = _interopRequireDefault(require("react-loadable"));
 
@@ -31,15 +31,16 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-const sheet = new _styledComponents.ServerStyleSheet();
-
 function renderFullPage(req, store, context = {}) {
+  const sheet = new _styledComponents.ServerStyleSheet();
+
   const fullContext = _objectSpread({
     fromServer: true
   }, context);
 
   let modules = [];
-  const html = (0, _server.renderToString)(_react.default.createElement(_styledComponents.StyleSheetManager, {
+
+  const html = _server.default.renderToString(_react.default.createElement(_styledComponents.StyleSheetManager, {
     sheet: sheet.instance
   }, _react.default.createElement(_reactRouter.StaticRouter, {
     location: req.url,
@@ -49,6 +50,7 @@ function renderFullPage(req, store, context = {}) {
   }, _react.default.createElement(_reactLoadable.default.Capture, {
     report: moduleName => modules.push(moduleName)
   }, _react.default.createElement(_index.default, null))))));
+
   const styleTags = sheet.getStyleTags();
   const bundles = (0, _webpack.getBundles)(_reactLoadable2.default, modules);
   sheet.seal();
@@ -78,7 +80,7 @@ function renderFullPage(req, store, context = {}) {
       <body>
         <div id="body">${html}</div>
         <script>
-          window.__PRELOADED_STATE__ = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}
+          window.__PRELOADED_STATE__ = ${JSON.stringify(store.getState()).replace(/</g, "\\u003c")}
         </script>
         <script src="/static/vendors~app.js"></script>
         <script src="/static/app.js"></script>

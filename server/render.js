@@ -1,19 +1,18 @@
-import React from 'react';
-import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import { Provider } from 'react-redux';
-import { StaticRouter as Router } from 'react-router';
-import { renderToString } from 'react-dom/server';
-import Loadable from 'react-loadable';
-import { getBundles } from 'react-loadable/webpack';
-import stats from './static/react-loadable.json';
-import App from '../public/scripts/app/index';
-
-const sheet = new ServerStyleSheet();
+import React from "react";
+import { ServerStyleSheet, StyleSheetManager } from "styled-components";
+import { Provider } from "react-redux";
+import { StaticRouter as Router } from "react-router";
+import ReactDOM from "react-dom/server";
+import Loadable from "react-loadable";
+import { getBundles } from "react-loadable/webpack";
+import stats from "./static/react-loadable.json";
+import App from "../public/scripts/app/index";
 
 export function renderFullPage(req, store, context = {}) {
+  const sheet = new ServerStyleSheet();
   const fullContext = { fromServer: true, ...context };
   let modules = [];
-  const html = renderToString(
+  const html = ReactDOM.renderToString(
     <StyleSheetManager sheet={sheet.instance}>
       <Router location={req.url} context={fullContext}>
         <Provider store={store}>
@@ -55,7 +54,7 @@ export function renderFullPage(req, store, context = {}) {
         <script>
           window.__PRELOADED_STATE__ = ${JSON.stringify(
             store.getState()
-          ).replace(/</g, '\\u003c')}
+          ).replace(/</g, "\\u003c")}
         </script>
         <script src="/static/vendors~app.js"></script>
         <script src="/static/app.js"></script>
