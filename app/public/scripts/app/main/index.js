@@ -21,14 +21,14 @@ const NotificationButton = _styledComponents.default.div.withConfig({
 })(["margin:50px;"]);
 
 const Main = () => {
-  return _react.default.createElement(_semanticUiReact.Header, {
+  return /*#__PURE__*/_react.default.createElement(_semanticUiReact.Header, {
     as: "h2",
     icon: true,
     textAlign: "center"
-  }, _react.default.createElement(_semanticUiReact.Icon, {
+  }, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Icon, {
     name: "users",
     circular: true
-  }), _react.default.createElement(_semanticUiReact.Header.Content, null, "Main"), _react.default.createElement(NotificationButton, null, _react.default.createElement(_semanticUiReact.Button, {
+  }), /*#__PURE__*/_react.default.createElement(_semanticUiReact.Header.Content, null, "Main"), /*#__PURE__*/_react.default.createElement(NotificationButton, null, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Button, {
     positive: true,
     onClick: () => {
       fetch('/sendNotification', {

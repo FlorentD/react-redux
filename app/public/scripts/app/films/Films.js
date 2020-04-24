@@ -13,12 +13,12 @@ var _semanticUiReact = require("semantic-ui-react");
 
 var _FilmsRequest = _interopRequireDefault(require("./FilmsRequest"));
 
-const Films = () => _react.default.createElement(_FilmsRequest.default, null, films => _react.default.createElement(_semanticUiReact.Card.Group, null, films.map(film => _react.default.createElement(_semanticUiReact.Card, {
+const Films = () => /*#__PURE__*/_react.default.createElement(_FilmsRequest.default, null, films => /*#__PURE__*/_react.default.createElement(_semanticUiReact.Card.Group, null, films.map(film => /*#__PURE__*/_react.default.createElement(_semanticUiReact.Card, {
   key: film.id
-}, _react.default.createElement(_semanticUiReact.Image, {
+}, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Image, {
   src: film.image,
   wrapped: true
-}), _react.default.createElement(_semanticUiReact.Card.Content, null, _react.default.createElement(_semanticUiReact.Card.Header, null, film.title), _react.default.createElement(_semanticUiReact.Card.Meta, null, "Film."))))));
+}), /*#__PURE__*/_react.default.createElement(_semanticUiReact.Card.Content, null, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Card.Header, null, film.title), /*#__PURE__*/_react.default.createElement(_semanticUiReact.Card.Meta, null, "Film."))))));
 
 var _default = Films;
 exports.default = _default;

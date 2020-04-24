@@ -44,14 +44,14 @@ const CheckConnection = () => {
   }
 
   if (isOnline && showWelcomeBackMessage) {
-    return _react.default.createElement(_semanticUiReact.Message, {
+    return /*#__PURE__*/_react.default.createElement(_semanticUiReact.Message, {
       success: true
-    }, _react.default.createElement(_semanticUiReact.Message.Header, null, "Welcome back on web ! \uD83C\uDF89"));
+    }, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Message.Header, null, "Welcome back on web ! \uD83C\uDF89"));
   }
 
-  return _react.default.createElement(_semanticUiReact.Message, {
+  return /*#__PURE__*/_react.default.createElement(_semanticUiReact.Message, {
     warning: true
-  }, _react.default.createElement(_semanticUiReact.Message.Header, null, "You seem to be offline \uD83D\uDE2D"));
+  }, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Message.Header, null, "You seem to be offline \uD83D\uDE2D"));
 };
 
 var _default = CheckConnection;

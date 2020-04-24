@@ -54,20 +54,20 @@ const Layout = _styledComponents.default.div.withConfig({
 })(["padding:10px;background-image:url('/image/background.jpg');background-position:center;background-size:cover;background-attachment:fixed;background-color:#f0efef;color:black;height:100%;"]);
 
 let App = () => {
-  return _react.default.createElement(Layout, null, _react.default.createElement(GlobalStyle, null), _react.default.createElement(_menu.default, null), _react.default.createElement(_CheckConnection.default, null), _react.default.createElement(_semanticUiReact.Container, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react.default.createElement(Layout, null, /*#__PURE__*/_react.default.createElement(GlobalStyle, null), /*#__PURE__*/_react.default.createElement(_menu.default, null), /*#__PURE__*/_react.default.createElement(_CheckConnection.default, null), /*#__PURE__*/_react.default.createElement(_semanticUiReact.Container, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/",
     component: _main.default
-  }), _react.default.createElement(_reactRouterDom.Route, {
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/why",
     component: _why.default
-  }), _react.default.createElement(_reactRouterDom.Route, {
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/about",
     component: _about.default
-  }), _react.default.createElement(_reactRouterDom.Route, {
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/films",
     component: _LoadableFilms.default
-  }), _react.default.createElement(_reactRouterDom.Route, {
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     component: _NoMatch.default
   }))));
 };

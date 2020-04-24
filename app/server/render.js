@@ -19,12 +19,6 @@ var _reactRouter = require("react-router");
 
 var _server = _interopRequireDefault(require("react-dom/server"));
 
-var _reactLoadable = _interopRequireDefault(require("react-loadable"));
-
-var _webpack = require("react-loadable/webpack");
-
-var _reactLoadable2 = _interopRequireDefault(require("./static/react-loadable.json"));
-
 var _index = _interopRequireDefault(require("../public/scripts/app/index"));
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -38,21 +32,16 @@ function renderFullPage(req, store, context = {}) {
     fromServer: true
   }, context);
 
-  let modules = [];
-
-  const html = _server.default.renderToString(_react.default.createElement(_styledComponents.StyleSheetManager, {
+  const html = _server.default.renderToString( /*#__PURE__*/_react.default.createElement(_styledComponents.StyleSheetManager, {
     sheet: sheet.instance
-  }, _react.default.createElement(_reactRouter.StaticRouter, {
+  }, /*#__PURE__*/_react.default.createElement(_reactRouter.StaticRouter, {
     location: req.url,
     context: fullContext
-  }, _react.default.createElement(_reactRedux.Provider, {
+  }, /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
     store: store
-  }, _react.default.createElement(_reactLoadable.default.Capture, {
-    report: moduleName => modules.push(moduleName)
-  }, _react.default.createElement(_index.default, null))))));
+  }, /*#__PURE__*/_react.default.createElement(_index.default, null)))));
 
   const styleTags = sheet.getStyleTags();
-  const bundles = (0, _webpack.getBundles)(_reactLoadable2.default, modules);
   sheet.seal();
   return `
     <!doctype html>
@@ -84,7 +73,6 @@ function renderFullPage(req, store, context = {}) {
         </script>
         <script src="/static/vendors~app.js"></script>
         <script src="/static/app.js"></script>
-        ${bundles.map(bundle => `<script src="/static/${bundle.file}"></script>`)}
       </body>
     </html>
     `;

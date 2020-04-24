@@ -18,14 +18,14 @@ var _redux = require("./redux");
 var _reactRouterDom = require("react-router-dom");
 
 const PageMenu = () => {
-  return _react.default.createElement(_semanticUiReact.Menu, null, (0, _reactRedux.useSelector)(_redux.getMenu).map(({
+  return /*#__PURE__*/_react.default.createElement(_semanticUiReact.Menu, null, (0, _reactRedux.useSelector)(_redux.getMenu).map(({
     id,
     label,
     link
-  }) => _react.default.createElement(_semanticUiReact.Menu.Item, {
+  }) => /*#__PURE__*/_react.default.createElement(_semanticUiReact.Menu.Item, {
     key: id,
     name: id
-  }, _react.default.createElement(_reactRouterDom.Link, {
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: link
   }, label))));
 };
