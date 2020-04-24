@@ -1,26 +1,26 @@
-const { ReactLoadablePlugin } = require('react-loadable/webpack');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { ReactLoadablePlugin } = require("react-loadable/webpack");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  mode: 'production',
+  mode: "production",
   entry: {
-    app: './public/scripts/app',
+    app: "./public/scripts/app",
   },
   output: {
     path: `${__dirname}/dist`,
-    publicPath: '/static/',
-    filename: '[name].js',
+    publicPath: "/static/",
+    filename: "[name].js",
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
       },
       {
         test: /\.html$/,
-        loader: 'html-loader',
+        loader: "html-loader",
       },
     ],
   },
@@ -30,20 +30,20 @@ module.exports = {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           priority: 1,
-          chunks: 'all',
+          chunks: "all",
         },
       },
     },
   },
   plugins: [
     new ReactLoadablePlugin({
-      filename: './dist/react-loadable.json',
+      filename: "./dist/react-loadable.json",
     }),
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: "index.html",
     }),
     new webpack.DefinePlugin({
-      'process.env': {
+      "process.env": {
         NODE_ENV: '"production"',
       },
     }),

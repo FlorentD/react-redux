@@ -1,41 +1,43 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-  mode: 'development',
-  entry: './public/scripts/app',
-  devtool: 'inline-source-map',
+  mode: "development",
+  entry: "./public/scripts/app",
+  devtool: "inline-source-map",
   output: {
     path: path.resolve(__dirname),
-    filename: 'bundle.js',
-    publicPath: '/',
+    filename: "bundle.js",
+    publicPath: "/",
   },
   devServer: {
     contentBase: [
-      path.join(__dirname, 'public'),
-      path.join(__dirname, 'server'),
+      path.join(__dirname, "public"),
+      path.join(__dirname, "server"),
     ],
     watchContentBase: true,
     compress: true,
     port: 3000,
     proxy: {
-      '/info': 'http://localhost:8080',
+      "/info": "http://localhost:8080",
     },
   },
   module: {
     rules: [
-      { test: /\.(js|jsx)$/, exclude: /node_modudes/, use: 'babel-loader' },
+      { test: /\.(js|jsx)$/, exclude: /node_modudes/, use: "babel-loader" },
       {
         test: /\.(png|jpg|woff|woff2|eot|ttf|svg|otf)$/,
-        use: 'url-loader?limit=100000',
+        use: "url-loader?limit=100000",
       },
     ],
   },
+  optimization: {
+    moduleIds: "named",
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
-      'process.env': {
+      "process.env": {
         NODE_ENV: '"developpment"',
       },
     }),
