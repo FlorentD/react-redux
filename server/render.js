@@ -3,6 +3,7 @@ import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 import { Provider } from "react-redux";
 import { StaticRouter as Router } from "react-router";
 import ReactDOM from "react-dom/server";
+import manfiest from "./static/manifest.assets.json";
 import App from "../public/scripts/app/index";
 
 export function renderFullPage(req, store, context = {}) {
@@ -18,6 +19,15 @@ export function renderFullPage(req, store, context = {}) {
     </StyleSheetManager>
   );
   const styleTags = sheet.getStyleTags();
+  const assets =
+    process.env.ASSETS_STRATEGY !== "production"
+      ? `
+      <script src="/static/vendors~app.js">
+      </script><script src="/static/app.js"></script>
+       `
+      : ["vendors~app.js", "app.js"].map(
+          (file) => `<script src="${manfiest[file]}"></script>`
+        );
   sheet.seal();
   return `
     <!doctype html>
@@ -44,13 +54,12 @@ export function renderFullPage(req, store, context = {}) {
       </head>
       <body>
         <div id="body">${html}</div>
+        ${assets}
         <script>
           window.__PRELOADED_STATE__ = ${JSON.stringify(
             store.getState()
           ).replace(/</g, "\\u003c")}
         </script>
-        <script src="/static/vendors~app.js"></script>
-        <script src="/static/app.js"></script>
       </body>
     </html>
     `;

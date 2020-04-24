@@ -1,5 +1,7 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ManifestPlugin = require("webpack-manifest-plugin");
+
 module.exports = {
   mode: "production",
   entry: {
@@ -8,7 +10,7 @@ module.exports = {
   output: {
     path: `${__dirname}/dist`,
     publicPath: "/static/",
-    filename: "[name].js",
+    filename: "[name].[hash].js",
   },
   module: {
     rules: [
@@ -37,6 +39,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "index.html",
+    }),
+    new ManifestPlugin({
+      fileName: "manifest.assets.json",
     }),
     new webpack.DefinePlugin({
       "process.env": {

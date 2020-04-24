@@ -19,6 +19,8 @@ var _reactRouter = require("react-router");
 
 var _server = _interopRequireDefault(require("react-dom/server"));
 
+var _manifestAssets = _interopRequireDefault(require("./static/manifest.assets.json"));
+
 var _index = _interopRequireDefault(require("../public/scripts/app/index"));
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -42,6 +44,10 @@ function renderFullPage(req, store, context = {}) {
   }, /*#__PURE__*/_react.default.createElement(_index.default, null)))));
 
   const styleTags = sheet.getStyleTags();
+  const assets = process.env.ASSETS_STRATEGY !== "production" ? `
+      <script src="/static/vendors~app.js">
+      </script><script src="/static/app.js"></script>
+       ` : ["vendors~app.js", "app.js"].map(file => `<script src="${_manifestAssets.default[file]}"></script>`);
   sheet.seal();
   return `
     <!doctype html>
@@ -68,11 +74,10 @@ function renderFullPage(req, store, context = {}) {
       </head>
       <body>
         <div id="body">${html}</div>
+        ${assets}
         <script>
           window.__PRELOADED_STATE__ = ${JSON.stringify(store.getState()).replace(/</g, "\\u003c")}
         </script>
-        <script src="/static/vendors~app.js"></script>
-        <script src="/static/app.js"></script>
       </body>
     </html>
     `;
