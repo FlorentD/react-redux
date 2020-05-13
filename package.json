@@ -20,7 +20,7 @@
     "build": "rm -rf dist && webpack --config webpack-prod.config.js && cp dist/*.* server/static",
     "test": "jest --config tests/jest.config.json",
     "dev": "clear && webpack-dev-server",
-    "deploy": "npm run test && npm run dist && git push heroku master",
+    "deploy": "npm run test && npm run dist && git add . && git commit -m 'deploy to heroku' && git push heroku master",
     "start": "node ./app/server/index.js",
     "ssr": "nodemon --exec babel-node server/index.js"
   },
