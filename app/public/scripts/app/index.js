@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+
 var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
@@ -31,30 +33,27 @@ var _CheckConnection = _interopRequireDefault(require("./CheckConnection"));
 
 var _LoadableFilms = _interopRequireDefault(require("./films/LoadableFilms"));
 
-const GlobalStyle = (0, _styledComponents.createGlobalStyle)`
-html, body, #body {
-  height: 100%;
+var _Graph = _interopRequireWildcard(require("./Graph"));
+
+function _templateObject() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\nhtml, body, #body {\n  height: 100%;\n}\n\nul {\n  list-style: none;\n}\n\na {\n  color: rgb(0, 0, 0);\n  &:visited {\n    color: blue;\n  }\n}\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
 }
 
-ul {
-  list-style: none;
-}
+var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject());
 
-a {
-  color: rgb(0, 0, 0);
-  &:visited {
-    color: blue;
-  }
-}
-`;
-
-const Layout = _styledComponents.default.div.withConfig({
+var Layout = _styledComponents.default.div.withConfig({
   displayName: "app__Layout",
   componentId: "vbjlqm-0"
-})(["padding:10px;background-image:url('/image/background.jpg');background-position:center;background-size:cover;background-attachment:fixed;background-color:#f0efef;color:black;height:100%;"]);
+})(["padding:10px;background-image:url(\"/image/background.jpg\");background-position:center;background-size:cover;background-attachment:fixed;background-color:#f0efef;color:black;height:100%;"]);
 
-let App = () => {
-  return /*#__PURE__*/_react.default.createElement(Layout, null, /*#__PURE__*/_react.default.createElement(GlobalStyle, null), /*#__PURE__*/_react.default.createElement(_menu.default, null), /*#__PURE__*/_react.default.createElement(_CheckConnection.default, null), /*#__PURE__*/_react.default.createElement(_semanticUiReact.Container, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+var App = function App() {
+  return /*#__PURE__*/_react.default.createElement(Layout, null, /*#__PURE__*/_react.default.createElement(GlobalStyle, null), /*#__PURE__*/_react.default.createElement(_menu.default, null), /*#__PURE__*/_react.default.createElement(_Graph.default, null), /*#__PURE__*/_react.default.createElement(_Graph.MyResponsiveBar, null), /*#__PURE__*/_react.default.createElement(_CheckConnection.default, null), /*#__PURE__*/_react.default.createElement(_semanticUiReact.Container, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/",
     component: _main.default
@@ -72,10 +71,9 @@ let App = () => {
   }))));
 };
 
-if (process.env.NODE_ENV !== 'production') {
-  const {
-    hot
-  } = require('react-hot-loader/root');
+if (process.env.NODE_ENV !== "production") {
+  var _require = require("react-hot-loader/root"),
+      hot = _require.hot;
 
   App = hot(App);
 }

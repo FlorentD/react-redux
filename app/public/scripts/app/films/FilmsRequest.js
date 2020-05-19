@@ -13,12 +13,11 @@ var _reactRouter = require("react-router");
 
 var _redux = require("./redux");
 
-const FilmsRequest = ({
-  children,
-  staticContext
-}) => {
-  const dispatch = (0, _reactRedux.useDispatch)();
-  (0, _react.useEffect)(() => {
+var FilmsRequest = function FilmsRequest(_ref) {
+  var children = _ref.children,
+      staticContext = _ref.staticContext;
+  var dispatch = (0, _reactRedux.useDispatch)();
+  (0, _react.useEffect)(function () {
     if (!staticContext || !staticContext.fromServer) dispatch((0, _redux.fetchFilms)());
   }, []);
   return children((0, _reactRedux.useSelector)(_redux.getFilms));

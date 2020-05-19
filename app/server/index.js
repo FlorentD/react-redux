@@ -22,18 +22,20 @@ var _render = require("./render");
 
 var _handleFilms = require("./handlers/handleFilms");
 
-const app = (0, _express.default)();
+var app = (0, _express.default)();
 app.use(_bodyParser.default.urlencoded({
   extended: false
 }));
 app.use(_bodyParser.default.json());
 app.use((0, _compression.default)());
-app.use("/static", _express.default.static(`${__dirname}/static`));
-app.use("/image", _express.default.static(`${__dirname}/image`));
+app.use("/static", _express.default.static("".concat(__dirname, "/static")));
+app.use("/image", _express.default.static("".concat(__dirname, "/image")));
 app.get("/films", _handleFilms.handleFilm);
-app.get("/vapidPublicKey", (req, res) => res.send(_push.publicKey));
-app.post("/sendNotification", (req, res) => {
-  const subscription = req.body.subscription;
+app.get("/vapidPublicKey", function (req, res) {
+  return res.send(_push.publicKey);
+});
+app.post("/sendNotification", function (req, res) {
+  var subscription = req.body.subscription;
   (0, _push.sendNotification)(subscription).then(function () {
     res.sendStatus(201);
   }).catch(function (error) {
@@ -41,30 +43,32 @@ app.post("/sendNotification", (req, res) => {
     console.log(error);
   });
 });
-app.get("*", (req, res) => {
+app.get("*", function (req, res) {
   _logger.default.info(req.url);
 
   if (req.url === "/robots.txt") {
-    return res.status(300).sendFile(`${__dirname}/robots.txt`);
+    return res.status(300).sendFile("".concat(__dirname, "/robots.txt"));
   }
 
   if (req.url === "/sw.js") {
-    return res.status(200).sendFile(`${__dirname}/sw.js`);
+    return res.status(200).sendFile("".concat(__dirname, "/sw.js"));
   }
 
   if (req.url === "/favicon.ico") {
-    return res.status(200).sendFile(`${__dirname}/favicon.ico`);
+    return res.status(200).sendFile("".concat(__dirname, "/favicon.ico"));
   }
 
   if (req.url === "/404.html") {
-    return res.status(200).sendFile(`${__dirname}/static/404.html`);
+    return res.status(200).sendFile("".concat(__dirname, "/static/404.html"));
   }
 
   if (req.url === "/offline.html") {
-    return res.status(200).sendFile(`${__dirname}/static/offline.html`);
+    return res.status(200).sendFile("".concat(__dirname, "/static/offline.html"));
   }
 
-  const store = (0, _store.create)();
+  var store = (0, _store.create)();
   res.status(200).send((0, _render.renderFullPage)(req, store));
 });
-app.listen(process.env.PORT || 8080, () => _logger.default.info("App running on port 8080 o//"));
+app.listen(process.env.PORT || 8080, function () {
+  return _logger.default.info("App running on port 8080 o//");
+});

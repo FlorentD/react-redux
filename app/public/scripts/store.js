@@ -15,9 +15,9 @@ var _reduxThunk = _interopRequireDefault(require("redux-thunk"));
 
 var _logger = _interopRequireDefault(require("./middleware/logger"));
 
-const preloadedState = window.__PRELOADED_STATE__;
+var preloadedState = window.__PRELOADED_STATE__;
 delete window.__PRELOADED_STATE__;
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || _redux.compose;
-const store = (0, _redux.createStore)(_reducers.default, preloadedState, composeEnhancers((0, _redux.applyMiddleware)(_reduxThunk.default, _logger.default)));
+var composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || _redux.compose;
+var store = (0, _redux.createStore)(_reducers.default, preloadedState, composeEnhancers((0, _redux.applyMiddleware)(_reduxThunk.default, _logger.default)));
 var _default = store;
 exports.default = _default;

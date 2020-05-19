@@ -3,7 +3,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
 if (workbox) {
-  console.log(`Yay! Workbox is loaded 🎉`);
+  console.log("Yay! Workbox is loaded \uD83C\uDF89");
   workbox.precaching.precacheAndRoute(['/static/app.css', {
     url: '/index.html',
     revision: '383676'
@@ -20,10 +20,10 @@ if (workbox) {
     })]
   }));
 } else {
-  console.log(`Boo! Workbox didn't load 😬`);
+  console.log("Boo! Workbox didn't load \uD83D\uDE2C");
 }
 
-self.addEventListener('push', event => {
+self.addEventListener('push', function (event) {
   event.waitUntil(self.registration.showNotification('ReactRedux-FR', {
     lang: 'en',
     icon: '/image/icon-96.png',

@@ -1,11 +1,16 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.getMenu = void 0;
-const NAME = 'MENU';
-const initialState = {
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var NAME = 'MENU';
+var initialState = {
   menu: [{
     id: 'item1',
     label: 'Main',
@@ -29,17 +34,21 @@ const initialState = {
   }]
 };
 
-function reducer(state = initialState) {
+function reducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+
   switch (state.type) {
     default:
       return state;
   }
 }
 
-const getMenu = state => state[NAME].menu;
+var getMenu = function getMenu(state) {
+  return state[NAME].menu;
+};
 
 exports.getMenu = getMenu;
-var _default = {
-  [NAME]: reducer
-};
+
+var _default = (0, _defineProperty2.default)({}, NAME, reducer);
+
 exports.default = _default;

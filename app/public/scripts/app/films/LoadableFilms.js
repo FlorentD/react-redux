@@ -4,6 +4,10 @@ var _interopRequireWildcard3 = require("@babel/runtime/helpers/interopRequireWil
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
+require("core-js/modules/es.object.to-string");
+
+require("core-js/modules/es.promise");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -15,9 +19,13 @@ var _react = _interopRequireWildcard3(require("react"));
 
 var _semanticUiReact = require("semantic-ui-react");
 
-const Films = (0, _react.lazy)(() => Promise.resolve().then(() => (0, _interopRequireWildcard2.default)(require("./Films"))));
+var Films = (0, _react.lazy)(function () {
+  return Promise.resolve().then(function () {
+    return (0, _interopRequireWildcard2.default)(require("./Films"));
+  });
+});
 
-const LoadableFilms = () => {
+var LoadableFilms = function LoadableFilms() {
   return /*#__PURE__*/_react.default.createElement(_react.Suspense, {
     fallback: /*#__PURE__*/_react.default.createElement(_semanticUiReact.Segment, null, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Dimmer, {
       active: true

@@ -9,7 +9,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-const Why = () => {
+var Why = function Why() {
   return /*#__PURE__*/_react.default.createElement("h1", null, "Why");
 };
 

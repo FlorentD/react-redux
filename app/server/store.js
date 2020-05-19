@@ -13,6 +13,8 @@ var _reducers = _interopRequireDefault(require("../public/scripts/app/reducers")
 
 var _reduxThunk = _interopRequireDefault(require("redux-thunk"));
 
-const create = () => (0, _redux.createStore)(_reducers.default, (0, _redux.applyMiddleware)(_reduxThunk.default));
+var create = function create() {
+  return (0, _redux.createStore)(_reducers.default, (0, _redux.applyMiddleware)(_reduxThunk.default));
+};
 
 exports.create = create;

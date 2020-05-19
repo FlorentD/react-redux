@@ -2,6 +2,28 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
+require("core-js/modules/es.symbol");
+
+require("core-js/modules/es.array.concat");
+
+require("core-js/modules/es.array.filter");
+
+require("core-js/modules/es.array.for-each");
+
+require("core-js/modules/es.array.map");
+
+require("core-js/modules/es.object.get-own-property-descriptor");
+
+require("core-js/modules/es.object.get-own-property-descriptors");
+
+require("core-js/modules/es.object.keys");
+
+require("core-js/modules/es.regexp.exec");
+
+require("core-js/modules/es.string.replace");
+
+require("core-js/modules/web.dom-collections.for-each");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -27,14 +49,15 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-function renderFullPage(req, store, context = {}) {
-  const sheet = new _styledComponents.ServerStyleSheet();
+function renderFullPage(req, store) {
+  var context = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var sheet = new _styledComponents.ServerStyleSheet();
 
-  const fullContext = _objectSpread({
+  var fullContext = _objectSpread({
     fromServer: true
   }, context);
 
-  const html = _server.default.renderToString( /*#__PURE__*/_react.default.createElement(_styledComponents.StyleSheetManager, {
+  var html = _server.default.renderToString( /*#__PURE__*/_react.default.createElement(_styledComponents.StyleSheetManager, {
     sheet: sheet.instance
   }, /*#__PURE__*/_react.default.createElement(_reactRouter.StaticRouter, {
     location: req.url,
@@ -43,42 +66,10 @@ function renderFullPage(req, store, context = {}) {
     store: store
   }, /*#__PURE__*/_react.default.createElement(_index.default, null)))));
 
-  const styleTags = sheet.getStyleTags();
-  const assets = process.env.ASSETS_STRATEGY !== "production" ? `
-      <script src="/static/vendors~app.js">
-      </script><script src="/static/app.js"></script>
-       ` : ["vendors~app.js", "app.js"].map(file => `<script src="${_manifestAssets.default[file]}"></script>`);
+  var styleTags = sheet.getStyleTags();
+  var assets = process.env.ASSETS_STRATEGY !== "production" ? "\n      <script src=\"/static/vendors~app.js\">\n      </script><script src=\"/static/app.js\"></script>\n       " : ["vendors~app.js", "app.js"].map(function (file) {
+    return "<script src=\"".concat(_manifestAssets.default[file], "\"></script>");
+  });
   sheet.seal();
-  return `
-    <!doctype html>
-    <html lang="en">
-      <head>
-         <script> 
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js');
-            }
-        </script>
-        <link rel="icon" type="image/jpeg" href="/image/icon-48.jpg">
-        <link rel="manifest" href="/static/manifest.json">
-        <meta charset="utf-8" />
-        <meta name="theme-color" content="#0066ff"/>
-        <meta name="description" content="My tests to get the perfect webapp" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <link
-          rel="stylesheet"
-          href="/static/app.css"
-        />
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
-        <title>My SSR APP</title>
-        ${styleTags}
-      </head>
-      <body>
-        <div id="body">${html}</div>
-        ${assets}
-        <script>
-          window.__PRELOADED_STATE__ = ${JSON.stringify(store.getState()).replace(/</g, "\\u003c")}
-        </script>
-      </body>
-    </html>
-    `;
+  return "\n    <!doctype html>\n    <html lang=\"en\">\n      <head>\n         <script> \n            if ('serviceWorker' in navigator) {\n                navigator.serviceWorker.register('/sw.js');\n            }\n        </script>\n        <link rel=\"icon\" type=\"image/jpeg\" href=\"/image/icon-48.jpg\">\n        <link rel=\"manifest\" href=\"/static/manifest.json\">\n        <meta charset=\"utf-8\" />\n        <meta name=\"theme-color\" content=\"#0066ff\"/>\n        <meta name=\"description\" content=\"My tests to get the perfect webapp\" />\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, shrink-to-fit=no\">\n        <link\n          rel=\"stylesheet\"\n          href=\"/static/app.css\"\n        />\n        <link rel=\"stylesheet\" href=\"//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css\" />\n        <title>My SSR APP</title>\n        ".concat(styleTags, "\n      </head>\n      <body>\n        <div id=\"body\">").concat(html, "</div>\n        ").concat(assets, "\n        <script>\n          window.__PRELOADED_STATE__ = ").concat(JSON.stringify(store.getState()).replace(/</g, "\\u003c"), "\n        </script>\n      </body>\n    </html>\n    ");
 }

@@ -2,6 +2,10 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
+require("core-js/modules/es.object.to-string");
+
+require("core-js/modules/es.promise");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -15,12 +19,12 @@ var _semanticUiReact = require("semantic-ui-react");
 
 var _push = require("../push");
 
-const NotificationButton = _styledComponents.default.div.withConfig({
+var NotificationButton = _styledComponents.default.div.withConfig({
   displayName: "main__NotificationButton",
   componentId: "sc-14cy0bs-0"
 })(["margin:50px;"]);
 
-const Main = () => {
+var Main = function Main() {
   return /*#__PURE__*/_react.default.createElement(_semanticUiReact.Header, {
     as: "h2",
     icon: true,
@@ -30,7 +34,7 @@ const Main = () => {
     circular: true
   }), /*#__PURE__*/_react.default.createElement(_semanticUiReact.Header.Content, null, "Main"), /*#__PURE__*/_react.default.createElement(NotificationButton, null, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Button, {
     positive: true,
-    onClick: () => {
+    onClick: function onClick() {
       fetch('/sendNotification', {
         method: 'post',
         headers: {
@@ -39,7 +43,9 @@ const Main = () => {
         body: JSON.stringify({
           subscription: (0, _push.getSubscription)()
         })
-      }).then(() => console.info('notification sent'));
+      }).then(function () {
+        return console.info('notification sent');
+      });
     }
   }, "Send my a notification please !")));
 };
