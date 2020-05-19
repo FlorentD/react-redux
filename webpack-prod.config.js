@@ -1,4 +1,3 @@
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 
@@ -16,7 +15,6 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
         loader: "babel-loader",
       },
       {
@@ -42,11 +40,6 @@ module.exports = {
     }),
     new ManifestPlugin({
       fileName: "manifest.assets.json",
-    }),
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: '"production"',
-      },
     }),
   ],
 };

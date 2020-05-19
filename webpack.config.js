@@ -24,7 +24,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.(js|jsx)$/, exclude: /node_modudes/, use: "babel-loader" },
+      { test: /\.(js|jsx)$/, use: "babel-loader" },
       {
         test: /\.(png|jpg|woff|woff2|eot|ttf|svg|otf)$/,
         use: "url-loader?limit=100000",
@@ -34,12 +34,5 @@ module.exports = {
   optimization: {
     moduleIds: "named",
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: '"developpment"',
-      },
-    }),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 };
