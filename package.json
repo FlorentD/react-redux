@@ -24,6 +24,11 @@
     "start": "node ./app/server/index.js",
     "ssr": "nodemon --exec babel-node server/index.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.js": [
       "prettier",
@@ -32,6 +37,7 @@
   },
   "browserslist": "> 0.25%, not dead",
   "dependencies": {
+    "@babel/node": "7.8.7",
     "@nivo/bar": "0.61.1",
     "@nivo/chord": "0.61.1",
     "body-parser": "1.19.0",
@@ -59,7 +65,6 @@
   "devDependencies": {
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.6",
-    "@babel/node": "7.8.7",
     "@babel/plugin-proposal-object-rest-spread": "7.9.6",
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
     "@babel/plugin-transform-runtime": "7.9.6",
@@ -77,6 +82,7 @@
     "enzyme-adapter-react-16": "1.15.2",
     "html-loader": "1.1.0",
     "html-webpack-plugin": "4.3.0",
+    "husky": "4.2.5",
     "jest": "26.0.1",
     "lint-staged": "10.2.4",
     "prettier": "2.0.5",
