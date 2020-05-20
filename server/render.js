@@ -38,17 +38,15 @@ export function renderFullPage(req, store, context = {}) {
                 navigator.serviceWorker.register('/sw.js');
             }
         </script>
-        <link rel="icon" type="image/jpeg" href="/image/icon-48.jpg">
+        <link rel="icon" type="image/jpeg" href="/image/icon-48.png">
         <link rel="manifest" href="/static/manifest.json">
         <meta charset="utf-8" />
         <meta name="theme-color" content="#0066ff"/>
         <meta name="description" content="My tests to get the perfect webapp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <link
-          rel="stylesheet"
-          href="/static/app.css"
-        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+        
         <title>My SSR APP</title>
         ${styleTags}
       </head>

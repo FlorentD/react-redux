@@ -49,11 +49,21 @@ let App = () => {
       <CheckConnection />
       <Container>
         <Switch>
-          <Route exact path="/" component={Main} />
-          <Route path="/why" component={Why} />
-          <Route path="/about" component={About} />
-          <Route path="/films" component={LoadableFilms} />
-          <Route component={NoMatch} />
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route path="/why">
+            <Why />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/films">
+            <LoadableFilms />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
         </Switch>
       </Container>
     </Layout>
