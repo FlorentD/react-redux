@@ -24,7 +24,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.(js|jsx)$/, use: "babel-loader" },
+      { test: /\.(js|jsx)$/, use: "babel-loader", exclude: /node_modules/ },
       {
         test: /\.(png|jpg|woff|woff2|eot|ttf|svg|otf)$/,
         use: "url-loader?limit=100000",
