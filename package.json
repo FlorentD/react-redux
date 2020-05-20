@@ -77,7 +77,6 @@
     "enzyme-adapter-react-16": "1.15.2",
     "html-loader": "1.1.0",
     "html-webpack-plugin": "4.3.0",
-    "husky": "4.2.5",
     "jest": "26.0.1",
     "lint-staged": "10.2.4",
     "prettier": "2.0.5",
