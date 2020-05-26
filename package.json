@@ -58,7 +58,7 @@
     "reselect": "4.0.0",
     "restify": "8.5.1",
     "semantic-ui-react": "0.88.2",
-    "styled-components": "5.1.0",
+    "styled-components": "5.1.1",
     "web-push": "3.4.4",
     "winston": "3.2.1"
   },
@@ -84,7 +84,7 @@
     "html-webpack-plugin": "4.3.0",
     "husky": "4.2.5",
     "jest": "26.0.1",
-    "lint-staged": "10.2.4",
+    "lint-staged": "10.2.6",
     "prettier": "2.0.5",
     "react-hot-loader": "4.12.21",
     "react-test-renderer": "16.13.1",
