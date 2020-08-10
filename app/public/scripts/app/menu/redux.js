@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.getMenu = void 0;
+exports["default"] = exports.getMenu = void 0;
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -49,6 +49,6 @@ var getMenu = function getMenu(state) {
 
 exports.getMenu = getMenu;
 
-var _default = (0, _defineProperty2.default)({}, NAME, reducer);
+var _default = (0, _defineProperty2["default"])({}, NAME, reducer);
 
-exports.default = _default;
+exports["default"] = _default;

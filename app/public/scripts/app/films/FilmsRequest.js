@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = require("react");
 
@@ -25,4 +25,4 @@ var FilmsRequest = function FilmsRequest(_ref) {
 
 var _default = (0, _reactRouter.withRouter)(FilmsRequest);
 
-exports.default = _default;
+exports["default"] = _default;

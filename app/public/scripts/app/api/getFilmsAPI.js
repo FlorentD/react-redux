@@ -21,15 +21,15 @@ var _dexie = _interopRequireDefault(require("dexie"));
 
 var _isEmpty = _interopRequireDefault(require("lodash/fp/isEmpty"));
 
-var db = new _dexie.default('reactredux-fr-db');
+var db = new _dexie["default"]('reactredux-fr-db');
 db.version(1).stores({
   films: '++id,title,image'
 });
 
 var getFilmsAPI = /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
     var localFilms, response, films;
-    return _regenerator.default.wrap(function _callee$(_context) {
+    return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -47,7 +47,7 @@ var getFilmsAPI = /*#__PURE__*/function () {
             return _context.abrupt("return", localFilms);
 
           case 7:
-            if (!(0, _isEmpty.default)(localFilms)) {
+            if (!(0, _isEmpty["default"])(localFilms)) {
               _context.next = 19;
               break;
             }

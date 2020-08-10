@@ -5,13 +5,13 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var Why = function Why() {
-  return /*#__PURE__*/_react.default.createElement("h1", null, "Why");
+  return /*#__PURE__*/_react["default"].createElement("h1", null, "Why");
 };
 
 var _default = Why;
-exports.default = _default;
+exports["default"] = _default;

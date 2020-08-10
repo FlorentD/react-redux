@@ -4,10 +4,12 @@ var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWild
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
+require("core-js/modules/web.timers");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
@@ -19,17 +21,17 @@ var CheckConnection = function CheckConnection() {
   if (typeof navigator === 'undefined') return null;
 
   var _useState = (0, _react.useState)(navigator.onLine),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      _useState2 = (0, _slicedToArray2["default"])(_useState, 2),
       isOnline = _useState2[0],
       online = _useState2[1];
 
   var _useState3 = (0, _react.useState)(false),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
+      _useState4 = (0, _slicedToArray2["default"])(_useState3, 2),
       hasBeenOffline = _useState4[0],
       offline = _useState4[1];
 
   var _useState5 = (0, _react.useState)(false),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
+      _useState6 = (0, _slicedToArray2["default"])(_useState5, 2),
       showWelcomeBackMessage = _useState6[0],
       welcomeBackMessage = _useState6[1];
 
@@ -67,15 +69,15 @@ var CheckConnection = function CheckConnection() {
   }
 
   if (isOnline && showWelcomeBackMessage) {
-    return /*#__PURE__*/_react.default.createElement(_semanticUiReact.Message, {
+    return /*#__PURE__*/_react["default"].createElement(_semanticUiReact.Message, {
       success: true
-    }, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Message.Header, null, "Welcome back on web ! \uD83C\uDF89"));
+    }, /*#__PURE__*/_react["default"].createElement(_semanticUiReact.Message.Header, null, "Welcome back on web ! \uD83C\uDF89"));
   }
 
-  return /*#__PURE__*/_react.default.createElement(_semanticUiReact.Message, {
+  return /*#__PURE__*/_react["default"].createElement(_semanticUiReact.Message, {
     warning: true
-  }, /*#__PURE__*/_react.default.createElement(_semanticUiReact.Message.Header, null, "You seem to be offline \uD83D\uDE2D"));
+  }, /*#__PURE__*/_react["default"].createElement(_semanticUiReact.Message.Header, null, "You seem to be offline \uD83D\uDE2D"));
 };
 
 var _default = CheckConnection;
-exports.default = _default;
+exports["default"] = _default;

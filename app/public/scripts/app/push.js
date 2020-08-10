@@ -94,9 +94,9 @@ if (typeof window !== 'undefined') {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(function (registration) {
       return registration.pushManager.getSubscription().then( /*#__PURE__*/function () {
-        var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(validSubscription) {
+        var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(validSubscription) {
           var response, vapidPublicKey, convertedVapidKey;
-          return _regenerator.default.wrap(function _callee$(_context) {
+          return _regenerator["default"].wrap(function _callee$(_context) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
