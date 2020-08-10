@@ -9,7 +9,6 @@ import About from "./about";
 import NoMatch from "./NoMatch";
 import CheckConnection from "./CheckConnection";
 import LoadableFilms from "./films/LoadableFilms";
-import Graph, { MyResponsiveBar } from "./Graph";
 
 const GlobalStyle = createGlobalStyle`
 html, body, #body {
@@ -44,8 +43,6 @@ let App = () => {
     <Layout>
       <GlobalStyle />
       <Menu />
-      <Graph />
-      <MyResponsiveBar />
       <CheckConnection />
       <Container>
         <Switch>
