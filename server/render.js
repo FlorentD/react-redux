@@ -22,10 +22,10 @@ export function renderFullPage(req, store, context = {}) {
   const assets =
     process.env.ASSETS_STRATEGY !== "production"
       ? `
-      <script src="/static/vendors~app.js">
+      <script src="/static/vendors.js">
       </script><script src="/static/app.js"></script>
        `
-      : ["vendors~app.js", "app.js"].map(
+      : ["vendors.js", "app.js"].map(
           (file) => `<script src="${manfiest[file]}"></script>`
         );
   sheet.seal();

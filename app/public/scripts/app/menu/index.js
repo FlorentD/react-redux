@@ -2,9 +2,9 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("core-js/modules/es.array.map");
+require("core-js/modules/es.array.map.js");
 
-require("core-js/modules/es.string.link");
+require("core-js/modules/es.string.link.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true

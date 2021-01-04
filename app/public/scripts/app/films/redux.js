@@ -2,24 +2,6 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("core-js/modules/es.symbol");
-
-require("core-js/modules/es.array.filter");
-
-require("core-js/modules/es.array.for-each");
-
-require("core-js/modules/es.object.define-properties");
-
-require("core-js/modules/es.object.define-property");
-
-require("core-js/modules/es.object.get-own-property-descriptor");
-
-require("core-js/modules/es.object.get-own-property-descriptors");
-
-require("core-js/modules/es.object.keys");
-
-require("core-js/modules/web.dom-collections.for-each");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -27,7 +9,7 @@ exports["default"] = exports.getFilms = exports.fetchFilms = exports.updateFilms
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
-require("regenerator-runtime/runtime");
+require("regenerator-runtime/runtime.js");
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 

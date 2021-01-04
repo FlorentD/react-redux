@@ -9,7 +9,7 @@ exports.handleFilm = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
-require("regenerator-runtime/runtime");
+require("regenerator-runtime/runtime.js");
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 

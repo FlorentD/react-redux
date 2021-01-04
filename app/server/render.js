@@ -2,31 +2,13 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("core-js/modules/es.symbol");
+require("core-js/modules/es.array.concat.js");
 
-require("core-js/modules/es.array.concat");
+require("core-js/modules/es.array.map.js");
 
-require("core-js/modules/es.array.filter");
+require("core-js/modules/es.regexp.exec.js");
 
-require("core-js/modules/es.array.for-each");
-
-require("core-js/modules/es.array.map");
-
-require("core-js/modules/es.object.define-properties");
-
-require("core-js/modules/es.object.define-property");
-
-require("core-js/modules/es.object.get-own-property-descriptor");
-
-require("core-js/modules/es.object.get-own-property-descriptors");
-
-require("core-js/modules/es.object.keys");
-
-require("core-js/modules/es.regexp.exec");
-
-require("core-js/modules/es.string.replace");
-
-require("core-js/modules/web.dom-collections.for-each");
+require("core-js/modules/es.string.replace.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -71,7 +53,7 @@ function renderFullPage(req, store) {
   }, /*#__PURE__*/_react["default"].createElement(_index["default"], null)))));
 
   var styleTags = sheet.getStyleTags();
-  var assets = process.env.ASSETS_STRATEGY !== "production" ? "\n      <script src=\"/static/vendors~app.js\">\n      </script><script src=\"/static/app.js\"></script>\n       " : ["vendors~app.js", "app.js"].map(function (file) {
+  var assets = process.env.ASSETS_STRATEGY !== "production" ? "\n      <script src=\"/static/vendors.js\">\n      </script><script src=\"/static/app.js\"></script>\n       " : ["vendors.js", "app.js"].map(function (file) {
     return "<script src=\"".concat(_manifestAssets["default"][file], "\"></script>");
   });
   sheet.seal();

@@ -2,67 +2,67 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("core-js/modules/es.array.iterator");
+require("core-js/modules/es.array.iterator.js");
 
-require("core-js/modules/es.array-buffer.slice");
+require("core-js/modules/es.array-buffer.slice.js");
 
-require("core-js/modules/es.object.to-string");
+require("core-js/modules/es.object.to-string.js");
 
-require("core-js/modules/es.promise");
+require("core-js/modules/es.promise.js");
 
-require("core-js/modules/es.regexp.exec");
+require("core-js/modules/es.regexp.exec.js");
 
-require("core-js/modules/es.string.repeat");
+require("core-js/modules/es.string.repeat.js");
 
-require("core-js/modules/es.string.replace");
+require("core-js/modules/es.string.replace.js");
 
-require("core-js/modules/es.typed-array.uint8-array");
+require("core-js/modules/es.typed-array.uint8-array.js");
 
-require("core-js/modules/es.typed-array.copy-within");
+require("core-js/modules/es.typed-array.copy-within.js");
 
-require("core-js/modules/es.typed-array.every");
+require("core-js/modules/es.typed-array.every.js");
 
-require("core-js/modules/es.typed-array.fill");
+require("core-js/modules/es.typed-array.fill.js");
 
-require("core-js/modules/es.typed-array.filter");
+require("core-js/modules/es.typed-array.filter.js");
 
-require("core-js/modules/es.typed-array.find");
+require("core-js/modules/es.typed-array.find.js");
 
-require("core-js/modules/es.typed-array.find-index");
+require("core-js/modules/es.typed-array.find-index.js");
 
-require("core-js/modules/es.typed-array.for-each");
+require("core-js/modules/es.typed-array.for-each.js");
 
-require("core-js/modules/es.typed-array.includes");
+require("core-js/modules/es.typed-array.includes.js");
 
-require("core-js/modules/es.typed-array.index-of");
+require("core-js/modules/es.typed-array.index-of.js");
 
-require("core-js/modules/es.typed-array.iterator");
+require("core-js/modules/es.typed-array.iterator.js");
 
-require("core-js/modules/es.typed-array.join");
+require("core-js/modules/es.typed-array.join.js");
 
-require("core-js/modules/es.typed-array.last-index-of");
+require("core-js/modules/es.typed-array.last-index-of.js");
 
-require("core-js/modules/es.typed-array.map");
+require("core-js/modules/es.typed-array.map.js");
 
-require("core-js/modules/es.typed-array.reduce");
+require("core-js/modules/es.typed-array.reduce.js");
 
-require("core-js/modules/es.typed-array.reduce-right");
+require("core-js/modules/es.typed-array.reduce-right.js");
 
-require("core-js/modules/es.typed-array.reverse");
+require("core-js/modules/es.typed-array.reverse.js");
 
-require("core-js/modules/es.typed-array.set");
+require("core-js/modules/es.typed-array.set.js");
 
-require("core-js/modules/es.typed-array.slice");
+require("core-js/modules/es.typed-array.slice.js");
 
-require("core-js/modules/es.typed-array.some");
+require("core-js/modules/es.typed-array.some.js");
 
-require("core-js/modules/es.typed-array.sort");
+require("core-js/modules/es.typed-array.sort.js");
 
-require("core-js/modules/es.typed-array.subarray");
+require("core-js/modules/es.typed-array.subarray.js");
 
-require("core-js/modules/es.typed-array.to-locale-string");
+require("core-js/modules/es.typed-array.to-locale-string.js");
 
-require("core-js/modules/es.typed-array.to-string");
+require("core-js/modules/es.typed-array.to-string.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -71,7 +71,7 @@ exports.getSubscription = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
-require("regenerator-runtime/runtime");
+require("regenerator-runtime/runtime.js");
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 

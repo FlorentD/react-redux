@@ -2,11 +2,11 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("core-js/modules/es.array.join");
+require("core-js/modules/es.array.join.js");
 
-require("core-js/modules/es.array.slice");
+require("core-js/modules/es.array.slice.js");
 
-require("core-js/modules/es.function.name");
+require("core-js/modules/es.function.name.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true

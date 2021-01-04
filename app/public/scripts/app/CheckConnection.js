@@ -4,7 +4,7 @@ var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWild
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("core-js/modules/web.timers");
+require("core-js/modules/web.timers.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true

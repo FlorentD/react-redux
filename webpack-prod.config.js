@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ManifestPlugin = require("webpack-manifest-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
 module.exports = {
   mode: "production",
@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: `${__dirname}/dist`,
     publicPath: "/static/",
-    filename: "[name].[hash].js",
+    filename: "[name].[contenthash].js",
   },
   module: {
     rules: [
@@ -27,7 +27,8 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        vendors: {
+        defaultVendors: {
+          name: "vendors",
           test: /[\\/]node_modules[\\/]/,
           priority: 1,
           chunks: "all",
@@ -39,7 +40,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
-    new ManifestPlugin({
+    new WebpackManifestPlugin({
       fileName: "manifest.assets.json",
     }),
   ],
