@@ -17,8 +17,6 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _semanticUiReact = require("semantic-ui-react");
-
 var _menu = _interopRequireDefault(require("./menu"));
 
 var _main = _interopRequireDefault(require("./main"));
@@ -48,10 +46,10 @@ var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject());
 var Layout = _styledComponents["default"].div.withConfig({
   displayName: "app__Layout",
   componentId: "vbjlqm-0"
-})(["padding:10px;background-image:url(\"/image/background.jpg\");background-position:center;background-size:cover;background-attachment:fixed;background-color:#f0efef;color:black;height:100%;"]);
+})(["padding:10px;background-image:url('/image/background.jpg');background-position:center;background-size:cover;background-attachment:fixed;background-color:#f0efef;color:black;height:100%;"]);
 
 var App = function App() {
-  return /*#__PURE__*/_react["default"].createElement(Layout, null, /*#__PURE__*/_react["default"].createElement(GlobalStyle, null), /*#__PURE__*/_react["default"].createElement(_menu["default"], null), /*#__PURE__*/_react["default"].createElement(_CheckConnection["default"], null), /*#__PURE__*/_react["default"].createElement(_semanticUiReact.Container, null, /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react["default"].createElement(Layout, null, /*#__PURE__*/_react["default"].createElement(GlobalStyle, null), /*#__PURE__*/_react["default"].createElement(_menu["default"], null), /*#__PURE__*/_react["default"].createElement(_CheckConnection["default"], null), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/_react["default"].createElement(_main["default"], null)), /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Route, {
@@ -62,13 +60,6 @@ var App = function App() {
     path: "/films"
   }, /*#__PURE__*/_react["default"].createElement(_LoadableFilms["default"], null)), /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Route, null, /*#__PURE__*/_react["default"].createElement(_NoMatch["default"], null)))));
 };
-
-if (process.env.NODE_ENV !== "production") {
-  var _require = require("react-hot-loader/root"),
-      hot = _require.hot;
-
-  App = hot(App);
-}
 
 var _default = App;
 exports["default"] = _default;

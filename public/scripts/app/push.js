@@ -16,10 +16,10 @@ function urlBase64ToUint8Array(base64String) {
 if (typeof window !== 'undefined') {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
-      .then(registration =>
+      .then((registration) =>
         registration.pushManager
           .getSubscription()
-          .then(async validSubscription => {
+          .then(async (validSubscription) => {
             if (validSubscription) {
               return validSubscription;
             }
@@ -32,7 +32,7 @@ if (typeof window !== 'undefined') {
             });
           })
       )
-      .then(validSubscription => (subscription = validSubscription));
+      .then((validSubscription) => (subscription = validSubscription));
   }
 }
 

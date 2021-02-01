@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Message } from 'semantic-ui-react';
 
 const CheckConnection = () => {
-  if (typeof navigator === 'undefined') return null
+  if (typeof navigator === 'undefined') return null;
   const [isOnline, online] = useState(navigator.onLine);
   const [hasBeenOffline, offline] = useState(false);
   const [showWelcomeBackMessage, welcomeBackMessage] = useState(false);
@@ -35,16 +34,16 @@ const CheckConnection = () => {
 
   if (isOnline && showWelcomeBackMessage) {
     return (
-      <Message success>
-        <Message.Header>Welcome back on web ! 🎉</Message.Header>
-      </Message>
+      <div>
+        <span>Welcome back on web ! 🎉</span>
+      </div>
     );
   }
 
   return (
-    <Message warning>
-      <Message.Header>You seem to be offline 😭</Message.Header>
-    </Message>
+    <div>
+      <span>You seem to be offline 😭</span>
+    </div>
   );
 };
 

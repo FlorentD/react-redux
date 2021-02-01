@@ -1,18 +1,41 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-import { Menu } from 'semantic-ui-react';
 import { getMenu } from './redux';
 import { Link } from 'react-router-dom';
 
+const List = styled.ul`
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+`;
+
+const Item = styled.li`
+  padding: 12px;
+  position: relative;
+  font-size: smaller;
+  ::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background: gainsboro;
+  }
+`;
+
 const PageMenu = () => {
   return (
-    <Menu>
+    <List>
       {useSelector(getMenu).map(({ id, label, link }) => (
-        <Menu.Item key={id} name={id}>
+        <Item key={id} name={id}>
           <Link to={link}>{label}</Link>
-        </Menu.Item>
+        </Item>
       ))}
-    </Menu>
+    </List>
   );
 };
 

@@ -17,16 +17,16 @@ function reducer(state = initialState, action) {
   }
 }
 
-export const updateFilms = films => ({
+export const updateFilms = (films) => ({
   type: UPDATE_FILMS,
   payload: { films },
 });
 
-export const fetchFilms = () => async dispatch => {
+export const fetchFilms = () => async (dispatch) => {
   const films = await getFilmsAPI();
   dispatch(updateFilms(films));
 };
 
-export const getFilms = state => state[NAME].films;
+export const getFilms = (state) => state[NAME].films;
 
 export default { [NAME]: reducer };

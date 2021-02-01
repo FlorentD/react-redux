@@ -15,7 +15,7 @@ export const getFilmsAPI = async () => {
     return films;
   } else
     fetch('https://startmeup.herokuapp.com/api/movies')
-      .then(response => response.json())
-      .then(films => db.films.bulkPut(films));
+      .then((response) => response.json())
+      .then((films) => db.films.bulkPut(films));
   return localFilms;
 };

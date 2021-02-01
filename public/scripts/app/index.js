@@ -1,14 +1,13 @@
-import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
-import { Route, Switch } from "react-router-dom";
-import { Container } from "semantic-ui-react";
-import Menu from "./menu";
-import Main from "./main";
-import Why from "./why";
-import About from "./about";
-import NoMatch from "./NoMatch";
-import CheckConnection from "./CheckConnection";
-import LoadableFilms from "./films/LoadableFilms";
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Route, Switch } from 'react-router-dom';
+import Menu from './menu';
+import Main from './main';
+import Why from './why';
+import About from './about';
+import NoMatch from './NoMatch';
+import CheckConnection from './CheckConnection';
+import LoadableFilms from './films/LoadableFilms';
 
 const GlobalStyle = createGlobalStyle`
 html, body, #body {
@@ -29,7 +28,7 @@ a {
 
 const Layout = styled.div`
   padding: 10px;
-  background-image: url("/image/background.jpg");
+  background-image: url('/image/background.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -44,7 +43,7 @@ let App = () => {
       <GlobalStyle />
       <Menu />
       <CheckConnection />
-      <Container>
+      <div>
         <Switch>
           <Route exact path="/">
             <Main />
@@ -62,14 +61,9 @@ let App = () => {
             <NoMatch />
           </Route>
         </Switch>
-      </Container>
+      </div>
     </Layout>
   );
 };
-
-if (process.env.NODE_ENV !== "production") {
-  const { hot } = require("react-hot-loader/root");
-  App = hot(App);
-}
 
 export default App;

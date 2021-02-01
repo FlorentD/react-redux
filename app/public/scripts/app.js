@@ -16,6 +16,6 @@ var _index = _interopRequireDefault(require("./app/index"));
 
 var _store = _interopRequireDefault(require("./store"));
 
-(0, _reactDom.hydrate)( /*#__PURE__*/_react["default"].createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react["default"].createElement(_reactRedux.Provider, {
+(0, _reactDom.render)( /*#__PURE__*/_react["default"].createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react["default"].createElement(_reactRedux.Provider, {
   store: _store["default"]
 }, /*#__PURE__*/_react["default"].createElement(_index["default"], null))), document.getElementById('body'));

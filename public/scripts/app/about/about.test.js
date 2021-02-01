@@ -11,7 +11,7 @@ describe('About.jsx', () => {
 
   it(
     'should work with sinon',
-    sinon.test(function() {
+    sinon.test(function () {
       const spy = this.spy();
       spy();
       spy.should.have.been.calledOnce;

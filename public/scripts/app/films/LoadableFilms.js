@@ -1,19 +1,10 @@
-import React, { lazy, Suspense } from "react";
-import { Segment, Dimmer, Loader } from "semantic-ui-react";
+import React, { lazy, Suspense } from 'react';
 
-const Films = lazy(() => import("./Films"));
+const Films = lazy(() => import('./Films'));
 
 const LoadableFilms = () => {
   return (
-    <Suspense
-      fallback={
-        <Segment>
-          <Dimmer active>
-            <Loader indeterminate>Loading</Loader>
-          </Dimmer>
-        </Segment>
-      }
-    >
+    <Suspense fallback={<div>Loading</div>}>
       <Films />
     </Suspense>
   );

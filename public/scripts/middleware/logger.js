@@ -1,7 +1,7 @@
 /* eslint no-console:0 */
 import isFunction from 'lodash/isFunction';
 
-const logger = store => next => action => {
+const logger = (store) => (next) => (action) => {
   if (isFunction(action)) {
     console.info(
       ['%c', 'call ', action.name.slice(1), '()'].join(''),

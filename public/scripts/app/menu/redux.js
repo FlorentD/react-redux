@@ -37,6 +37,6 @@ function reducer(state = initialState) {
   }
 }
 
-export const getMenu = state => state[NAME].menu;
+export const getMenu = (state) => state[NAME].menu;
 
 export default { [NAME]: reducer };
