@@ -1,36 +1,26 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Header, Icon, Button } from 'semantic-ui-react';
-import { getSubscription } from '../push';
-
-const NotificationButton = styled.div`
-  margin: 50px;
-`;
 
 const Main = () => {
   return (
-    <Header as="h2" icon textAlign="center">
-      <Icon name="users" circular />
-      <Header.Content>Main</Header.Content>
-      <NotificationButton>
-        <Button
-          positive
+    <div className="text-center m-4">
+      <h1>Main</h1>
+      <div className="m-12">
+        <button
+          className="rounded-md bg-button hover:bg-buttonFocused py-2 px-4 text-white font-bold text-sm"
           onClick={() => {
             fetch('/sendNotification', {
               method: 'post',
               headers: {
                 'Content-type': 'application/json',
               },
-              body: JSON.stringify({
-                subscription: getSubscription(),
-              }),
+              body: null, // fix push api
             }).then(() => console.info('notification sent'));
           }}
         >
-          Send my a notification please !
-        </Button>
-      </NotificationButton>
-    </Header>
+          Send my a notification please !!
+        </button>
+      </div>
+    </div>
   );
 };
 

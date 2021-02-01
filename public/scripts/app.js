@@ -1,12 +1,13 @@
 import './webWorker';
+import '../styles.css';
 import React from 'react';
-import { hydrate } from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './app/index';
 import store from './store';
 
-hydrate(
+render(
   <Router>
     <Provider store={store}>
       <App />

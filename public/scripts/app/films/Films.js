@@ -1,21 +1,20 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
 import FilmsRequest from './FilmsRequest';
 
 const Films = () => (
   <FilmsRequest>
-    {films => (
-      <Card.Group>
-        {films.map(film => (
-          <Card key={film.id}>
-            <Image src={film.image} wrapped />
-            <Card.Content>
-              <Card.Header>{film.title}</Card.Header>
-              <Card.Meta>Film.</Card.Meta>
-            </Card.Content>
-          </Card>
+    {(films) => (
+      <ul>
+        {films.map((film) => (
+          <div key={film.id}>
+            <img src={film.image} wrapped />
+            <div>
+              <h2>{film.title}</h2>
+              <p>Film.</p>
+            </div>
+          </div>
         ))}
-      </Card.Group>
+      </ul>
     )}
   </FilmsRequest>
 );

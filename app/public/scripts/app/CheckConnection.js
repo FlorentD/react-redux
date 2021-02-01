@@ -15,8 +15,6 @@ var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/sli
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _semanticUiReact = require("semantic-ui-react");
-
 var CheckConnection = function CheckConnection() {
   if (typeof navigator === 'undefined') return null;
 
@@ -69,14 +67,10 @@ var CheckConnection = function CheckConnection() {
   }
 
   if (isOnline && showWelcomeBackMessage) {
-    return /*#__PURE__*/_react["default"].createElement(_semanticUiReact.Message, {
-      success: true
-    }, /*#__PURE__*/_react["default"].createElement(_semanticUiReact.Message.Header, null, "Welcome back on web ! \uD83C\uDF89"));
+    return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("div", null, "Welcome back on web ! \uD83C\uDF89"));
   }
 
-  return /*#__PURE__*/_react["default"].createElement(_semanticUiReact.Message, {
-    warning: true
-  }, /*#__PURE__*/_react["default"].createElement(_semanticUiReact.Message.Header, null, "You seem to be offline \uD83D\uDE2D"));
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("div", null, "You seem to be offline \uD83D\uDE2D"));
 };
 
 var _default = CheckConnection;

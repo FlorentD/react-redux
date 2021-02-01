@@ -1,18 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Menu } from 'semantic-ui-react';
 import { getMenu } from './redux';
 import { Link } from 'react-router-dom';
 
 const PageMenu = () => {
   return (
-    <Menu>
+    <ul className="flex flex-row bg-white rounded-sm border border-solid border-gray-200">
       {useSelector(getMenu).map(({ id, label, link }) => (
-        <Menu.Item key={id} name={id}>
+        <li key={id} name={id} className="py-3.5 px-4">
           <Link to={link}>{label}</Link>
-        </Menu.Item>
+        </li>
       ))}
-    </Menu>
+    </ul>
   );
 };
 

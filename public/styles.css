@@ -1,0 +1,15 @@
+@import 'colors.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+h1 {
+  @apply text-2xl font-extrabold;
+}
+
+html,
+body,
+#body {
+  height: 100%;
+}
