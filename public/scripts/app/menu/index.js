@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const List = styled.ul`
   padding: 0;
   margin: 0;
-  background-color: white;
+  background-color: ${({ theme }) => theme.bgColor};
   border-radius: 4px;
   display: flex;
 `;

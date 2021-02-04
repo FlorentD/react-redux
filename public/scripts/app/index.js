@@ -1,5 +1,5 @@
-import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import React, { useState } from 'react';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import Menu from './menu';
 import Main from './main';
@@ -19,7 +19,7 @@ ul {
 }
 
 a {
-  color: rgb(0, 0, 0);
+  color: ${({ theme }) => theme.color};
   &:visited {
     color: blue;
   }
@@ -32,37 +32,50 @@ const Layout = styled.div`
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: #f0efef;
-  color: black;
+  color: ${({ theme }) => theme.color};
   height: 100%;
 `;
 
+const lightTheme = {
+  bgColor: '#f0efef',
+  color: '#000',
+};
+
+const darkTheme = {
+  color: '#f0efef',
+  bgColor: '#000',
+};
+
 let App = () => {
+  const [isLight, setTheme] = useState(true);
   return (
-    <Layout>
-      <GlobalStyle />
-      <Menu />
-      <CheckConnection />
-      <div>
-        <Switch>
-          <Route exact path="/">
-            <Main />
-          </Route>
-          <Route path="/why">
-            <Why />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/films">
-            <LoadableFilms />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
-        </Switch>
-      </div>
-    </Layout>
+    <ThemeProvider theme={isLight ? lightTheme : darkTheme}>
+      <Layout>
+        <GlobalStyle />
+        <Menu />
+        <CheckConnection />
+        <div>
+          <Switch>
+            <Route exact path="/">
+              <Main />
+            </Route>
+            <Route path="/why">
+              <Why />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/films">
+              <LoadableFilms />
+            </Route>
+            <Route>
+              <NoMatch />
+            </Route>
+          </Switch>
+        </div>
+        <button onClick={() => setTheme(!isLight)}>Switch theme</button>
+      </Layout>
+    </ThemeProvider>
   );
 };
 
