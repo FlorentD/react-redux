@@ -20,6 +20,10 @@ app.use(compression());
 app.use('/static', express.static(`${__dirname}/static`));
 app.use('/image', express.static(`${__dirname}/image`));
 
+app.post('/api', function (req, res) {
+  res.redirect(307, '/graphql');
+});
+
 app.get('/vapidPublicKey', (req, res) => res.send(publicKey));
 
 app.post('/sendNotification', (req, res) => {
@@ -36,6 +40,9 @@ app.post('/sendNotification', (req, res) => {
 
 app.get('*', (req, res) => {
   logger.info(req.url);
+  if (req.url === '/robots.txt') {
+    return res.status(300).sendFile(`${__dirname}/robots.txt`);
+  }
   if (req.url === '/robots.txt') {
     return res.status(300).sendFile(`${__dirname}/robots.txt`);
   }

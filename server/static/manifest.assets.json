@@ -1,5 +1,7 @@
 {
-  "app.js": "/static/app.ece9be67b398787d6284.js",
-  "vendors.js": "/static/vendors.b51d11e60ab28367c0f1.js",
+  "app.js": "/static/app.4fbb8872bbbc265d89c1.js",
+  "app.js.map": "/static/app.4fbb8872bbbc265d89c1.js.map",
+  "vendors.js": "/static/vendors.76d0421bd19f124f7529.js",
+  "vendors.js.map": "/static/vendors.76d0421bd19f124f7529.js.map",
   "index.html": "/static/index.html"
 }

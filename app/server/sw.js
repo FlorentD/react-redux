@@ -4,7 +4,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox
 
 if (workbox) {
   console.log("Yay! Workbox is loaded \uD83C\uDF89");
-  workbox.precaching.precacheAndRoute(['/static/app.css', {
+  workbox.precaching.precacheAndRoute([{
     url: '/index.html',
     revision: '383676'
   }]);

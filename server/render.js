@@ -31,19 +31,13 @@ export function renderFullPage(req, context = {}) {
   return getDataFromTree(FullApp).then((content) => {
     const initialState = client.extract();
     const styleTags = sheet.getStyleTags();
-    const assets =
-      process.env.ASSETS_STRATEGY !== 'production'
-        ? `
-      <script src="/static/vendors.js">
-      </script><script src="/static/app.js"></script>
-       `
-        : ['vendors.js', 'app.js']
-            .map((file) => `<script src="${manfiest[file]}"></script>`)
-            .join('');
+    const assets = ['vendors.js', 'app.js']
+      .map((file) => `<script src="${manfiest[file]}"></script>`)
+      .join('');
     sheet.seal();
     return `
-    <\!doctype html>
-    <html lang="en">
+    <!doctype html>
+    <html lang="fr">
       <head>
          <script> 
             if ('serviceWorker' in navigator) {
@@ -51,24 +45,24 @@ export function renderFullPage(req, context = {}) {
             }
         </script>
         <link rel="icon" type="image/jpeg" href="/image/icon-48.png">
-        <link rel="manifest" href="/static/manifest.json">
+        <link rel="manifest" href="/manifest.json">
         <meta charset="utf-8" />
         <meta name="theme-color" content="#0066ff"/>
         <meta name="description" content="My tests to get the perfect webapp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-        
         <title>My SSR APP</title>
         ${styleTags}
       </head>
       <body>
         <div id="body">${content}</div>
+        <script>
+            window.__APOLLO_STATE__ = ${JSON.stringify(initialState).replace(
+              /</g,
+              '\\u003c'
+            )}
+        </script>
         ${assets}
-        <script dangerouslySetInnerHTML={{
-          __html: \`window.__APOLLO_STATE__=${JSON.stringify(
-            initialState
-          ).replace(/</g, '\\u003c')};\`,
-        }} />
       </body>
     </html>
     `;

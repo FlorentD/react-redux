@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 
 const Films = () => {
-  const { data, loading, error } = useQuery(
+  const { data, loading } = useQuery(
     gql`
       {
         films {
@@ -13,7 +13,6 @@ const Films = () => {
       }
     `
   );
-  console.log(error);
   if (loading) return null;
   return (
     <ul>

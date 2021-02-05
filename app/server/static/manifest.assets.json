@@ -1,6 +1,7 @@
 {
-  "app.js": "/static/app.bc257e8c6076c1584980.js",
-  "712.de9644b0e825b97f44e7.js": "/static/712.de9644b0e825b97f44e7.js",
-  "vendors.js": "/static/vendors.afa6dc7a418f85d73dad.js",
+  "app.js": "/static/app.ae050841ab6eb2829b5d.js",
+  "app.js.map": "/static/app.ae050841ab6eb2829b5d.js.map",
+  "vendors.js": "/static/vendors.76d0421bd19f124f7529.js",
+  "vendors.js.map": "/static/vendors.76d0421bd19f124f7529.js.map",
   "index.html": "/static/index.html"
 }

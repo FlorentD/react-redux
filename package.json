@@ -16,7 +16,7 @@
     "dist": "webpack --config webpack-prod.config.js --progress --color && npm run copy",
     "postdist": "rm -fr dist",
     "prettier": "prettier --single-quote --trailing-comma es5 --write",
-    "copy": "cp -R dist/. app/server/static/ && cp server/image/*.png app/server/image/ && cp server/image/*.jpg app/server/image/ && cp server/favicon.ico app/server",
+    "copy": "cp -R dist/. app/server/static/ && cp server/image/*.png app/server/image/ && cp server/image/*.jpg app/server/image/ && cp server/favicon.ico app/server && cp server/static/manifest.json app/server",
     "build": "rm -rf dist && webpack --config webpack-prod.config.js && cp dist/*.* server/static",
     "test": "jest --config tests/jest.config.json",
     "dev": "clear && webpack serve",

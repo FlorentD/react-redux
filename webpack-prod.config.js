@@ -1,26 +1,27 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
-  mode: "production",
+  mode: 'production',
+  devtool: 'source-map',
   entry: {
-    app: "./public/scripts/app",
+    app: './public/scripts/app',
   },
   output: {
     path: `${__dirname}/dist`,
-    publicPath: "/static/",
-    filename: "[name].[contenthash].js",
+    publicPath: '/static/',
+    filename: '[name].[contenthash].js',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.html$/,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
     ],
   },
@@ -28,20 +29,20 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         defaultVendors: {
-          name: "vendors",
+          name: 'vendors',
           test: /[\\/]node_modules[\\/]/,
           priority: 1,
-          chunks: "all",
+          chunks: 'all',
         },
       },
     },
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      template: 'index.html',
     }),
     new WebpackManifestPlugin({
-      fileName: "manifest.assets.json",
+      fileName: 'manifest.assets.json',
     }),
   ],
 };
