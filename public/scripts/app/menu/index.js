@@ -1,8 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
-import { getMenu } from './redux';
 import { Link } from 'react-router-dom';
+
+const menu = [
+  {
+    id: 'item1',
+    label: 'Main',
+    link: '',
+  },
+  {
+    id: 'item2',
+    label: 'Why',
+    link: 'why',
+  },
+  {
+    id: 'item3',
+    label: 'About',
+    link: 'about',
+  },
+  {
+    id: 'item4',
+    label: 'NoMatch',
+    link: 'nomatch',
+  },
+  {
+    id: 'item5',
+    label: 'Filmz',
+    link: 'films',
+  },
+];
 
 const List = styled.ul`
   padding: 0;
@@ -30,7 +56,7 @@ const Item = styled.li`
 const PageMenu = () => {
   return (
     <List>
-      {useSelector(getMenu).map(({ id, label, link }) => (
+      {menu.map(({ id, label, link }) => (
         <Item key={id} name={id}>
           <Link to={link}>{label}</Link>
         </Item>

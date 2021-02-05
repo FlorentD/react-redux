@@ -1,16 +1,16 @@
 import './webWorker';
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ApolloProvider } from '@apollo/client';
+import { client } from './app/api';
 import App from './app/index';
-import store from './store';
 
 render(
-  <Router>
-    <Provider store={store}>
+  <ApolloProvider client={client}>
+    <Router>
       <App />
-    </Provider>
-  </Router>,
+    </Router>
+  </ApolloProvider>,
   document.getElementById('body')
 );

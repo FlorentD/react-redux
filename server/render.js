@@ -1,20 +1,29 @@
 import React from 'react';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import { Provider } from 'react-redux';
 import { StaticRouter as Router } from 'react-router';
 import ReactDOM from 'react-dom/server';
 import manfiest from './static/manifest.assets.json';
 import App from '../public/scripts/app/index';
+import { getDataFromTree } from '@apollo/client/react/ssr';
+import { client } from '../public/scripts/app/api';
 
-export function renderFullPage(req, store, context = {}) {
+export function renderFullPage(req, context = {}) {
   const sheet = new ServerStyleSheet();
   const fullContext = { fromServer: true, ...context };
+  getDataFromTree(
+    <StyleSheetManager sheet={sheet.instance}>
+      <Router location={req.url} context={fullContext}>
+        <App />
+      </Router>
+    </StyleSheetManager>
+  ).then((content) => {
+    const initialState = client.extract();
+    console.log(initialState);
+  });
   const html = ReactDOM.renderToString(
     <StyleSheetManager sheet={sheet.instance}>
       <Router location={req.url} context={fullContext}>
-        <Provider store={store}>
-          <App />
-        </Provider>
+        <App />
       </Router>
     </StyleSheetManager>
   );
@@ -52,11 +61,6 @@ export function renderFullPage(req, store, context = {}) {
       <body>
         <div id="body">${html}</div>
         ${assets}
-        <script>
-          window.__PRELOADED_STATE__ = ${JSON.stringify(
-            store.getState()
-          ).replace(/</g, '\\u003c')}
-        </script>
       </body>
     </html>
     `;

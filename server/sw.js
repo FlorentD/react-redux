@@ -5,7 +5,6 @@ importScripts(
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
   workbox.precaching.precacheAndRoute([
-    '/static/app.css',
     { url: '/index.html', revision: '383676' },
   ]);
 
@@ -32,7 +31,7 @@ if (workbox) {
   console.log(`Boo! Workbox didn't load 😬`);
 }
 
-self.addEventListener('push', event => {
+self.addEventListener('push', (event) => {
   event.waitUntil(
     self.registration.showNotification('ReactRedux-FR', {
       lang: 'en',

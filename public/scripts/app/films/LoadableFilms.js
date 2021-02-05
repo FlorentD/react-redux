@@ -1,13 +1,10 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
+import loadable from '@loadable/component';
 
-const Films = lazy(() => import('./Films'));
+const Films = loadable(() => import('./Films'));
 
 const LoadableFilms = () => {
-  return (
-    <Suspense fallback={<div>Loading</div>}>
-      <Films />
-    </Suspense>
-  );
+  return <Films />;
 };
 
 export default LoadableFilms;
