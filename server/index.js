@@ -11,7 +11,7 @@ import { renderFullPage } from './render';
 
 const app = express();
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers, uploads: false });
 server.applyMiddleware({ app });
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,10 +19,6 @@ app.use(bodyParser.json());
 app.use(compression());
 app.use('/static', express.static(`${__dirname}/static`));
 app.use('/image', express.static(`${__dirname}/image`));
-
-app.post('/api', (req, res) => {
-  res.redirect(307, '/graphql');
-});
 
 app.get('/vapidPublicKey', (req, res) => res.send(publicKey));
 
@@ -55,7 +51,7 @@ app.get('*', (req, res) => {
   if (req.url === '/offline.html') {
     return res.status(200).sendFile(`${__dirname}/static/offline.html`);
   }
-  res.status(200).send(renderFullPage(req));
+  renderFullPage(req).then((result) => res.status(200).send(result));
 });
 
 app.listen(process.env.PORT || 8080, () =>

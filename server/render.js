@@ -1,45 +1,48 @@
 import React from 'react';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import { StaticRouter as Router } from 'react-router';
-import ReactDOM from 'react-dom/server';
 import manfiest from './static/manifest.assets.json';
 import App from '../public/scripts/app/index';
+import { makeExecutableSchema } from 'apollo-server-express';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { SchemaLink } from '@apollo/client/link/schema';
+import { resolvers, typeDefs } from './apollo';
 import { getDataFromTree } from '@apollo/client/react/ssr';
-import { client } from '../public/scripts/app/api';
 
 export function renderFullPage(req, context = {}) {
   const sheet = new ServerStyleSheet();
-  const fullContext = { fromServer: true, ...context };
-  getDataFromTree(
-    <StyleSheetManager sheet={sheet.instance}>
-      <Router location={req.url} context={fullContext}>
-        <App />
-      </Router>
-    </StyleSheetManager>
-  ).then((content) => {
-    const initialState = client.extract();
-    console.log(initialState);
+  const client = new ApolloClient({
+    ssrMode: true,
+    link: new SchemaLink({
+      schema: makeExecutableSchema({ resolvers, typeDefs }),
+    }),
+    cache: new InMemoryCache(),
   });
-  const html = ReactDOM.renderToString(
+  const fullContext = { fromServer: true, ...context };
+  const FullApp = (
     <StyleSheetManager sheet={sheet.instance}>
-      <Router location={req.url} context={fullContext}>
-        <App />
-      </Router>
+      <ApolloProvider client={client} context={fullContext}>
+        <Router location={req.url} context={fullContext}>
+          <App />
+        </Router>
+      </ApolloProvider>
     </StyleSheetManager>
   );
-  const styleTags = sheet.getStyleTags();
-  const assets =
-    process.env.ASSETS_STRATEGY !== 'production'
-      ? `
+  return getDataFromTree(FullApp).then((content) => {
+    const initialState = client.extract();
+    const styleTags = sheet.getStyleTags();
+    const assets =
+      process.env.ASSETS_STRATEGY !== 'production'
+        ? `
       <script src="/static/vendors.js">
       </script><script src="/static/app.js"></script>
        `
-      : ['vendors.js', 'app.js'].map(
-          (file) => `<script src="${manfiest[file]}"></script>`
-        );
-  sheet.seal();
-  return `
-    <!doctype html>
+        : ['vendors.js', 'app.js']
+            .map((file) => `<script src="${manfiest[file]}"></script>`)
+            .join('');
+    sheet.seal();
+    return `
+    <\!doctype html>
     <html lang="en">
       <head>
          <script> 
@@ -59,9 +62,15 @@ export function renderFullPage(req, context = {}) {
         ${styleTags}
       </head>
       <body>
-        <div id="body">${html}</div>
+        <div id="body">${content}</div>
         ${assets}
+        <script dangerouslySetInnerHTML={{
+          __html: \`window.__APOLLO_STATE__=${JSON.stringify(
+            initialState
+          ).replace(/</g, '\\u003c')};\`,
+        }} />
       </body>
     </html>
     `;
+  });
 }
