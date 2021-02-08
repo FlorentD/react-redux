@@ -28,6 +28,11 @@ const menu = [
     label: 'Filmz',
     link: 'films',
   },
+  {
+    id: 'item6',
+    label: 'Lazy',
+    link: 'lazy',
+  },
 ];
 
 const List = styled.ul`

@@ -37,15 +37,16 @@ var menu = [{
   id: 'item5',
   label: 'Filmz',
   link: 'films'
+}, {
+  id: 'item6',
+  label: 'Lazy',
+  link: 'lazy'
 }];
 
 var List = _styledComponents["default"].ul.withConfig({
   displayName: "menu__List",
   componentId: "sc-1c9xkt1-0"
-})(["padding:0;margin:0;background-color:", ";border-radius:4px;display:flex;"], function (_ref) {
-  var theme = _ref.theme;
-  return theme.bgColor;
-});
+})(["padding:0;margin:0;background-color:var(--background-color);border-radius:4px;display:flex;"]);
 
 var Item = _styledComponents["default"].li.withConfig({
   displayName: "menu__Item",
@@ -53,10 +54,10 @@ var Item = _styledComponents["default"].li.withConfig({
 })(["padding:12px;position:relative;font-size:smaller;::before{position:absolute;content:'';top:0;right:0;height:100%;width:1px;background:gainsboro;}"]);
 
 var PageMenu = function PageMenu() {
-  return /*#__PURE__*/_react["default"].createElement(List, null, menu.map(function (_ref2) {
-    var id = _ref2.id,
-        label = _ref2.label,
-        link = _ref2.link;
+  return /*#__PURE__*/_react["default"].createElement(List, null, menu.map(function (_ref) {
+    var id = _ref.id,
+        label = _ref.label,
+        link = _ref.link;
     return /*#__PURE__*/_react["default"].createElement(Item, {
       key: id,
       name: id

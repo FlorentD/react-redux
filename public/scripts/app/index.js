@@ -1,4 +1,5 @@
 import React from 'react';
+import loadable from '@loadable/component';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import Menu from './menu';
@@ -71,6 +72,13 @@ let App = () => {
           <Route path="/films">
             <LoadableFilms />
           </Route>
+          <Route
+            path="/lazy"
+            render={() => {
+              const Lazy = loadable(() => import('./lazy'));
+              return <Lazy />;
+            }}
+          />
           <Route>
             <NoMatch />
           </Route>
