@@ -33,7 +33,7 @@ const menu = [
 const List = styled.ul`
   padding: 0;
   margin: 0;
-  background-color: ${({ theme }) => theme.bgColor};
+  background-color: var(--background-color);
   border-radius: 4px;
   display: flex;
 `;

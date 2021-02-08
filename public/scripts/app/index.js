@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import Menu from './menu';
 import Main from './main';
@@ -10,6 +10,21 @@ import CheckConnection from './CheckConnection';
 import LoadableFilms from './films/LoadableFilms';
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --background-color:#f0efef;
+    --primary-color: #000;
+  }
+  
+  html.dark {
+    --background-color:#000;
+    --primary-color: #f0efef;
+  }
+
+  html.theming, 
+  html.theming * {
+    transition: all 0.2s linear;
+  }
+  
 html, body, #body {
   height: 100%;
 }
@@ -19,7 +34,7 @@ ul {
 }
 
 a {
-  color: ${({ theme }) => theme.color};
+  color: var(--primary-color);
   &:visited {
     color: blue;
   }
@@ -32,50 +47,49 @@ const Layout = styled.div`
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  color: ${({ theme }) => theme.color};
+  color: var(--primary-color);
   height: 100%;
 `;
 
-const lightTheme = {
-  bgColor: '#f0efef',
-  color: '#000',
-};
-
-const darkTheme = {
-  color: '#f0efef',
-  bgColor: '#000',
-};
-
 let App = () => {
-  const [isLight, setTheme] = useState(true);
   return (
-    <ThemeProvider theme={isLight ? lightTheme : darkTheme}>
-      <Layout>
-        <GlobalStyle />
-        <Menu />
-        <CheckConnection />
-        <div>
-          <Switch>
-            <Route exact path="/">
-              <Main />
-            </Route>
-            <Route path="/why">
-              <Why />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/films">
-              <LoadableFilms />
-            </Route>
-            <Route>
-              <NoMatch />
-            </Route>
-          </Switch>
-        </div>
-        <button onClick={() => setTheme(!isLight)}>Switch theme</button>
-      </Layout>
-    </ThemeProvider>
+    <Layout>
+      <GlobalStyle />
+      <Menu />
+      <CheckConnection />
+      <div>
+        <Switch>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route path="/why">
+            <Why />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/films">
+            <LoadableFilms />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
+      </div>
+      <button
+        onClick={() => {
+          document.documentElement.classList.add('theming');
+          document.documentElement.addEventListener(
+            'transitionend',
+            () => document.documentElement.classList.remove('theming'),
+            { once: true }
+          );
+          document.documentElement.classList.toggle('dark');
+        }}
+      >
+        Switch theme
+      </button>
+    </Layout>
   );
 };
 
