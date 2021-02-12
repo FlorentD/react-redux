@@ -4,6 +4,10 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 
 require("./webWorker");
 
+require("../tailwind.css");
+
+require("../styles.css");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = require("react-dom");

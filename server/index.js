@@ -43,8 +43,8 @@ app.get('*', (req, res) => {
   if (req.url === '/robots.txt') {
     return res.status(300).sendFile(`${__dirname}/robots.txt`);
   }
-  if (req.url === '/robots.txt') {
-    return res.status(300).sendFile(`${__dirname}/robots.txt`);
+  if (req.url === '/manifest.json') {
+    return res.status(300).sendFile(`${__dirname}/manifest.json`);
   }
   if (req.url === '/sw.js') {
     return res.status(200).sendFile(`${__dirname}/sw.js`);

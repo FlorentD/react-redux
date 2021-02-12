@@ -23,7 +23,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = require("styled-components");
 
-var _reactRouter = require("react-router");
+var _reactRouterDom = require("react-router-dom");
 
 var _manifestAssets = _interopRequireDefault(require("./static/manifest.assets.json"));
 
@@ -66,7 +66,7 @@ function renderFullPage(req) {
   }, /*#__PURE__*/_react["default"].createElement(_client.ApolloProvider, {
     client: client,
     context: fullContext
-  }, /*#__PURE__*/_react["default"].createElement(_reactRouter.StaticRouter, {
+  }, /*#__PURE__*/_react["default"].createElement(_reactRouterDom.StaticRouter, {
     location: req.url,
     context: fullContext
   }, /*#__PURE__*/_react["default"].createElement(_index["default"], null))));
@@ -74,10 +74,13 @@ function renderFullPage(req) {
   return (0, _ssr.getDataFromTree)(FullApp).then(function (content) {
     var initialState = client.extract();
     var styleTags = sheet.getStyleTags();
+    var styles = ['app.css'].map(function (file) {
+      return "<link rel=\"stylesheet\" href=\"".concat(_manifestAssets["default"][file], "\"/>");
+    });
     var assets = ['vendors.js', 'app.js'].map(function (file) {
       return "<script src=\"".concat(_manifestAssets["default"][file], "\"></script>");
     }).join('');
     sheet.seal();
-    return "\n    <!doctype html>\n    <html lang=\"fr\">\n      <head>\n         <script> \n            if ('serviceWorker' in navigator) {\n                navigator.serviceWorker.register('/sw.js');\n            }\n        </script>\n        <link rel=\"icon\" type=\"image/jpeg\" href=\"/image/icon-48.png\">\n        <link rel=\"manifest\" href=\"/manifest.json\">\n        <meta charset=\"utf-8\" />\n        <meta name=\"theme-color\" content=\"#0066ff\"/>\n        <meta name=\"description\" content=\"My tests to get the perfect webapp\" />\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, shrink-to-fit=no\">\n        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css\" />\n        <title>My SSR APP</title>\n        ".concat(styleTags, "\n      </head>\n      <body>\n        <div id=\"body\">").concat(content, "</div>\n        <script>\n            window.__APOLLO_STATE__ = ").concat(JSON.stringify(initialState).replace(/</g, "\\u003c"), "\n        </script>\n        ").concat(assets, "\n      </body>\n    </html>\n    ");
+    return "\n    <!doctype html>\n    <html lang=\"fr\">\n      <head>\n         <script> \n            if ('serviceWorker' in navigator) {\n                navigator.serviceWorker.register('/sw.js');\n            }\n        </script>\n        <link rel=\"icon\" type=\"image/jpeg\" href=\"/image/icon-48.png\">\n        <link rel=\"manifest\" href=\"/manifest.json\">\n        <meta charset=\"utf-8\" />\n        <meta name=\"theme-color\" content=\"#0066ff\"/>\n        <meta name=\"description\" content=\"My tests to get the perfect webapp\" />\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, shrink-to-fit=no\">\n        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css\" />\n         ".concat(styles, "\n        <title>My SSR APP</title>\n        ").concat(styleTags, "\n      </head>\n      <body>\n        <div id=\"body\">").concat(content, "</div>\n        <script>\n            window.__APOLLO_STATE__ = ").concat(JSON.stringify(initialState).replace(/</g, "\\u003c"), "\n        </script>\n        ").concat(assets, "\n      </body>\n    </html>\n    ");
   });
 }

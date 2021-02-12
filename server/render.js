@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import { StaticRouter as Router } from 'react-router';
+import { StaticRouter as Router } from 'react-router-dom';
 import manfiest from './static/manifest.assets.json';
 import App from '../public/scripts/app/index';
 import { makeExecutableSchema } from 'apollo-server-express';
@@ -31,6 +31,9 @@ export function renderFullPage(req, context = {}) {
   return getDataFromTree(FullApp).then((content) => {
     const initialState = client.extract();
     const styleTags = sheet.getStyleTags();
+    const styles = ['app.css'].map(
+      (file) => `<link rel="stylesheet" href="${manfiest[file]}"/>`
+    );
     const assets = ['vendors.js', 'app.js']
       .map((file) => `<script src="${manfiest[file]}"></script>`)
       .join('');
@@ -51,6 +54,7 @@ export function renderFullPage(req, context = {}) {
         <meta name="description" content="My tests to get the perfect webapp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+         ${styles}
         <title>My SSR APP</title>
         ${styleTags}
       </head>

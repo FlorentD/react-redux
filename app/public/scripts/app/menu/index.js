@@ -13,8 +13,6 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _reactRouterDom = require("react-router-dom");
 
 var menu = [{
@@ -43,25 +41,18 @@ var menu = [{
   link: 'lazy'
 }];
 
-var List = _styledComponents["default"].ul.withConfig({
-  displayName: "menu__List",
-  componentId: "sc-1c9xkt1-0"
-})(["padding:0;margin:0;background-color:var(--background-color);border-radius:4px;display:flex;"]);
-
-var Item = _styledComponents["default"].li.withConfig({
-  displayName: "menu__Item",
-  componentId: "sc-1c9xkt1-1"
-})(["padding:12px;position:relative;font-size:smaller;::before{position:absolute;content:'';top:0;right:0;height:100%;width:1px;background:gainsboro;}"]);
-
 var PageMenu = function PageMenu() {
-  return /*#__PURE__*/_react["default"].createElement(List, null, menu.map(function (_ref) {
+  return /*#__PURE__*/_react["default"].createElement("ul", {
+    className: "flex flex-col mt-4"
+  }, menu.map(function (_ref) {
     var id = _ref.id,
         label = _ref.label,
         link = _ref.link;
-    return /*#__PURE__*/_react["default"].createElement(Item, {
+    return /*#__PURE__*/_react["default"].createElement("li", {
       key: id,
       name: id
     }, /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Link, {
+      className: "block p-4 text-white visited:text-blue-100 font-bold hover:text-blue-200 text-xl",
       to: link
     }, label));
   }));

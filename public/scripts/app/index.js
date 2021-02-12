@@ -1,6 +1,5 @@
 import React from 'react';
 import loadable from '@loadable/component';
-import styled, { createGlobalStyle } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import Menu from './menu';
 import Main from './main';
@@ -9,56 +8,16 @@ import About from './about';
 import NoMatch from './NoMatch';
 import CheckConnection from './CheckConnection';
 import LoadableFilms from './films/LoadableFilms';
-
-const GlobalStyle = createGlobalStyle`
-  :root {
-    --background-color:#f0efef;
-    --primary-color: #000;
-  }
-  
-  html.dark {
-    --background-color:#000;
-    --primary-color: #f0efef;
-  }
-
-  html.theming, 
-  html.theming * {
-    transition: all 0.2s linear;
-  }
-  
-html, body, #body {
-  height: 100%;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  color: var(--primary-color);
-  &:visited {
-    color: blue;
-  }
-}
-`;
-
-const Layout = styled.div`
-  padding: 10px;
-  background-image: url('/image/background.jpg');
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  color: var(--primary-color);
-  height: 100%;
-`;
+import { Layout } from './components';
 
 let App = () => {
   return (
     <Layout>
-      <GlobalStyle />
-      <Menu />
+      <Layout.Menu>
+        <Menu />
+      </Layout.Menu>
       <CheckConnection />
-      <div>
+      <Layout.Body>
         <Switch>
           <Route exact path="/">
             <Main />
@@ -83,20 +42,7 @@ let App = () => {
             <NoMatch />
           </Route>
         </Switch>
-      </div>
-      <button
-        onClick={() => {
-          document.documentElement.classList.add('theming');
-          document.documentElement.addEventListener(
-            'transitionend',
-            () => document.documentElement.classList.remove('theming'),
-            { once: true }
-          );
-          document.documentElement.classList.toggle('dark');
-        }}
-      >
-        Switch theme
-      </button>
+      </Layout.Body>
     </Layout>
   );
 };

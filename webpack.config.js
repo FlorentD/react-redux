@@ -14,6 +14,7 @@ module.exports = {
   devServer: {
     static: [path.join(__dirname, 'public'), path.join(__dirname, 'server')],
     compress: true,
+    historyApiFallback: true,
     port: 3000,
     proxy: {
       '/api': 'http://localhost:8080/graphql',
@@ -36,6 +37,10 @@ module.exports = {
       {
         test: /\.(png|jpg|woff|woff2|eot|ttf|svg|otf)$/,
         use: 'url-loader?limit=100000',
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
   },

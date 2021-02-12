@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -20,6 +21,10 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+      },
+      {
         test: /\.html$/,
         loader: 'html-loader',
       },
@@ -38,6 +43,10 @@ module.exports = {
     },
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css',
+    }),
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),

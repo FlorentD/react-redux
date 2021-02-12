@@ -60,8 +60,8 @@ app.get('*', function (req, res) {
     return res.status(300).sendFile("".concat(__dirname, "/robots.txt"));
   }
 
-  if (req.url === '/robots.txt') {
-    return res.status(300).sendFile("".concat(__dirname, "/robots.txt"));
+  if (req.url === '/manifest.json') {
+    return res.status(300).sendFile("".concat(__dirname, "/manifest.json"));
   }
 
   if (req.url === '/sw.js') {
