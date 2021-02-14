@@ -38,7 +38,7 @@
     "defaults"
   ],
   "dependencies": {
-    "@apollo/client": "3.3.9",
+    "@apollo/client": "3.3.10",
     "@babel/node": "7.12.16",
     "@loadable/component": "5.14.1",
     "apollo-server-express": "2.21.0",
