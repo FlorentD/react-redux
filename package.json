@@ -24,7 +24,7 @@
     "start": "node ./app/server/index.js",
     "ssr": "ASSETS_STRATEGY='production' nodemon --exec babel-node server/index.js",
     "cypress:open": "cypress open",
-    "cy:run": "cypress run --spec ./cypress/integration/sanity/welcome.spec.js --record --key 42791497-6ed9-4f3d-8661-87f9590ced14",
+    "cy:run": "cypress run --spec ./cypress/integration/sanity/welcome.spec.js --record --key 42791497-6ed9-4f3d-8661-87f9590ced14 --config video=false",
     "test:ci": "start-server-and-test start http://localhost:8080 cy:run"
   },
   "husky": {
@@ -108,7 +108,6 @@
     "tailwindcss": "2.0.3",
     "uglifycss": "0.0.29",
     "url-loader": "4.1.1",
-    "wait-on": "5.2.1",
     "webpack": "5.21.2",
     "webpack-cli": "4.5.0",
     "webpack-dev-server": "next",
