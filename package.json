@@ -22,7 +22,10 @@
     "dev": "clear && webpack serve",
     "deploy": "npm run test && npm run dist && git add . && git commit -m 'deploy to heroku' && git push heroku master",
     "start": "node ./app/server/index.js",
-    "ssr": "ASSETS_STRATEGY='production' nodemon --exec babel-node server/index.js"
+    "ssr": "ASSETS_STRATEGY='production' nodemon --exec babel-node server/index.js",
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run --spec ./cypress/integration/sanity/welcome.spec.js --record --key 42791497-6ed9-4f3d-8661-87f9590ced14",
+    "test:ci": "start-server-and-test start http://localhost:8080 cy:run"
   },
   "husky": {
     "hooks": {
@@ -79,6 +82,7 @@
     "chai-enzyme": "beta",
     "css-loader": "5.0.2",
     "cssnano": "4.1.10",
+    "cypress": "6.4.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.6",
     "file-loader": "6.2.0",
@@ -99,10 +103,12 @@
     "sinon": "9.2.4",
     "sinon-chai": "3.5.0",
     "sinon-test": "3.0.0",
+    "start-server-and-test": "1.12.0",
     "style-loader": "2.0.0",
     "tailwindcss": "2.0.3",
     "uglifycss": "0.0.29",
     "url-loader": "4.1.1",
+    "wait-on": "5.2.1",
     "webpack": "5.21.2",
     "webpack-cli": "4.5.0",
     "webpack-dev-server": "next",
