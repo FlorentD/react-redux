@@ -7,7 +7,7 @@ import Why from './why';
 import About from './about';
 import NoMatch from './NoMatch';
 import CheckConnection from './CheckConnection';
-import LoadableFilms from './films/LoadableFilms';
+import Films from './films/Films';
 import { Layout } from './components';
 
 let App = () => {
@@ -29,7 +29,7 @@ let App = () => {
             <About />
           </Route>
           <Route path="/films">
-            <LoadableFilms />
+            <Films />
           </Route>
           <Route
             path="/lazy"

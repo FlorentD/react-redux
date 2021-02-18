@@ -1,4 +1,3 @@
-import 'isomorphic-fetch';
 import { sendNotification, publicKey } from './push';
 import React from 'react';
 import express from 'express';
