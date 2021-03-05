@@ -1,11 +1,11 @@
 "use strict";
 
-require("core-js/modules/es.array.concat.js");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
+
+require("core-js/modules/es.array.concat.js");
 
 var _winston = require("winston");
 
@@ -21,4 +21,4 @@ var logger = (0, _winston.createLogger)({
   transports: [new _winston.transports.Console()]
 });
 var _default = logger;
-exports["default"] = _default;
+exports.default = _default;

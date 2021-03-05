@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.resolvers = exports.typeDefs = void 0;
+exports.default = exports.resolvers = exports.typeDefs = void 0;
 
 var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
 
@@ -13,7 +13,7 @@ var _apolloServerExpress = require("apollo-server-express");
 
 var _templateObject;
 
-var typeDefs = (0, _apolloServerExpress.gql)(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n  type Film {\n    id: ID!\n    image: String\n    title: String\n  }\n\n  type Query {\n    films: [Film]\n  }\n"])));
+var typeDefs = (0, _apolloServerExpress.gql)(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n  type Film {\n    id: ID!\n    image: String\n    title: String\n  }\n\n  type Query {\n    films: [Film]\n  }\n"])));
 exports.typeDefs = typeDefs;
 var resolvers = {
   Query: {
@@ -31,4 +31,4 @@ var _default = {
   typeDefs: typeDefs,
   resolvers: resolvers
 };
-exports["default"] = _default;
+exports.default = _default;

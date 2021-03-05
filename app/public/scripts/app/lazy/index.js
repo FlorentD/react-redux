@@ -5,13 +5,13 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var Lazy = function Lazy() {
-  return /*#__PURE__*/_react["default"].createElement("div", null, "Lazy loaded ?");
+  return /*#__PURE__*/_react.default.createElement("div", null, "Lazy loaded ?");
 };
 
 var _default = Lazy;
-exports["default"] = _default;
+exports.default = _default;

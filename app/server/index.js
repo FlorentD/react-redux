@@ -2,8 +2,6 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("isomorphic-fetch");
-
 var _push = require("./push");
 
 var _react = _interopRequireDefault(require("react"));
@@ -22,7 +20,7 @@ var _logger = _interopRequireDefault(require("./logger"));
 
 var _render = require("./render");
 
-var app = (0, _express["default"])();
+var app = (0, _express.default)();
 var server = new _apolloServerExpress.ApolloServer({
   typeDefs: _apollo.typeDefs,
   resolvers: _apollo.resolvers,
@@ -31,13 +29,13 @@ var server = new _apolloServerExpress.ApolloServer({
 server.applyMiddleware({
   app: app
 });
-app.use(_bodyParser["default"].urlencoded({
+app.use(_bodyParser.default.urlencoded({
   extended: false
 }));
-app.use(_bodyParser["default"].json());
-app.use((0, _compression["default"])());
-app.use('/static', _express["default"]["static"]("".concat(__dirname, "/static")));
-app.use('/image', _express["default"]["static"]("".concat(__dirname, "/image")));
+app.use(_bodyParser.default.json());
+app.use((0, _compression.default)());
+app.use('/static', _express.default.static("".concat(__dirname, "/static")));
+app.use('/image', _express.default.static("".concat(__dirname, "/image")));
 app.post('/api', function (req, res) {
   res.redirect(307, '/graphql');
 });
@@ -48,13 +46,13 @@ app.post('/sendNotification', function (req, res) {
   var subscription = req.body.subscription;
   (0, _push.sendNotification)(subscription).then(function () {
     res.sendStatus(201);
-  })["catch"](function (error) {
+  }).catch(function (error) {
     res.sendStatus(500);
     console.log(error);
   });
 });
 app.get('*', function (req, res) {
-  _logger["default"].info(req.url);
+  _logger.default.info(req.url);
 
   if (req.url === '/robots.txt') {
     return res.status(300).sendFile("".concat(__dirname, "/robots.txt"));
@@ -85,5 +83,5 @@ app.get('*', function (req, res) {
   });
 });
 app.listen(process.env.PORT || 8080, function () {
-  return _logger["default"].info('App running on port 8080 o//');
+  return _logger.default.info('App running on port 8080 o//');
 });

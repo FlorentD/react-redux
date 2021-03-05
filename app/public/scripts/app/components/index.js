@@ -8,13 +8,13 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "Layout", {
   enumerable: true,
   get: function get() {
-    return _layout["default"];
+    return _layout.default;
   }
 });
 Object.defineProperty(exports, "Button", {
   enumerable: true,
   get: function get() {
-    return _button["default"];
+    return _button.default;
   }
 });
 

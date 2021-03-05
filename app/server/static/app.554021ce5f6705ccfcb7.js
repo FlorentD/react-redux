@@ -2,51 +2,41 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
+var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
+
+require("core-js/modules/es.array.map.js");
+
+require("core-js/modules/es.string.link.js");
+
+require("core-js/modules/es.promise.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/es.array.reduce.js");
+
+require("core-js/modules/es.object.keys.js");
+
+require("core-js/modules/web.dom-collections.for-each.js");
+
 require("core-js/modules/es.symbol.js");
 
 require("core-js/modules/es.symbol.description.js");
 
 require("core-js/modules/es.symbol.to-string-tag.js");
 
-require("core-js/modules/es.array.for-each.js");
-
-require("core-js/modules/es.array.iterator.js");
-
-require("core-js/modules/es.array.map.js");
-
-require("core-js/modules/es.array.reduce.js");
-
-require("core-js/modules/es.array.splice.js");
-
-require("core-js/modules/es.function.bind.js");
-
-require("core-js/modules/es.function.name.js");
+require("core-js/modules/es.math.to-string-tag.js");
 
 require("core-js/modules/es.json.to-string-tag.js");
 
-require("core-js/modules/es.math.to-string-tag.js");
+require("core-js/modules/es.function.name.js");
 
-require("core-js/modules/es.object.create.js");
-
-require("core-js/modules/es.object.define-property.js");
-
-require("core-js/modules/es.object.keys.js");
-
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.promise.js");
-
-require("core-js/modules/es.string.iterator.js");
-
-require("core-js/modules/es.string.link.js");
-
-require("core-js/modules/web.dom-collections.for-each.js");
-
-require("core-js/modules/web.dom-collections.iterator.js");
-
-require("core-js/modules/web.timers.js");
-
-var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
+require("core-js/modules/es.array.splice.js");
 
 !function () {
   var e,
@@ -243,7 +233,7 @@ var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
     2658: function _() {
       "serviceWorker" in navigator && navigator.serviceWorker.register("/sw.js").then(function (e) {
         console.log("Registration successful, scope is:", e.scope);
-      })["catch"](function (e) {
+      }).catch(function (e) {
         console.log("Service worker registration failed, error:", e);
       });
     }
@@ -262,7 +252,7 @@ var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
 
   o.m = t, o.x = function () {}, o.n = function (e) {
     var n = e && e.__esModule ? function () {
-      return e["default"];
+      return e.default;
     } : function () {
       return e;
     };
@@ -283,12 +273,12 @@ var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
   }, o.u = function (e) {
     return e + ".76875f2049533c31e92d.js";
   }, o.g = function () {
-    if ("object" == (typeof globalThis === "undefined" ? "undefined" : (0, _typeof2["default"])(globalThis))) return globalThis;
+    if ("object" == (typeof globalThis === "undefined" ? "undefined" : (0, _typeof2.default)(globalThis))) return globalThis;
 
     try {
       return this || new Function("return this")();
     } catch (e) {
-      if ("object" == (typeof window === "undefined" ? "undefined" : (0, _typeof2["default"])(window))) return window;
+      if ("object" == (typeof window === "undefined" ? "undefined" : (0, _typeof2.default)(window))) return window;
     }
   }(), o.hmd = function (e) {
     return (e = Object.create(e)).children || (e.children = []), Object.defineProperty(e, "exports", {

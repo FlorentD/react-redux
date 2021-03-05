@@ -2,19 +2,20 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("core-js/modules/es.array.iterator.js");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getSubscription = void 0;
 
-require("core-js/modules/es.array-buffer.slice.js");
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.promise.js");
-
-require("core-js/modules/es.regexp.exec.js");
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 require("core-js/modules/es.string.repeat.js");
 
 require("core-js/modules/es.string.replace.js");
+
+require("core-js/modules/es.regexp.exec.js");
 
 require("core-js/modules/es.typed-array.uint8-array.js");
 
@@ -64,16 +65,11 @@ require("core-js/modules/es.typed-array.to-locale-string.js");
 
 require("core-js/modules/es.typed-array.to-string.js");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getSubscription = void 0;
+require("core-js/modules/es.object.to-string.js");
 
-var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+require("core-js/modules/es.array.iterator.js");
 
-require("regenerator-runtime/runtime.js");
-
-var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+require("core-js/modules/es.promise.js");
 
 var subscription = null;
 
@@ -94,9 +90,9 @@ if (typeof window !== 'undefined') {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(function (registration) {
       return registration.pushManager.getSubscription().then( /*#__PURE__*/function () {
-        var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(validSubscription) {
+        var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(validSubscription) {
           var response, vapidPublicKey, convertedVapidKey;
-          return _regenerator["default"].wrap(function _callee$(_context) {
+          return _regenerator.default.wrap(function _callee$(_context) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
