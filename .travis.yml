@@ -1,25 +1,25 @@
 language: node_js
 node_js:
-  - '14'
+- '14'
 matrix:
   fast_finish: true
 addons:
   apt:
     packages:
-      - libgconf-2-4
+    - libgconf-2-4
 cache:
   npm: true
   directories:
-    - '~/.cache'
+  - "~/.cache"
 install:
-  - npm install
+- npm install
 script:
-  - npm test
-  - npm run dist
-  - npm run test:ci
+- npm test
+- npm run dist
+- npm run test:ci
 deploy:
   provider: heroku
   app: reactredux-fr
   skip_cleanup: true
   api_key:
-    secure: A0PttAiFN9UURWqI3zGVRAWfkY4yBCkUm8pkZ6YayQeJWoYmWW32Ip0pxqnvJ3odCRnJSHAM7XgoxNWoEEfR/fTOvexF2F36XjaovVyPQYeMEZ7rUR4s220K74mXX92GdNZ75oWGO9CRX+X9HsQvlnRkIOpSklOW5XiD4OWl00SrKQ8bpfbwiJFkVmXGFQRYiuH2UycBzYYGC1/u4JUxqjIOk8cX5vj08eGf7kIAOA8CuCtYTILdnNeC0eGD/xg6MR9cDHVmSAsofNrjbwfsVK31gsqeGfPg6V8p/0nGYaa2ux2/Jd+XjTFfwuvtKFA/Sd7YhTzbKm66G8PVwVaZByAitrNPUNyD1AoqKTnQLXy5fzdhegmUIuzz7H4PiC+hrziywqONkViiBJZW60xAPpL86I5TRRhkG3oRoyTDAC9DkzeJEJkOEd2E8Hcw/uKJTWbwMCByAdZ9l5xKoxR5hRXilCXTIiL7AEh5Nq0rq8NLclvmNKsPSw/MtrtbNvmAENiR+U0vecSX3GItEFPKZYkbivfdphOd6hbG/DZkxC0TjPvmdymGXURfWX2tZ8ZHYW2Cm+XZH6f8ePfn93eUuM6uhCmSWgw6G/HPWrXv3ZylaWPtKh0PUP2idSCTvTFxIbUd3Hbf0upyXnrRUJI+qNia0diGk0ZmYtQLP5Ll5TU=
+    secure: wgeRD80SBgCGwGIlrpkpbpmWYLu6u6sopE1Sf+kLoWFaqo2KrxG+88gDNBkDE0uCt9+M7wrDwvRMncgF8njiTUre2huvmu35zPmJ3uWBHHbBG7efbZnJa4ZLCt/OcwTgZCf/+JC0y4j6Np62eEqb9+3msiZlgM4J2T97WYWxU1n3OJAIcs1nXp2uEGmmNfpMhwX8ED8eZPwNd4MlyLg5CzQyjvZLJyigtdkUWaI2sMCLMdq6laqHu61Z7JQzyG9Xg1mshruuSZQ8YNgkYN/NPerWLNQ0y5OdYTaLjPI/31+fb2wz1dUBjIpIia+Px3XPV8atXmIIbLz5lbgOuCE2usokVh9OTMPmQhkojLgHKfjWhYUGg+MiRruM3t1z9P4hEKtiR9ZNKHlmIELhLS1XKl5M+UDgm5PPk4OvMVMU6T6ykqkaIr+qqsBEI3Qa/+XZMPattaks9aMfbPTBKyVRPWZ6d5Mv9i38pv69S8+4Ie2SfjJxdHJHmY6Vudx+bQ9MRJsRh6oQqGJ0+hEh4/jLPDhw6Dyv4A2vGSP+zch9HUyrIDnKMdj60fZEgp5VAjpTmO3ds7jGWU43jdaRww+FmivN0YkZCOsQBi6RNeZjkuZYH2RzlDi9Lf8SiKKdRN4YgMDpAsnvb81lzzcPWYGub3k9YqrtMXM8K/Gx1bKzxqY=
