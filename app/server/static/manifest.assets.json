@@ -1,11 +1,11 @@
 {
   "app.css": "/static/app.e1279ea715c926e30e87.css",
-  "app.js": "/static/app.ca29f157e95513d35dcd.js",
+  "app.js": "/static/app.9585bc78c203708bac95.js",
   "app.css.map": "/static/app.e1279ea715c926e30e87.css.map",
-  "app.js.map": "/static/app.ca29f157e95513d35dcd.js.map",
-  "140.76875f2049533c31e92d.js": "/static/140.76875f2049533c31e92d.js",
-  "140.76875f2049533c31e92d.js.map": "/static/140.76875f2049533c31e92d.js.map",
-  "vendors.js": "/static/vendors.c524a1d8adff5262ad27.js",
-  "vendors.js.map": "/static/vendors.c524a1d8adff5262ad27.js.map",
+  "app.js.map": "/static/app.9585bc78c203708bac95.js.map",
+  "140.js": "/static/140.76875f2049533c31e92d.js",
+  "140.js.map": "/static/140.76875f2049533c31e92d.js.map",
+  "vendors.js": "/static/vendors.446558af2e711da088d3.js",
+  "vendors.js.map": "/static/vendors.446558af2e711da088d3.js.map",
   "index.html": "/static/index.html"
 }
