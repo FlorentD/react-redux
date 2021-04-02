@@ -1,19 +1,18 @@
 const path = require('path');
-const { HotModuleReplacementPlugin } = require('webpack');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: './public/scripts/app',
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   output: {
     path: path.resolve(__dirname),
     filename: 'bundle.js',
     publicPath: '/',
   },
   devServer: {
+    hot: true,
     static: [path.join(__dirname, 'public'), path.join(__dirname, 'server')],
-    compress: true,
     historyApiFallback: true,
     port: 3000,
     proxy: {
@@ -44,8 +43,5 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    moduleIds: 'named',
-  },
-  plugins: [new HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()],
+  plugins: [new ReactRefreshWebpackPlugin()],
 };
