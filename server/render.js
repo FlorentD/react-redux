@@ -42,11 +42,6 @@ export function renderFullPage(req, context = {}) {
     <!doctype html>
     <html lang="fr">
       <head>
-         <script> 
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js');
-            }
-        </script>
         <link rel="icon" type="image/jpeg" href="/image/icon-48.png">
         <link rel="manifest" href="/manifest.json">
         <meta charset="utf-8" />
