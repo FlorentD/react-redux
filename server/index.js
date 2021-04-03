@@ -57,6 +57,11 @@ app.get('*', (req, res) => {
   if (req.url === '/offline.html') {
     return res.status(200).sendFile(`${__dirname}/static/offline.html`);
   }
+  if (req.url === '/google4ced536c6d2b891f.html') {
+    return res
+      .status(200)
+      .sendFile(`${__dirname}/static/google4ced536c6d2b891f.html`);
+  }
   renderFullPage(req).then((result) => res.status(200).send(result));
 });
 
