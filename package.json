@@ -14,7 +14,7 @@
     "predist": "rm -rf app && rm -rf dist && npx babel server --out-dir app/server && npx babel public --out-dir app/public && mkdir dist && mkdir app/server/image",
     "dist": "webpack --config webpack-prod.config.js --progress --color && npm run copy",
     "postdist": "rm -fr dist",
-    "prettier": "prettier --single-quote --trailing-comma es5 --write",
+    "prettier": "prettier --write",
     "copy": "cp -R dist/. app/server/static/ && cp server/image/*.png app/server/image/ && cp server/image/*.jpg app/server/image/ && cp server/favicon.ico app/server && cp server/static/manifest.json app/server && cp server/robots.txt app/server",
     "build": "rm -rf dist && webpack --config webpack-prod.config.js && cp dist/*.* server/static",
     "test": "jest --config tests/jest.config.json",
@@ -29,7 +29,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier"
+      "prettier --write"
     ]
   },
   "browserslist": [

@@ -7,9 +7,9 @@ const Main = () => {
       <h1>Main</h1>
       <Button
         onClick={() => {
-          fetch('/sendNotification', { method: 'post', headers:{
-              'Content-type': 'application/json',
-            },
+          fetch('/sendNotification', {
+            method: 'post',
+            headers: { 'Content-type': 'application/json' },
             body: {},
           }).then(() => console.info('notification sent'));
         }}
