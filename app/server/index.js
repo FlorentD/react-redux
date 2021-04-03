@@ -1,49 +1,47 @@
-'use strict';
+"use strict";
 
-var _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault');
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require('core-js/modules/es.array.includes.js');
+require("core-js/modules/es.array.includes.js");
 
-require('core-js/modules/es.string.includes.js');
+require("core-js/modules/es.string.includes.js");
 
-require('core-js/modules/es.array.concat.js');
+require("core-js/modules/es.array.concat.js");
 
-var _push = require('./push');
+var _push = require("./push");
 
-var _react = _interopRequireDefault(require('react'));
+var _react = _interopRequireDefault(require("react"));
 
-var _express = _interopRequireDefault(require('express'));
+var _express = _interopRequireDefault(require("express"));
 
-var _bodyParser = _interopRequireDefault(require('body-parser'));
+var _bodyParser = _interopRequireDefault(require("body-parser"));
 
-var _apolloServerExpress = require('apollo-server-express');
+var _apolloServerExpress = require("apollo-server-express");
 
-var _apollo = require('./apollo');
+var _apollo = require("./apollo");
 
-var _compression = _interopRequireDefault(require('compression'));
+var _compression = _interopRequireDefault(require("compression"));
 
-var _logger = _interopRequireDefault(require('./logger'));
+var _logger = _interopRequireDefault(require("./logger"));
 
-var _render = require('./render');
+var _render = require("./render");
 
 var app = (0, _express.default)();
 var server = new _apolloServerExpress.ApolloServer({
   typeDefs: _apollo.typeDefs,
   resolvers: _apollo.resolvers,
-  uploads: false,
+  uploads: false
 });
 server.applyMiddleware({
-  app: app,
+  app: app
 });
-app.use(
-  _bodyParser.default.urlencoded({
-    extended: false,
-  })
-);
+app.use(_bodyParser.default.urlencoded({
+  extended: false
+}));
 app.use(_bodyParser.default.json());
 app.use((0, _compression.default)());
-app.use('/static', _express.default.static(''.concat(__dirname, '/static')));
-app.use('/image', _express.default.static(''.concat(__dirname, '/image')));
+app.use('/static', _express.default.static("".concat(__dirname, "/static")));
+app.use('/image', _express.default.static("".concat(__dirname, "/image")));
 app.post('/api', function (req, res) {
   res.redirect(307, '/graphql');
 });
@@ -52,56 +50,46 @@ app.get('/vapidPublicKey', function (req, res) {
 });
 app.post('/sendNotification', function (req, res) {
   var subscription = req.body.subscription;
-  (0, _push.sendNotification)(subscription)
-    .then(function () {
-      res.sendStatus(201);
-    })
-    .catch(function (error) {
-      res.sendStatus(500);
-      console.log(error);
-    });
+  (0, _push.sendNotification)(subscription).then(function () {
+    res.sendStatus(201);
+  }).catch(function (error) {
+    res.sendStatus(500);
+    console.log(error);
+  });
 });
 app.get('*', function (req, res) {
   _logger.default.info(req.url);
 
   if (req.url === '/robots.txt') {
-    return res.status(300).sendFile(''.concat(__dirname, '/robots.txt'));
+    return res.status(300).sendFile("".concat(__dirname, "/robots.txt"));
   }
 
   if (req.url === '/manifest.json') {
-    return res.status(300).sendFile(''.concat(__dirname, '/manifest.json'));
+    return res.status(300).sendFile("".concat(__dirname, "/manifest.json"));
   }
 
   if (req.url === '/service-worker.js') {
-    return res
-      .status(200)
-      .sendFile(''.concat(__dirname, '/static/service-worker.js'));
+    return res.status(200).sendFile("".concat(__dirname, "/static/service-worker.js"));
   }
 
   if (req.url === '/favicon.ico') {
-    return res.status(200).sendFile(''.concat(__dirname, '/favicon.ico'));
+    return res.status(200).sendFile("".concat(__dirname, "/favicon.ico"));
   }
 
   if (req.url === '/404.html') {
-    return res.status(200).sendFile(''.concat(__dirname, '/static/404.html'));
+    return res.status(200).sendFile("".concat(__dirname, "/static/404.html"));
   }
 
   if (req.url === '/offline.html') {
-    return res
-      .status(200)
-      .sendFile(''.concat(__dirname, '/static/offline.html'));
+    return res.status(200).sendFile("".concat(__dirname, "/static/offline.html"));
   }
 
   if (req.url === '/google4ced536c6d2b891f.html') {
-    return res
-      .status(200)
-      .sendFile(''.concat(__dirname, '/static/google4ced536c6d2b891f.html'));
+    return res.status(200).sendFile("".concat(__dirname, "/static/google4ced536c6d2b891f.html"));
   }
 
   if (req.url.includes('/workbox-') || req.url.includes('/.js.map')) {
-    return res
-      .status(200)
-      .sendFile(''.concat(__dirname, '/static/').concat(req.url));
+    return res.status(200).sendFile("".concat(__dirname, "/static/").concat(req.url));
   }
 
   (0, _render.renderFullPage)(req).then(function (result) {
