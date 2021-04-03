@@ -11,7 +11,6 @@
     "node": "14.x"
   },
   "scripts": {
-    "precommit": "lint-staged",
     "predist": "rm -rf app && rm -rf dist && npx babel server --out-dir app/server && npx babel public --out-dir app/public && mkdir dist && mkdir app/server/image",
     "dist": "webpack --config webpack-prod.config.js --progress --color && npm run copy",
     "postdist": "rm -fr dist",
@@ -25,12 +24,8 @@
     "ssr": "ASSETS_STRATEGY='production' nodemon --exec babel-node server/index.js",
     "cypress:open": "cypress open",
     "cy:run": "cypress run --spec ./cypress/integration/sanity/welcome.spec.js --record --key 42791497-6ed9-4f3d-8661-87f9590ced14",
-    "test:ci": "start-server-and-test start http://localhost:8080 cy:run"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "test:ci": "start-server-and-test start http://localhost:8080 cy:run",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.js": [
