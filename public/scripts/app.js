@@ -1,4 +1,4 @@
-import './webWorker';
+import './sw';
 import '../tailwind.css';
 import '../styles.css';
 import React from 'react';

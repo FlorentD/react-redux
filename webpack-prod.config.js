@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -53,5 +54,6 @@ module.exports = {
     new WebpackManifestPlugin({
       fileName: 'manifest.assets.json',
     }),
+    new GenerateSW({ cleanupOutdatedCaches: true }),
   ],
 };

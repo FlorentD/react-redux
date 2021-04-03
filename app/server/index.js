@@ -66,8 +66,10 @@ app.get('*', function (req, res) {
     return res.status(300).sendFile(''.concat(__dirname, '/manifest.json'));
   }
 
-  if (req.url === '/sw.js') {
-    return res.status(200).sendFile(''.concat(__dirname, '/sw.js'));
+  if (req.url === '/service-worker.js') {
+    return res
+      .status(200)
+      .sendFile(''.concat(__dirname, '/static/service-worker.js'));
   }
 
   if (req.url === '/favicon.ico') {
