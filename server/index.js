@@ -62,6 +62,9 @@ app.get('*', (req, res) => {
       .status(200)
       .sendFile(`${__dirname}/static/google4ced536c6d2b891f.html`);
   }
+  if (req.url.includes('/workbox-') || req.url.includes('/.js.map')) {
+    return res.status(200).sendFile(`${__dirname}/static/${req.url}`);
+  }
   renderFullPage(req).then((result) => res.status(200).send(result));
 });
 

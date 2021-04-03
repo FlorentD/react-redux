@@ -2,6 +2,12 @@
 
 var _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault');
 
+require('core-js/modules/es.array.includes.js');
+
+require('core-js/modules/es.string.includes.js');
+
+require('core-js/modules/es.array.concat.js');
+
 var _push = require('./push');
 
 var _react = _interopRequireDefault(require('react'));
@@ -90,6 +96,12 @@ app.get('*', function (req, res) {
     return res
       .status(200)
       .sendFile(''.concat(__dirname, '/static/google4ced536c6d2b891f.html'));
+  }
+
+  if (req.url.includes('/workbox-') || req.url.includes('/.js.map')) {
+    return res
+      .status(200)
+      .sendFile(''.concat(__dirname, '/static/').concat(req.url));
   }
 
   (0, _render.renderFullPage)(req).then(function (result) {
