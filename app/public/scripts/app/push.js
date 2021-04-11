@@ -13,9 +13,13 @@ var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/
 
 require("core-js/modules/es.string.repeat.js");
 
+require("core-js/modules/es.regexp.exec.js");
+
 require("core-js/modules/es.string.replace.js");
 
-require("core-js/modules/es.regexp.exec.js");
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
 
 require("core-js/modules/es.typed-array.uint8-array.js");
 
@@ -64,10 +68,6 @@ require("core-js/modules/es.typed-array.subarray.js");
 require("core-js/modules/es.typed-array.to-locale-string.js");
 
 require("core-js/modules/es.typed-array.to-string.js");
-
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.array.iterator.js");
 
 require("core-js/modules/es.promise.js");
 

@@ -25,9 +25,9 @@ require("core-js/modules/es.array.join.js");
 
 require("core-js/modules/es.array.concat.js");
 
-require("core-js/modules/es.string.replace.js");
-
 require("core-js/modules/es.regexp.exec.js");
+
+require("core-js/modules/es.string.replace.js");
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 

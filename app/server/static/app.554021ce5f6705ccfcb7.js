@@ -8,13 +8,13 @@ require("core-js/modules/es.array.map.js");
 
 require("core-js/modules/es.string.link.js");
 
-require("core-js/modules/es.promise.js");
-
 require("core-js/modules/es.object.to-string.js");
 
-require("core-js/modules/es.string.iterator.js");
+require("core-js/modules/es.promise.js");
 
 require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/es.string.iterator.js");
 
 require("core-js/modules/web.dom-collections.iterator.js");
 
@@ -30,9 +30,9 @@ require("core-js/modules/es.symbol.description.js");
 
 require("core-js/modules/es.symbol.to-string-tag.js");
 
-require("core-js/modules/es.math.to-string-tag.js");
-
 require("core-js/modules/es.json.to-string-tag.js");
+
+require("core-js/modules/es.math.to-string-tag.js");
 
 require("core-js/modules/es.function.name.js");
 

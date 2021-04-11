@@ -9,9 +9,9 @@ exports.getFilmsAPI = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
-require("core-js/modules/es.promise.js");
-
 require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.promise.js");
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
