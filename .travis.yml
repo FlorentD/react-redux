@@ -1,22 +1,24 @@
 language: node_js
 node_js:
-- '14'
+  - '14'
 matrix:
   fast_finish: true
 addons:
   apt:
     packages:
-    - libgconf-2-4
+      - libgconf-2-4
+before_cache:
+  - rm -rf $HOME/.cache/Cypress
 cache:
   npm: true
   directories:
-  - "~/.cache"
+    - '~/.cache'
 install:
-- npm install
+  - npm install
 script:
-- npm test
-- npm run dist
-- npm run test:ci
+  - npm test
+  - npm run dist
+  - npm run test:ci
 deploy:
   provider: heroku
   app: reactredux-fr
