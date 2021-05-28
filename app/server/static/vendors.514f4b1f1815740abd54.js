@@ -54,8 +54,6 @@ require("core-js/modules/es.string.link.js");
 
 require("core-js/modules/es.promise.finally.js");
 
-require("core-js/modules/es.array.reduce.js");
-
 require("core-js/modules/es.array.concat.js");
 
 require("core-js/modules/es.string.split.js");

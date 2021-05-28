@@ -18,8 +18,6 @@ require("core-js/modules/es.string.iterator.js");
 
 require("core-js/modules/web.dom-collections.iterator.js");
 
-require("core-js/modules/es.array.reduce.js");
-
 require("core-js/modules/es.object.keys.js");
 
 require("core-js/modules/web.dom-collections.for-each.js");
