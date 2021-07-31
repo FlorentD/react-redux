@@ -36,6 +36,8 @@ require("core-js/modules/es.object.keys.js");
 
 require("core-js/modules/es.string.replace.js");
 
+require("core-js/modules/es.array.sort.js");
+
 require("core-js/modules/es.array.filter.js");
 
 require("core-js/modules/es.object.values.js");
