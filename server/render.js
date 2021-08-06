@@ -3,7 +3,7 @@ import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import { StaticRouter as Router } from 'react-router-dom';
 import manfiest from './static/manifest.assets.json';
 import App from '../public/scripts/app/index';
-import { makeExecutableSchema } from 'apollo-server-express';
+import { makeExecutableSchema } from '@graphql-tools/schema';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { SchemaLink } from '@apollo/client/link/schema';
 import { resolvers, typeDefs } from './apollo';

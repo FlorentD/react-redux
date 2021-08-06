@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|woff|woff2|eot|ttf|svg|otf)$/,
-        use: 'url-loader?limit=100000',
+        type: 'asset',
       },
       {
         test: /\.css$/i,

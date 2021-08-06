@@ -32,8 +32,10 @@ var server = new _apolloServerExpress.ApolloServer({
   resolvers: _apollo.resolvers,
   uploads: false
 });
-server.applyMiddleware({
-  app: app
+server.start().then(function () {
+  server.applyMiddleware({
+    app: app
+  });
 });
 app.use(_bodyParser.default.urlencoded({
   extended: false

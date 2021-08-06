@@ -41,11 +41,11 @@ var _manifestAssets = _interopRequireDefault(require("./static/manifest.assets.j
 
 var _index = _interopRequireDefault(require("../public/scripts/app/index"));
 
-var _apolloServerExpress = require("apollo-server-express");
+var _schema = require("@graphql-tools/schema");
 
 var _client = require("@apollo/client");
 
-var _schema = require("@apollo/client/link/schema");
+var _schema2 = require("@apollo/client/link/schema");
 
 var _apollo = require("./apollo");
 
@@ -60,8 +60,8 @@ function renderFullPage(req) {
   var sheet = new _styledComponents.ServerStyleSheet();
   var client = new _client.ApolloClient({
     ssrMode: true,
-    link: new _schema.SchemaLink({
-      schema: (0, _apolloServerExpress.makeExecutableSchema)({
+    link: new _schema2.SchemaLink({
+      schema: (0, _schema.makeExecutableSchema)({
         resolvers: _apollo.resolvers,
         typeDefs: _apollo.typeDefs
       })

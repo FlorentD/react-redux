@@ -11,7 +11,9 @@ import { renderFullPage } from './render';
 const app = express();
 
 const server = new ApolloServer({ typeDefs, resolvers, uploads: false });
-server.applyMiddleware({ app });
+server.start().then(() => {
+  server.applyMiddleware({ app });
+});
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

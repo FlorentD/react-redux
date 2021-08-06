@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
+const { ESBuildMinifyPlugin } = require('esbuild-loader');
 
 module.exports = {
   mode: 'production',
@@ -18,8 +19,11 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
+        loader: 'esbuild-loader',
+        options: {
+          loader: 'jsx',
+          target: 'es2015',
+        },
       },
       {
         test: /\.css$/i,
@@ -32,6 +36,7 @@ module.exports = {
     ],
   },
   optimization: {
+    minimizer: [new ESBuildMinifyPlugin({ target: 'es2015' })],
     splitChunks: {
       cacheGroups: {
         defaultVendors: {

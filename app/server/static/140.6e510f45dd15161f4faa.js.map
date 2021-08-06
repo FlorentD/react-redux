@@ -1,1 +1,0 @@
-{"version":3,"file":"140.6e510f45dd15161f4faa.js","mappings":"oIAMA,UAJa,WACX,OAAO","sources":["webpack://react-redux/./public/scripts/app/lazy/index.js"],"sourcesContent":["import React from 'react';\n\nconst Lazy = () => {\n  return <div>Lazy loaded ?</div>;\n};\n\nexport default Lazy;\n"],"names":[],"sourceRoot":""}
