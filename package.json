@@ -39,7 +39,7 @@
     "defaults"
   ],
   "dependencies": {
-    "@apollo/client": "3.4.5",
+    "@apollo/client": "3.4.7",
     "@babel/node": "7.14.9",
     "@loadable/component": "5.15.0",
     "apollo-server-express": "3.1.2",
@@ -66,9 +66,9 @@
     "@babel/plugin-transform-runtime": "7.15.0",
     "@babel/preset-env": "7.15.0",
     "@babel/preset-react": "7.14.5",
-    "@babel/runtime": "7.14.8",
-    "@graphql-tools/schema": "8.0.3",
-    "@pmmmwh/react-refresh-webpack-plugin": "0.5.0-beta.1",
+    "@babel/runtime": "7.15.3",
+    "@graphql-tools/schema": "8.1.1",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.5.0-rc.3",
     "@wojtekmaj/enzyme-adapter-react-17": "0.6.3",
     "acorn": "8.4.1",
     "autoprefixer": "10.3.1",
@@ -81,7 +81,7 @@
     "cypress": "8.2.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.6",
-    "esbuild-loader": "2.14.0",
+    "esbuild-loader": "2.15.0",
     "html-loader": "2.1.2",
     "html-webpack-plugin": "5.3.2",
     "husky": "7.0.1",
@@ -98,15 +98,15 @@
     "react-test-renderer": "17.0.2",
     "sinon": "11.1.2",
     "sinon-chai": "3.7.0",
-    "sinon-test": "3.1.0",
+    "sinon-test": "3.1.1",
     "start-server-and-test": "1.13.1",
     "style-loader": "3.2.1",
     "tailwindcss": "2.2.7",
     "uglifycss": "0.0.29",
-    "webpack": "5.49.0",
-    "webpack-cli": "4.7.2",
-    "webpack-dev-server": "4.0.0-beta.1",
+    "webpack": "5.50.0",
+    "webpack-cli": "4.8.0",
+    "webpack-dev-server": "4.0.0-rc.0",
     "webpack-manifest-plugin": "4.0.2",
-    "workbox-webpack-plugin": "6.2.0"
+    "workbox-webpack-plugin": "6.2.4"
   }
 }
