@@ -1,18 +1,22 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Test and deploy yo Heroku
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   workflow_dispatch:
 
 jobs:
+  strategy:
+    max-parallel: 1
+    matrix:
+      os: [macos-latest, windows-latest, ubuntu-18.04]
   test:
     runs-on: ubuntu-latest
     steps:
@@ -20,9 +24,19 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+          cache: 'npm'
       - name: Install deps
         run: npm i
       - name: Run unit tests
         run: npm test
       - name: Run e2e tests
         run: npm run test:ci
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "reactredux-fr"
+          heroku_email: "florent.duveau@gmail.com"
