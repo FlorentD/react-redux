@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
-      - run: npm run install
+      - run: npm i
       - run: npm test
   e2etest:
     name: 'End2end tests'
@@ -40,7 +40,7 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
-      - run: npm run install
+      - run: npm i
       - run: npm run test:ci
   deploy:
     name: Deploy to Heroku
@@ -48,7 +48,7 @@ jobs:
     needs: ['unittest', 'e2etest']
     steps:
       - uses: actions/checkout@v2
-      - run: npm run install
+      - run: npm i
       - run: npm run dist
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
