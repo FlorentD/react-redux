@@ -11,13 +11,19 @@ jobs:
   install:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-        cache: 'npm'
-    - name: Install deps
-      run: npm i
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'npm'
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install deps
+        run: npm i
   unittest:
     name: 'Unit tests'
     runs-on: ubuntu-latest
@@ -28,6 +34,12 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Run unit tests
         run: npm test
   e2etest:
@@ -40,6 +52,13 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Run e2e tests
         run: npm run test:ci
   deploy:
@@ -48,6 +67,8 @@ jobs:
     needs: ['unittest', 'e2etest']
     steps:
       - uses: actions/checkout@v2
+      - name: Building app
+        run: npm run dist
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
