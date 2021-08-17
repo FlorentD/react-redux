@@ -4,7 +4,7 @@ import { Button } from '../components';
 const Main = () => {
   return (
     <div className="text-center">
-      <h1>Main / Github Actions</h1>
+      <h1>Main</h1>
       <Button
         onClick={() => {
           fetch('/sendNotification', {
