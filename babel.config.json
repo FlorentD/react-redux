@@ -4,15 +4,15 @@
       "@babel/preset-env",
       {
         "useBuiltIns": "usage",
-        "corejs": "core-js@3"
+        "corejs": { "version": "3.8", "proposals": true },
+        "targets": {
+          "chrome": 90
+        }
       }
-    ],
-    "@babel/preset-react"
+    ]
   ],
   "plugins": [
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-transform-runtime",
-    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-react-jsx",
     "babel-plugin-styled-components"
   ]
 }

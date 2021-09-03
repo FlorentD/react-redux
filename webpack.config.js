@@ -14,7 +14,7 @@ module.exports = {
     hot: true,
     static: [path.join(__dirname, 'public'), path.join(__dirname, 'server')],
     historyApiFallback: true,
-    port: 3000,
+    port: 3001,
     proxy: {
       '/api': 'http://localhost:8080/graphql',
     },
