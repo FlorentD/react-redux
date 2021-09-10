@@ -1,48 +1,10 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
-
-require("core-js/modules/es.array.map.js");
-
-require("core-js/modules/es.string.link.js");
-
-require("core-js/modules/es.object.assign.js");
-
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.promise.js");
-
-require("core-js/modules/es.array.iterator.js");
-
-require("core-js/modules/es.string.iterator.js");
-
-require("core-js/modules/web.dom-collections.iterator.js");
-
-require("core-js/modules/es.object.keys.js");
-
-require("core-js/modules/web.dom-collections.for-each.js");
-
-require("core-js/modules/es.symbol.js");
-
-require("core-js/modules/es.symbol.description.js");
-
-require("core-js/modules/es.symbol.to-string-tag.js");
-
-require("core-js/modules/es.json.to-string-tag.js");
-
-require("core-js/modules/es.math.to-string-tag.js");
-
-require("core-js/modules/es.function.name.js");
-
-require("core-js/modules/es.array.splice.js");
-
 !function () {
   var e,
       n,
       t = {
-    2974: function _(e, n, t) {
+    2974: function (e, n, t) {
       "use strict";
 
       var r = {};
@@ -101,7 +63,7 @@ require("core-js/modules/es.array.splice.js");
         label: "Lazy",
         link: "lazy"
       }]),
-          g = function g() {
+          g = function () {
         return s.createElement("ul", {
           className: "flex flex-col mt-4"
         }, E.map(function (e) {
@@ -117,7 +79,7 @@ require("core-js/modules/es.array.splice.js");
           }, t));
         }));
       },
-          y = function y(e) {
+          y = function (e) {
         var n = e.children;
         return s.createElement(s.Fragment, null, s.createElement("div", {
           className: "absolute w-full h-screen z-0 flex"
@@ -148,17 +110,17 @@ require("core-js/modules/es.array.splice.js");
           x = y,
           k = (t(9601), t(7154)),
           N = t.n(k),
-          A = function A(e) {
+          A = function (e) {
         var n = Object.assign({}, e);
         return s.createElement("button", N()({
           className: "rounded-md bg-button hover:bg-buttonFocused py-2 px-4 text-white font-bold text-sm"
         }, n));
       },
-          j = function j() {
+          j = function () {
         return s.createElement("div", {
           className: "text-center"
         }, s.createElement("h1", null, "Main"), s.createElement(A, {
-          onClick: function onClick() {
+          onClick: function () {
             fetch("/sendNotification", {
               method: "post",
               headers: {
@@ -171,18 +133,18 @@ require("core-js/modules/es.array.splice.js");
           }
         }, "Send my a notification please !"));
       },
-          O = function O() {
+          O = function () {
         return s.createElement("h1", null, "Why");
       },
-          S = function S() {
+          S = function () {
         return s.createElement("h1", null, "About");
       },
-          P = function P() {
+          P = function () {
         return s.createElement("div", null, "PAGE NOT FOUND :-(");
       },
           T = (t(2564), t(3038)),
           W = t.n(T),
-          _ = function _() {
+          _ = function () {
         if ("undefined" == typeof navigator) return null;
         var e = (0, s.useState)(navigator.onLine),
             n = W()(e, 2),
@@ -197,10 +159,10 @@ require("core-js/modules/es.array.splice.js");
             d = c[0],
             f = c[1];
         return (0, s.useEffect)(function () {
-          var e = function e() {
+          var e = function () {
             return r(!0);
           },
-              n = function n() {
+              n = function () {
             r(!1), i(!0);
           };
 
@@ -221,7 +183,7 @@ require("core-js/modules/es.array.splice.js");
       },
           L = t(8655),
           M = t.n(L),
-          C = function C() {
+          C = function () {
         var e = (0, m.useQuery)((0, h.Ps)(w || (w = M()(["\n      {\n        films {\n          id\n          image\n          title\n        }\n      }\n    "])))),
             n = e.data;
         return e.loading ? null : s.createElement("ul", null, null == n ? void 0 : n.films.map(function (e) {
@@ -233,7 +195,7 @@ require("core-js/modules/es.array.splice.js");
           }), s.createElement("div", null, e.title), s.createElement("div", null, "Film."));
         }));
       },
-          F = function F() {
+          F = function () {
         return s.createElement(x, null, s.createElement(x.Menu, null, s.createElement(g, null)), s.createElement(_, null), s.createElement(x.Body, null, s.createElement(p.rs, null, s.createElement(p.AW, {
           exact: !0,
           path: "/"
@@ -245,7 +207,7 @@ require("core-js/modules/es.array.splice.js");
           path: "/films"
         }, s.createElement(C, null)), s.createElement(p.AW, {
           path: "/lazy",
-          render: function render() {
+          render: function () {
             var e = (0, b.ZP)(function () {
               return t.e(140).then(t.bind(t, 4140));
             });
@@ -258,7 +220,7 @@ require("core-js/modules/es.array.splice.js");
         client: v
       }, s.createElement(f.VK, null, s.createElement(F, null))), document.getElementById("body"));
     },
-    2658: function _() {
+    2658: function () {
       "serviceWorker" in navigator && navigator.serviceWorker.register("/sw.js").then(function (e) {
         console.log("Registration successful, scope is:", e.scope);
       }).catch(function (e) {
@@ -288,12 +250,10 @@ require("core-js/modules/es.array.splice.js");
       a: n
     }), n;
   }, l.d = function (e, n) {
-    for (var t in n) {
-      l.o(n, t) && !l.o(e, t) && Object.defineProperty(e, t, {
-        enumerable: !0,
-        get: n[t]
-      });
-    }
+    for (var t in n) l.o(n, t) && !l.o(e, t) && Object.defineProperty(e, t, {
+      enumerable: !0,
+      get: n[t]
+    });
   }, l.f = {}, l.e = function (e) {
     return Promise.all(Object.keys(l.f).reduce(function (n, t) {
       return l.f[t](e, n), n;
@@ -301,17 +261,17 @@ require("core-js/modules/es.array.splice.js");
   }, l.u = function (e) {
     return e + ".76875f2049533c31e92d.js";
   }, l.miniCssF = function (e) {}, l.g = function () {
-    if ("object" == (typeof globalThis === "undefined" ? "undefined" : (0, _typeof2.default)(globalThis))) return globalThis;
+    if ("object" == typeof globalThis) return globalThis;
 
     try {
       return this || new Function("return this")();
     } catch (e) {
-      if ("object" == (typeof window === "undefined" ? "undefined" : (0, _typeof2.default)(window))) return window;
+      if ("object" == typeof window) return window;
     }
   }(), l.hmd = function (e) {
     return (e = Object.create(e)).children || (e.children = []), Object.defineProperty(e, "exports", {
       enumerable: !0,
-      set: function set() {
+      set: function () {
         throw new Error("ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: " + e.id);
       }
     }), e;
@@ -330,7 +290,7 @@ require("core-js/modules/es.array.splice.js");
       }
       i || (u = !0, (i = document.createElement("script")).charset = "utf-8", i.timeout = 120, l.nc && i.setAttribute("nonce", l.nc), i.setAttribute("data-webpack", n + o), i.src = t), e[t] = [r];
 
-      var f = function f(n, r) {
+      var f = function (n, r) {
         i.onerror = i.onload = null, clearTimeout(m);
         var l = e[t];
         if (delete e[t], i.parentNode && i.parentNode.removeChild(i), l && l.forEach(function (e) {
@@ -375,19 +335,13 @@ require("core-js/modules/es.array.splice.js");
       }
     };
 
-    var t = function t() {},
-        r = function r(_r, o) {
-      for (var a, i, u = o[0], c = o[1], s = o[2], d = o[3], f = 0, m = []; f < u.length; f++) {
-        i = u[f], l.o(e, i) && e[i] && m.push(e[i][0]), e[i] = 0;
-      }
+    var t = function () {},
+        r = function (r, o) {
+      for (var a, i, u = o[0], c = o[1], s = o[2], d = o[3], f = 0, m = []; f < u.length; f++) i = u[f], l.o(e, i) && e[i] && m.push(e[i][0]), e[i] = 0;
 
-      for (a in c) {
-        l.o(c, a) && (l.m[a] = c[a]);
-      }
+      for (a in c) l.o(c, a) && (l.m[a] = c[a]);
 
-      for (s && s(l), _r && _r(o); m.length;) {
-        m.shift()();
-      }
+      for (s && s(l), r && r(o); m.length;) m.shift()();
 
       return d && n.push.apply(n, d), t();
     },

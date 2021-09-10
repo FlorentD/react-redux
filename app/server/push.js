@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -9,7 +7,9 @@ exports.sendNotification = exports.publicKey = void 0;
 
 var _webPush = _interopRequireDefault(require("web-push"));
 
-var vapidKeys = {
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const vapidKeys = {
   publicKey: 'BLDCqHnSteBvFmivU4jFZqMxMwtSm2vPuz4pzdxTtE0axpBTT_PxzNCAigDRDoxq-VZw_EURGHwfrSLzJq8USLs',
   privateKey: 'eLBRGf0hfEsVBhr1BL7mpt09Cqt-0kKy_mK46znuuBw'
 };
@@ -18,13 +18,11 @@ _webPush.default.setGCMAPIKey('BIPorsgIUazuLSA52W61rkbbFNI7MwlMe9gtuGpxUVb9FQYO3
 
 _webPush.default.setVapidDetails('http://reactredux-fr.herokuapp.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
-var publicKey = vapidKeys.publicKey;
+const publicKey = vapidKeys.publicKey;
 exports.publicKey = publicKey;
 
-var sendNotification = function sendNotification(subscription) {
-  return _webPush.default.sendNotification(subscription, null, {
-    TTL: 10
-  });
-};
+const sendNotification = subscription => _webPush.default.sendNotification(subscription, null, {
+  TTL: 10
+});
 
 exports.sendNotification = sendNotification;

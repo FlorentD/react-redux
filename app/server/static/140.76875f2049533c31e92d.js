@@ -1,7 +1,7 @@
 "use strict";
 
 (self.webpackChunkreact_redux = self.webpackChunkreact_redux || []).push([[140], {
-  4140: function _(e, u, r) {
+  4140: function (e, u, r) {
     "use strict";
 
     r.r(u);

@@ -1,46 +1,10 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
-
-require("core-js/modules/es.array.map.js");
-
-require("core-js/modules/es.string.link.js");
-
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.promise.js");
-
-require("core-js/modules/es.array.iterator.js");
-
-require("core-js/modules/es.string.iterator.js");
-
-require("core-js/modules/web.dom-collections.iterator.js");
-
-require("core-js/modules/es.object.keys.js");
-
-require("core-js/modules/web.dom-collections.for-each.js");
-
-require("core-js/modules/es.symbol.js");
-
-require("core-js/modules/es.symbol.description.js");
-
-require("core-js/modules/es.symbol.to-string-tag.js");
-
-require("core-js/modules/es.json.to-string-tag.js");
-
-require("core-js/modules/es.math.to-string-tag.js");
-
-require("core-js/modules/es.function.name.js");
-
-require("core-js/modules/es.array.splice.js");
-
 !function () {
   var e,
       n,
       t = {
-    6404: function _(e, n, t) {
+    6404: function (e, n, t) {
       "use strict";
 
       t(2658);
@@ -94,7 +58,7 @@ require("core-js/modules/es.array.splice.js");
         displayName: "menu__Item",
         componentId: "sc-1c9xkt1-1"
       })(["padding:12px;position:relative;font-size:smaller;::before{position:absolute;content:'';top:0;right:0;height:100%;width:1px;background:gainsboro;}"]),
-          E = function E() {
+          E = function () {
         return i.createElement(b, null, g.map(function (e) {
           var n = e.id,
               t = e.label,
@@ -115,9 +79,9 @@ require("core-js/modules/es.array.splice.js");
         displayName: "main__MainWrapper",
         componentId: "sc-14cy0bs-1"
       })(["text-align:center;"]),
-          w = function w() {
+          w = function () {
         return i.createElement(k, null, i.createElement("h2", null, "Main"), i.createElement(y, {
-          onClick: function onClick() {
+          onClick: function () {
             fetch("/sendNotification", {
               method: "post",
               headers: {
@@ -130,18 +94,18 @@ require("core-js/modules/es.array.splice.js");
           }
         }, "Send my a notification please !"));
       },
-          x = function x() {
+          x = function () {
         return i.createElement("h1", null, "Why");
       },
-          _ = function _() {
+          _ = function () {
         return i.createElement("h1", null, "About");
       },
-          P = function P() {
+          P = function () {
         return i.createElement("div", null, "PAGE NOT FOUND :-(");
       },
           A = (t(2564), t(3038)),
           L = t.n(A),
-          j = function j() {
+          j = function () {
         if ("undefined" == typeof navigator) return null;
         var e = (0, i.useState)(navigator.onLine),
             n = L()(e, 2),
@@ -156,10 +120,10 @@ require("core-js/modules/es.array.splice.js");
             m = d[0],
             s = d[1];
         return (0, i.useEffect)(function () {
-          var e = function e() {
+          var e = function () {
             return r(!0);
           },
-              n = function n() {
+              n = function () {
             r(!1), c(!0);
           };
 
@@ -178,7 +142,7 @@ require("core-js/modules/es.array.splice.js");
           }
         }, [t]), t && !m ? null : t && m ? i.createElement("div", null, i.createElement("span", null, "Welcome back on web ! 🎉")) : i.createElement("div", null, i.createElement("span", null, "You seem to be offline 😭"));
       },
-          S = function S() {
+          S = function () {
         var e = (0, c.useQuery)((0, u.Ps)(r || (r = s()(["\n      {\n        films {\n          id\n          image\n          title\n        }\n      }\n    "])))),
             n = e.data;
         return e.loading ? null : i.createElement("ul", null, null == n ? void 0 : n.films.map(function (e) {
@@ -195,7 +159,7 @@ require("core-js/modules/es.array.splice.js");
         displayName: "app__Layout",
         componentId: "vbjlqm-0"
       })(["padding:10px;background-image:url('/image/background.jpg');background-position:center;background-size:cover;background-attachment:fixed;color:var(--primary-color);height:100%;"]),
-          O = function O() {
+          O = function () {
         return i.createElement(N, null, i.createElement(C, null), i.createElement(E, null), i.createElement(j, null), i.createElement("div", null, i.createElement(h.rs, null, i.createElement(h.AW, {
           exact: !0,
           path: "/"
@@ -207,14 +171,14 @@ require("core-js/modules/es.array.splice.js");
           path: "/films"
         }, i.createElement(S, null)), i.createElement(h.AW, {
           path: "/lazy",
-          render: function render() {
+          render: function () {
             var e = (0, f.ZP)(function () {
               return t.e(140).then(t.bind(t, 4140));
             });
             return i.createElement(e, null);
           }
         }), i.createElement(h.AW, null, i.createElement(P, null)))), i.createElement("button", {
-          onClick: function onClick() {
+          onClick: function () {
             document.documentElement.classList.add("theming"), document.documentElement.addEventListener("transitionend", function () {
               return document.documentElement.classList.remove("theming");
             }, {
@@ -228,7 +192,7 @@ require("core-js/modules/es.array.splice.js");
         client: d
       }, i.createElement(a.VK, null, i.createElement(O, null))), document.getElementById("body"));
     },
-    2658: function _() {
+    2658: function () {
       "serviceWorker" in navigator && navigator.serviceWorker.register("/sw.js").then(function (e) {
         console.log("Registration successful, scope is:", e.scope);
       }).catch(function (e) {
@@ -258,12 +222,10 @@ require("core-js/modules/es.array.splice.js");
       a: n
     }), n;
   }, o.d = function (e, n) {
-    for (var t in n) {
-      o.o(n, t) && !o.o(e, t) && Object.defineProperty(e, t, {
-        enumerable: !0,
-        get: n[t]
-      });
-    }
+    for (var t in n) o.o(n, t) && !o.o(e, t) && Object.defineProperty(e, t, {
+      enumerable: !0,
+      get: n[t]
+    });
   }, o.f = {}, o.e = function (e) {
     return Promise.all(Object.keys(o.f).reduce(function (n, t) {
       return o.f[t](e, n), n;
@@ -271,17 +233,17 @@ require("core-js/modules/es.array.splice.js");
   }, o.u = function (e) {
     return e + ".76875f2049533c31e92d.js";
   }, o.g = function () {
-    if ("object" == (typeof globalThis === "undefined" ? "undefined" : (0, _typeof2.default)(globalThis))) return globalThis;
+    if ("object" == typeof globalThis) return globalThis;
 
     try {
       return this || new Function("return this")();
     } catch (e) {
-      if ("object" == (typeof window === "undefined" ? "undefined" : (0, _typeof2.default)(window))) return window;
+      if ("object" == typeof window) return window;
     }
   }(), o.hmd = function (e) {
     return (e = Object.create(e)).children || (e.children = []), Object.defineProperty(e, "exports", {
       enumerable: !0,
-      set: function set() {
+      set: function () {
         throw new Error("ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: " + e.id);
       }
     }), e;
@@ -300,7 +262,7 @@ require("core-js/modules/es.array.splice.js");
       }
       a || (c = !0, (a = document.createElement("script")).charset = "utf-8", a.timeout = 120, o.nc && a.setAttribute("nonce", o.nc), a.setAttribute("data-webpack", n + i), a.src = t), e[t] = [r];
 
-      var s = function s(n, r) {
+      var s = function (n, r) {
         a.onerror = a.onload = null, clearTimeout(f);
         var o = e[t];
         if (delete e[t], a.parentNode && a.parentNode.removeChild(a), o && o.forEach(function (e) {
@@ -345,19 +307,13 @@ require("core-js/modules/es.array.splice.js");
       }
     };
 
-    var t = function t() {},
-        r = function r(_r, i) {
-      for (var l, a, c = i[0], u = i[1], d = i[2], m = i[3], s = 0, f = []; s < c.length; s++) {
-        a = c[s], o.o(e, a) && e[a] && f.push(e[a][0]), e[a] = 0;
-      }
+    var t = function () {},
+        r = function (r, i) {
+      for (var l, a, c = i[0], u = i[1], d = i[2], m = i[3], s = 0, f = []; s < c.length; s++) a = c[s], o.o(e, a) && e[a] && f.push(e[a][0]), e[a] = 0;
 
-      for (l in u) {
-        o.o(u, l) && (o.m[l] = u[l]);
-      }
+      for (l in u) o.o(u, l) && (o.m[l] = u[l]);
 
-      for (d && d(o), _r && _r(i); f.length;) {
-        f.shift()();
-      }
+      for (d && d(o), r && r(i); f.length;) f.shift()();
 
       return m && n.push.apply(n, m), t();
     },

@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -9,8 +7,11 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var Layout = function Layout(_ref) {
-  var children = _ref.children;
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Layout = ({
+  children
+}) => {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "absolute w-full h-screen z-0 flex"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -24,15 +25,17 @@ var Layout = function Layout(_ref) {
   }, children)));
 };
 
-Layout.Menu = function (_ref2) {
-  var children = _ref2.children;
+Layout.Menu = ({
+  children
+}) => {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "col-start-1 col-end-4 co h-screen bg-blue-800 border-r-8 border-blue-900"
   }, children);
 };
 
-Layout.Body = function (_ref3) {
-  var children = _ref3.children;
+Layout.Body = ({
+  children
+}) => {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "col-span-9 h-screen bg-blue-100"
   }, children);

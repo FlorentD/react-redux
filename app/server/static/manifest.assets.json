@@ -1,15 +1,15 @@
 {
-  "app.css": "/static/app.8ce54be9349ab4229036.css",
-  "app.js": "/static/app.efb36135623ad5bdafc2.js",
+  "app.css": "/static/app.d81762b8c349abbe4d10.css",
+  "app.js": "/static/app.5b745102e5aa75f20d2e.js",
   "427.js": "/static/427.88d46eea93ef501e377f.js",
-  "vendors.js": "/static/vendors.e14694019a8549942b58.js",
-  "workbox-5001e083.js.map": "/static/workbox-5001e083.js.map",
-  "workbox-5001e083.js": "/static/workbox-5001e083.js",
+  "vendors.js": "/static/vendors.972cce12b1d7dcafaebe.js",
+  "workbox-e4f1ac2f.js.map": "/static/workbox-e4f1ac2f.js.map",
+  "workbox-e4f1ac2f.js": "/static/workbox-e4f1ac2f.js",
   "service-worker.js.map": "/static/service-worker.js.map",
   "service-worker.js": "/static/service-worker.js",
   "index.html": "/static/index.html",
-  "app.css.map": "/static/app.8ce54be9349ab4229036.css.map",
-  "app.js.map": "/static/app.efb36135623ad5bdafc2.js.map",
+  "app.css.map": "/static/app.d81762b8c349abbe4d10.css.map",
+  "app.js.map": "/static/app.5b745102e5aa75f20d2e.js.map",
   "427.js.map": "/static/427.88d46eea93ef501e377f.js.map",
-  "vendors.js.map": "/static/vendors.e14694019a8549942b58.js.map"
+  "vendors.js.map": "/static/vendors.972cce12b1d7dcafaebe.js.map"
 }

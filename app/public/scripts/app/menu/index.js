@@ -1,21 +1,17 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 
-require("core-js/modules/es.array.map.js");
-
-require("core-js/modules/es.string.link.js");
-
 var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var menu = [{
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const menu = [{
   id: 'item1',
   label: 'Main',
   link: ''
@@ -41,21 +37,20 @@ var menu = [{
   link: 'lazy'
 }];
 
-var PageMenu = function PageMenu() {
+const PageMenu = () => {
   return /*#__PURE__*/_react.default.createElement("ul", {
     className: "flex flex-col mt-4"
-  }, menu.map(function (_ref) {
-    var id = _ref.id,
-        label = _ref.label,
-        link = _ref.link;
-    return /*#__PURE__*/_react.default.createElement("li", {
-      key: id,
-      name: id
-    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      className: "block p-4 text-white visited:text-blue-100 font-bold hover:text-blue-200 text-xl",
-      to: link
-    }, label));
-  }));
+  }, menu.map(({
+    id,
+    label,
+    link
+  }) => /*#__PURE__*/_react.default.createElement("li", {
+    key: id,
+    name: id
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: "block p-4 text-white visited:text-blue-100 font-bold hover:text-blue-200 text-xl",
+    to: link
+  }, label))));
 };
 
 var _default = PageMenu;
