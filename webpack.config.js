@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
@@ -7,12 +8,11 @@ module.exports = {
   devtool: 'eval-source-map',
   output: {
     path: path.resolve(__dirname),
-    filename: 'bundle.js',
-    publicPath: '/',
+    filename: '[name].js',
   },
   devServer: {
     hot: true,
-    static: [path.join(__dirname, 'public'), path.join(__dirname, 'server')],
+    static: [path.join(__dirname, 'server')],
     historyApiFallback: true,
     port: 3001,
     proxy: {
@@ -43,5 +43,11 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ReactRefreshWebpackPlugin()],
+  plugins: [
+    new ReactRefreshWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: '[React-Redux DEV]',
+      template: 'public/index.html',
+    }),
+  ],
 };
