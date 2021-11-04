@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = require("styled-components");
 
-var _reactRouterDom = require("react-router-dom");
+var _server = require("react-router-dom/server");
 
 var _manifestAssets = _interopRequireDefault(require("./static/manifest.assets.json"));
 
@@ -49,7 +49,7 @@ function renderFullPage(req, context = {}) {
   }, /*#__PURE__*/_react.default.createElement(_client.ApolloProvider, {
     client: client,
     context: fullContext
-  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.StaticRouter, {
+  }, /*#__PURE__*/_react.default.createElement(_server.StaticRouter, {
     location: req.url,
     context: fullContext
   }, /*#__PURE__*/_react.default.createElement(_index.default, null))));

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import { StaticRouter as Router } from 'react-router-dom';
-import manfiest from './static/manifest.assets.json';
+import { StaticRouter } from 'react-router-dom/server';
+import manifest from './static/manifest.assets.json';
 import App from '../public/scripts/app/index';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
@@ -22,9 +22,9 @@ export function renderFullPage(req, context = {}) {
   const FullApp = (
     <StyleSheetManager sheet={sheet.instance}>
       <ApolloProvider client={client} context={fullContext}>
-        <Router location={req.url} context={fullContext}>
+        <StaticRouter location={req.url} context={fullContext}>
           <App />
-        </Router>
+        </StaticRouter>
       </ApolloProvider>
     </StyleSheetManager>
   );
@@ -32,10 +32,10 @@ export function renderFullPage(req, context = {}) {
     const initialState = client.extract();
     const styleTags = sheet.getStyleTags();
     const styles = ['app.css'].map(
-      (file) => `<link rel="stylesheet" href="${manfiest[file]}"/>`
+      (file) => `<link rel="stylesheet" href="${manifest[file]}"/>`
     );
     const assets = ['vendors.js', 'app.js']
-      .map((file) => `<script src="${manfiest[file]}"></script>`)
+      .map((file) => `<script src="${manifest[file]}"></script>`)
       .join('');
     sheet.seal();
     return `
