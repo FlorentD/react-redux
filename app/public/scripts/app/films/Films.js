@@ -25,7 +25,7 @@ const Films = () => {
       }
     `);
   if (loading) return null;
-  return /*#__PURE__*/_react.default.createElement("ul", null, data === null || data === void 0 ? void 0 : data.films.map(film => /*#__PURE__*/_react.default.createElement("li", {
+  return /*#__PURE__*/_react.default.createElement("ul", null, data?.films.map(film => /*#__PURE__*/_react.default.createElement("li", {
     key: film.id
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: film.image,

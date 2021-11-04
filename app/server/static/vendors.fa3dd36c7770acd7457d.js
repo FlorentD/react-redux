@@ -1,8 +1,18 @@
 "use strict";
 
+require("core-js/modules/esnext.async-iterator.for-each.js");
+
+require("core-js/modules/esnext.iterator.constructor.js");
+
+require("core-js/modules/esnext.iterator.for-each.js");
+
 require("core-js/modules/esnext.weak-map.delete-all.js");
 
+require("core-js/modules/esnext.weak-map.emplace.js");
+
 require("core-js/modules/esnext.map.delete-all.js");
+
+require("core-js/modules/esnext.map.emplace.js");
 
 require("core-js/modules/esnext.map.every.js");
 
@@ -27,6 +37,10 @@ require("core-js/modules/esnext.map.reduce.js");
 require("core-js/modules/esnext.map.some.js");
 
 require("core-js/modules/esnext.map.update.js");
+
+require("core-js/modules/esnext.async-iterator.map.js");
+
+require("core-js/modules/esnext.iterator.map.js");
 
 require("core-js/modules/esnext.set.add-all.js");
 
@@ -59,6 +73,22 @@ require("core-js/modules/esnext.set.some.js");
 require("core-js/modules/esnext.set.symmetric-difference.js");
 
 require("core-js/modules/esnext.set.union.js");
+
+require("core-js/modules/esnext.async-iterator.every.js");
+
+require("core-js/modules/esnext.iterator.every.js");
+
+require("core-js/modules/esnext.async-iterator.filter.js");
+
+require("core-js/modules/esnext.iterator.filter.js");
+
+require("core-js/modules/esnext.async-iterator.some.js");
+
+require("core-js/modules/esnext.iterator.some.js");
+
+require("core-js/modules/esnext.async-iterator.reduce.js");
+
+require("core-js/modules/esnext.iterator.reduce.js");
 
 require("core-js/modules/esnext.weak-set.add-all.js");
 

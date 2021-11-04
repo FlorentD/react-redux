@@ -5,6 +5,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getFilmsAPI = void 0;
 
+require("core-js/modules/esnext.async-iterator.constructor.js");
+
+require("core-js/modules/esnext.async-iterator.to-array.js");
+
+require("core-js/modules/esnext.iterator.constructor.js");
+
+require("core-js/modules/esnext.iterator.to-array.js");
+
 var _dexie = _interopRequireDefault(require("dexie"));
 
 var _isEmpty = _interopRequireDefault(require("lodash/fp/isEmpty"));

@@ -2,6 +2,8 @@
 
 require("core-js/modules/esnext.weak-map.delete-all.js");
 
+require("core-js/modules/esnext.weak-map.emplace.js");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -100,30 +102,28 @@ const isPreviousBlockAnImage = editorState => {
   const selectionState = editorState.getSelection();
   const anchorKey = selectionState.getAnchorKey();
   const beforeBlock = currentContent.getBlockBefore(anchorKey);
-  const blockType = beforeBlock === null || beforeBlock === void 0 ? void 0 : beforeBlock.get('type');
+  const blockType = beforeBlock?.get('type');
   return blockType === 'atomic';
 };
 
 const isCurrentBlockAllSelected = editorState => {
-  var _currentContentBlock$;
-
   const selectionState = editorState.getSelection();
   const anchorKey = selectionState.getAnchorKey();
   const currentContent = editorState.getCurrentContent();
   const currentContentBlock = currentContent.getBlockForKey(anchorKey);
-  const blockTextLength = currentContentBlock === null || currentContentBlock === void 0 ? void 0 : (_currentContentBlock$ = currentContentBlock.get('text')) === null || _currentContentBlock$ === void 0 ? void 0 : _currentContentBlock$.length;
-  const start = (selectionState === null || selectionState === void 0 ? void 0 : selectionState.getStartOffset()) ?? 0;
-  const end = (selectionState === null || selectionState === void 0 ? void 0 : selectionState.getEndOffset()) ?? 0;
+  const blockTextLength = currentContentBlock?.get('text')?.length;
+  const start = selectionState?.getStartOffset() ?? 0;
+  const end = selectionState?.getEndOffset() ?? 0;
   return blockTextLength === end - start;
 };
 
 const printSelection = editorState => {
   const selectionState = editorState.getSelection();
-  const startOffset = (selectionState === null || selectionState === void 0 ? void 0 : selectionState.getStartOffset()) ?? 0;
-  const endOffset = (selectionState === null || selectionState === void 0 ? void 0 : selectionState.getEndOffset()) ?? 0;
-  const anchorOffset = (selectionState === null || selectionState === void 0 ? void 0 : selectionState.getAnchorOffset()) ?? 0;
-  const focusOffset = (selectionState === null || selectionState === void 0 ? void 0 : selectionState.getFocusOffset()) ?? 0;
-  const focusKey = (selectionState === null || selectionState === void 0 ? void 0 : selectionState.getFocusKey()) ?? 0;
+  const startOffset = selectionState?.getStartOffset() ?? 0;
+  const endOffset = selectionState?.getEndOffset() ?? 0;
+  const anchorOffset = selectionState?.getAnchorOffset() ?? 0;
+  const focusOffset = selectionState?.getFocusOffset() ?? 0;
+  const focusKey = selectionState?.getFocusKey() ?? 0;
   console.log({
     startOffset,
     endOffset,

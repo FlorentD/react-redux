@@ -1,6 +1,6 @@
 import React from 'react';
 import loadable from '@loadable/component';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Menu from './menu';
 import Main from './main';
 import Why from './why';
@@ -10,6 +10,8 @@ import CheckConnection from './CheckConnection';
 import Films from './films/Films';
 import { Layout } from './components';
 
+const Lazy = loadable(() => import('./lazy'));
+
 let App = () => {
   return (
     <Layout>
@@ -18,30 +20,14 @@ let App = () => {
       </Layout.Menu>
       <CheckConnection />
       <Layout.Body>
-        <Switch>
-          <Route exact path="/">
-            <Main />
-          </Route>
-          <Route path="/why">
-            <Why />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/films">
-            <Films />
-          </Route>
-          <Route
-            path="/lazy"
-            render={() => {
-              const Lazy = loadable(() => import('./lazy'));
-              return <Lazy />;
-            }}
-          />
-          <Route>
-            <NoMatch />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="why" element={<Why />} />
+          <Route path="about" element={<About />} />
+          <Route path="films" element={<Films />} />
+          <Route path="lazy" element={<Lazy />} />
+          <Route path="*" element={<NoMatch />} />
+        </Routes>
       </Layout.Body>
     </Layout>
   );

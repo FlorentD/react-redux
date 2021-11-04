@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.resolvers = exports.typeDefs = void 0;
+exports.typeDefs = exports.resolvers = exports.default = void 0;
 
 var _apolloServerExpress = require("apollo-server-express");
 
