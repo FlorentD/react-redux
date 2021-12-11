@@ -1,6 +1,6 @@
 module.exports = {
-  purge: ['./public/scripts/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./public/scripts/**/*.js'],
+  darkMode: 'media',
   theme: {
     extend: {
       gridTemplateRows: {
@@ -13,11 +13,6 @@ module.exports = {
         button: 'var(--bg-button)',
         buttonFocused: 'var(--bg-button__hover)',
       }),
-    },
-  },
-  variants: {
-    extend: {
-      backgroundColor: ['hover'],
     },
   },
   plugins: [],
