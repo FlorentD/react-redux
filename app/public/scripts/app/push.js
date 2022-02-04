@@ -4,6 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getSubscription = void 0;
+
+require("core-js/modules/es.typed-array.set.js");
+
 let subscription = null;
 
 function urlBase64ToUint8Array(base64String) {

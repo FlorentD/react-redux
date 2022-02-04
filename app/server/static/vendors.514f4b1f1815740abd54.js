@@ -94,6 +94,8 @@ require("core-js/modules/esnext.weak-set.add-all.js");
 
 require("core-js/modules/esnext.weak-set.delete-all.js");
 
+require("core-js/modules/es.typed-array.set.js");
+
 require("core-js/modules/esnext.symbol.observable.js");
 
 /*! For license information please see vendors.514f4b1f1815740abd54.js.LICENSE.txt */
