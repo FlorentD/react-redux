@@ -2,14 +2,14 @@
   "app.css": "/static/app.0610c7deda147197e2b3.css",
   "app.js": "/static/app.e84b465ddb7cbe538a0e.js",
   "427.js": "/static/427.88d46eea93ef501e377f.js",
-  "vendors.js": "/static/vendors.7bf0f7f034c0a2ad7113.js",
-  "workbox-8b8a07c5.js.map": "/static/workbox-8b8a07c5.js.map",
-  "workbox-8b8a07c5.js": "/static/workbox-8b8a07c5.js",
+  "vendors.js": "/static/vendors.47956fa07da0e7aca334.js",
+  "workbox-2a61b411.js.map": "/static/workbox-2a61b411.js.map",
+  "workbox-2a61b411.js": "/static/workbox-2a61b411.js",
   "service-worker.js.map": "/static/service-worker.js.map",
   "service-worker.js": "/static/service-worker.js",
   "index.html": "/static/index.html",
   "app.css.map": "/static/app.0610c7deda147197e2b3.css.map",
   "app.js.map": "/static/app.e84b465ddb7cbe538a0e.js.map",
   "427.js.map": "/static/427.88d46eea93ef501e377f.js.map",
-  "vendors.js.map": "/static/vendors.7bf0f7f034c0a2ad7113.js.map"
+  "vendors.js.map": "/static/vendors.47956fa07da0e7aca334.js.map"
 }
